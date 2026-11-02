@@ -1,0 +1,62 @@
+[energy] instance L=3 seed=1: 2 interior slots @ room centers | doors=3
+/Users/juliius/Nobel30/Zeus/zeus_maze/rung3_energy.py:180: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:837.)
+  losses.append(float(Lval))
+  [energy] it   0 | chain_energy(Σ R)=1.708
+  [energy] it  10 | chain_energy(Σ R)=1.565
+  [energy] it  20 | chain_energy(Σ R)=0.470
+  [energy] it  30 | chain_energy(Σ R)=0.362
+  [energy] it  40 | chain_energy(Σ R)=1.391
+  [energy] it  50 | chain_energy(Σ R)=0.442
+  [energy] it  60 | chain_energy(Σ R)=0.410
+  [energy] it  70 | chain_energy(Σ R)=0.391
+  [energy] it  80 | chain_energy(Σ R)=0.330
+  [energy] it  90 | chain_energy(Σ R)=0.376
+  [energy] it  99 | chain_energy(Σ R)=0.330
+
+[energy] MIGRATION RESULT (L=3, seed=1):
+   room-center init : execute_success=False  | near-door frac=0.00 lift=0.00
+   after descent    : execute_success=False  | near-door frac=0.50 lift=20.00
+   Σ R: 1.708 -> 0.330
+[energy] wrote migration figure -> /Users/juliius/Nobel30/Zeus/figures/rung3_energy_migration_L3_s1.png
+[energy] instance L=3 seed=2: 2 interior slots @ room centers | doors=3
+  [energy] it   0 | chain_energy(Σ R)=1.442
+  [energy] it  10 | chain_energy(Σ R)=0.520
+  [energy] it  20 | chain_energy(Σ R)=0.499
+  [energy] it  30 | chain_energy(Σ R)=0.429
+  [energy] it  40 | chain_energy(Σ R)=0.710
+  [energy] it  50 | chain_energy(Σ R)=0.292
+  [energy] it  60 | chain_energy(Σ R)=0.314
+  [energy] it  70 | chain_energy(Σ R)=0.312
+  [energy] it  80 | chain_energy(Σ R)=0.348
+  [energy] it  90 | chain_energy(Σ R)=0.363
+  [energy] it  99 | chain_energy(Σ R)=0.404
+
+[energy] MIGRATION RESULT (L=3, seed=2):
+   room-center init : execute_success=False  | near-door frac=0.00 lift=0.00
+   after descent    : execute_success=False  | near-door frac=0.00 lift=0.00
+   Σ R: 1.442 -> 0.404
+[energy] wrote migration figure -> /Users/juliius/Nobel30/Zeus/figures/rung3_energy_migration_L3_s2.png
+[energy] instance L=3 seed=3: 2 interior slots @ room centers | doors=3
+  [energy] it   0 | chain_energy(Σ R)=1.148
+  [energy] it  10 | chain_energy(Σ R)=0.696
+  [energy] it  20 | chain_energy(Σ R)=0.996
+  [energy] it  30 | chain_energy(Σ R)=0.981
+  [energy] it  40 | chain_energy(Σ R)=1.186
+  [energy] it  50 | chain_energy(Σ R)=0.134
+  [energy] it  60 | chain_energy(Σ R)=0.126
+  [energy] it  70 | chain_energy(Σ R)=0.106
+  [energy] it  80 | chain_energy(Σ R)=0.124
+  [energy] it  90 | chain_energy(Σ R)=0.942
+  [energy] it  99 | chain_energy(Σ R)=0.195
+
+[energy] MIGRATION RESULT (L=3, seed=3):
+   room-center init : execute_success=False  | near-door frac=0.00 lift=0.00
+   after descent    : execute_success=False  | near-door frac=1.00 lift=66.67
+   Σ R: 1.148 -> 0.195
+[energy] wrote migration figure -> /Users/juliius/Nobel30/Zeus/figures/rung3_energy_migration_L3_s3.png
+
+[energy] SUMMARY (room-center -> descent):
+   seed 1: success False->False | lift 0.00->20.00
+   seed 2: success False->False | lift 0.00->0.00
+   seed 3: success False->False | lift 0.00->66.67

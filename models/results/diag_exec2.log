@@ -1,0 +1,4 @@
+L=2: EXTRACTED(true)=0.30 | ext per-hop reach=0.58 (11/19) | mean#subs=2.00 | sub->door mean=0.21
+L=3: EXTRACTED(true)=0.30 | ext per-hop reach=0.65 (15/23) | mean#subs=2.60 | sub->door mean=0.15
+L=4: EXTRACTED(true)=0.10 | ext per-hop reach=0.62 (16/26) | mean#subs=3.80 | sub->door mean=0.16
+DONE

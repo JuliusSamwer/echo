@@ -1,0 +1,186 @@
++ cd /workspace/HWM_PLDM
++ source /workspace/HWM_PLDM/activate_env.sh
+++ ZP1=/workspace
+++ source /workspace/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/workspace/miniconda3/bin/conda
++++ CONDA_EXE=/workspace/miniconda3/bin/conda
++++ export _CONDA_EXE=/workspace/miniconda3/bin/conda
++++ _CONDA_EXE=/workspace/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/workspace/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/workspace/miniconda3/bin/python
++++ export _CONDA_ROOT=/workspace/miniconda3
++++ _CONDA_ROOT=/workspace/miniconda3
++++ '[' -z '' ']'
++++ export CONDA_SHLVL=0
++++ CONDA_SHLVL=0
++++ '[' -n '' ']'
++++++ dirname /workspace/miniconda3/bin/conda
+++++ dirname /workspace/miniconda3/bin
++++ PATH=/workspace/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
++++ export PATH
++++ '[' -z '' ']'
++++ PS1=
+++ conda activate pldm
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate pldm
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1=
++++ __conda_exe shell.posix activate pldm
++++ '[' -n '' ']'
++++ /workspace/miniconda3/bin/conda shell.posix activate pldm
+++ ask_conda='export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(pldm) '\''
+export PATH='\''/workspace/miniconda3/envs/pldm/bin:/workspace/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'\''
+export CONDA_PREFIX='\''/workspace/miniconda3/envs/pldm'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''pldm'\''
+export CONDA_PROMPT_MODIFIER='\''(pldm) '\''
+export CONDA_EXE='\''/workspace/miniconda3/bin/conda'\''
+export _CONDA_EXE='\''/workspace/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/workspace/miniconda3/bin/python'\''
+export _CONDA_ROOT='\''/workspace/miniconda3'\'''
+++ eval 'export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(pldm) '\''
+export PATH='\''/workspace/miniconda3/envs/pldm/bin:/workspace/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'\''
+export CONDA_PREFIX='\''/workspace/miniconda3/envs/pldm'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''pldm'\''
+export CONDA_PROMPT_MODIFIER='\''(pldm) '\''
+export CONDA_EXE='\''/workspace/miniconda3/bin/conda'\''
+export _CONDA_EXE='\''/workspace/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/workspace/miniconda3/bin/python'\''
+export _CONDA_ROOT='\''/workspace/miniconda3'\'''
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ PS1='(pldm) '
++++ export PATH=/workspace/miniconda3/envs/pldm/bin:/workspace/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
++++ PATH=/workspace/miniconda3/envs/pldm/bin:/workspace/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
++++ export CONDA_PREFIX=/workspace/miniconda3/envs/pldm
++++ CONDA_PREFIX=/workspace/miniconda3/envs/pldm
++++ export CONDA_SHLVL=1
++++ CONDA_SHLVL=1
++++ export CONDA_DEFAULT_ENV=pldm
++++ CONDA_DEFAULT_ENV=pldm
++++ export 'CONDA_PROMPT_MODIFIER=(pldm) '
++++ CONDA_PROMPT_MODIFIER='(pldm) '
++++ export CONDA_EXE=/workspace/miniconda3/bin/conda
++++ CONDA_EXE=/workspace/miniconda3/bin/conda
++++ export _CONDA_EXE=/workspace/miniconda3/bin/conda
++++ _CONDA_EXE=/workspace/miniconda3/bin/conda
++++ export CONDA_PYTHON_EXE=/workspace/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/workspace/miniconda3/bin/python
++++ export _CONDA_ROOT=/workspace/miniconda3
++++ _CONDA_ROOT=/workspace/miniconda3
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
+++ export MUJOCO_PY_MUJOCO_PATH=/workspace/.mujoco/mujoco210
+++ MUJOCO_PY_MUJOCO_PATH=/workspace/.mujoco/mujoco210
+++ export LD_LIBRARY_PATH=:/workspace/.mujoco/mujoco210/bin:/usr/lib/nvidia
+++ LD_LIBRARY_PATH=:/workspace/.mujoco/mujoco210/bin:/usr/lib/nvidia
+++ export MUJOCO_GL=egl
+++ MUJOCO_GL=egl
+++ export D4RL_SUPPRESS_IMPORT_ERROR=1
+++ D4RL_SUPPRESS_IMPORT_ERROR=1
+++ export WANDB_MODE=offline
+++ WANDB_MODE=offline
++++ python -c 'import torch;print(torch.cuda.is_available())'
+++ echo '[env] pldm active | MUJOCO_GL=egl | cuda=True'
+[env] pldm active | MUJOCO_GL=egl | cuda=True
++ bash eval.sh hwm
+[eval] HWM (2-level hierarchical) ...
+/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/wandb/apis/public.py:3111: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import parse_version
+/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/wandb/apis/public.py:3111: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import parse_version
+wandb: Tracking run with wandb version 0.13.10
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:62: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.splits = torch.load(self.config.path)
+loading saved dataset from /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_25maps/data.p
+states will contain images
+loading /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/images.npy
+shape of images is: (101000, 98, 98, 3)
+85000 samples in  dataset
+estimating mean stds:   0%|          | 0/78 [00:00<?, ?it/s]/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:92: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  torch.from_numpy(self.images_tensor[index : index + length : skip_frame])
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:92: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  torch.from_numpy(self.images_tensor[index : index + length : skip_frame])
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:92: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  torch.from_numpy(self.images_tensor[index : index + length : skip_frame])
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:92: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  torch.from_numpy(self.images_tensor[index : index + length : skip_frame])
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:92: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  torch.from_numpy(self.images_tensor[index : index + length : skip_frame])
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:92: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  torch.from_numpy(self.images_tensor[index : index + length : skip_frame])
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:92: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  torch.from_numpy(self.images_tensor[index : index + length : skip_frame])
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:92: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  torch.from_numpy(self.images_tensor[index : index + length : skip_frame])
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:92: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  torch.from_numpy(self.images_tensor[index : index + length : skip_frame])
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:92: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  torch.from_numpy(self.images_tensor[index : index + length : skip_frame])
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:92: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  torch.from_numpy(self.images_tensor[index : index + length : skip_frame])
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:92: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  torch.from_numpy(self.images_tensor[index : index + length : skip_frame])
+estimating mean stds:   0%|          | 0/78 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/workspace/HWM_PLDM/pldm/train.py", line 737, in <module>
+    main(cfg)
+  File "/workspace/HWM_PLDM/pldm/train.py", line 724, in main
+    trainer = Trainer(config)
+  File "/workspace/HWM_PLDM/pldm/train.py", line 235, in __init__
+    datasets = DatasetFactory(
+  File "/workspace/HWM_PLDM/pldm/data/dataset_factory.py", line 35, in create_datasets
+    return self._create_d4rl_datasets()
+  File "/workspace/HWM_PLDM/pldm/data/dataset_factory.py", line 55, in _create_d4rl_datasets
+    ds = make_dataloader(ds=ds, loader_config=self.config)
+  File "/workspace/HWM_PLDM/pldm/data/utils.py", line 157, in make_dataloader
+    normalizer = Normalizer.build_normalizer(
+  File "/workspace/HWM_PLDM/pldm_envs/utils/normalizer.py", line 114, in build_normalizer
+    sample = next(it)
+  File "/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1465, in _next_data
+    return self._process_data(data)
+  File "/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1491, in _process_data
+    data.reraise()
+  File "/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/torch/_utils.py", line 715, in reraise
+    raise exception
+RuntimeError: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/torch/utils/data/_utils/collate.py", line 196, in collate
+    return elem_type(
+  File "/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/torch/utils/data/_utils/collate.py", line 198, in <genexpr>
+    collate(samples, collate_fn_map=collate_fn_map)
+  File "/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/torch/utils/data/_utils/collate.py", line 155, in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+  File "/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/torch/utils/data/_utils/collate.py", line 271, in collate_tensor_fn
+    out = elem.new(storage).resize_(len(batch), *list(elem.size()))
+RuntimeError: Trying to resize storage that is not resizable
+
+wandb: Waiting for W&B process to finish... (failed 1).
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /workspace/HWM_PLDM/checkpoint/maze2d_large_diverse/l2_wo_encoder/maze2d_large_diverse/wandb/offline-run-20260709_192218-7ux2aixn
+wandb: Find logs at: /workspace/HWM_PLDM/checkpoint/maze2d_large_diverse/l2_wo_encoder/maze2d_large_diverse/wandb/offline-run-20260709_192218-7ux2aixn/logs

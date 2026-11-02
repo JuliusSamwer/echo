@@ -1,0 +1,14 @@
+# Phase 2/3 base config (overlays the HWM eval; only repair-specific knobs here).
+seed: 246
+levels: "medium,hard"          # failure regime
+n_envs: 40                     # paper setting for the final matrix (12 for smoke/sweep)
+residual:
+  key: r_plan                  # r_plan | r_plan_norm  (switch to norm if calibration sanity-2 overlaps)
+  tau: null                    # set from CALIBRATION.md (90th pct r_plan of successful segs @ moderate L)
+repair:                        # Phase 3.1 defaults
+  alpha: 1.0
+  beta: 1.0
+  eta: 1.0e-2
+  n_inner: 10
+  refresh_actions: true
+  k_refresh: 10                # == n_inner -> one refresh at the end

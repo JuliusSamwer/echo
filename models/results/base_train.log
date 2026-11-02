@@ -1,0 +1,32 @@
+[base] it=0 mse=1.02e-03
+[base] it=2000 mse=8.08e-04
+[base] it=4000 mse=6.29e-04
+[base] it=6000 mse=6.15e-04
+[base] it=8000 mse=5.64e-04
+[base] it=10000 mse=5.63e-04
+[base] it=12000 mse=5.89e-04
+[base] it=14000 mse=5.02e-04
+[base] it=16000 mse=4.70e-04
+[base] it=18000 mse=5.87e-04
+[base] it=20000 mse=5.91e-04
+[base] it=22000 mse=4.84e-04
+[base] it=24000 mse=4.75e-04
+[base] it=26000 mse=5.71e-04
+[base] it=28000 mse=4.76e-04
+[base] it=30000 mse=4.82e-04
+[base] it=32000 mse=4.26e-04
+[base] it=34000 mse=3.73e-04
+[base] it=36000 mse=3.97e-04
+[base] it=38000 mse=4.31e-04
+[base] it=40000 mse=3.71e-04
+[base] it=42000 mse=3.28e-04
+[base] it=44000 mse=4.38e-04
+[base] it=46000 mse=4.76e-04
+[base] it=48000 mse=3.59e-04
+[base] it=50000 mse=4.18e-04
+[base] it=52000 mse=3.93e-04
+[base] it=54000 mse=4.32e-04
+[base] it=56000 mse=3.26e-04
+[base] it=58000 mse=3.75e-04
+[validate] open_rmse=4.86e-03  door_rmse=1.51e-02  wall_crossing_rate=0.0535  (overshoot=0.021)  FAIL
+[base] saved frozen base -> /Users/juliius/Nobel30/Zeus/models/base_frozen.pt  (validated ok=False)

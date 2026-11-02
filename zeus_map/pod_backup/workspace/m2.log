@@ -1,0 +1,26 @@
+[m2] instrumented hwm run start Fri Jul 10 02:30:09 UTC 2026
+[m2] hwm done; segments -> /workspace/HWM_PLDM/runs/hwm_segments.csv (1 rows)
+[m2] calibration (moderate L = medium = 2) ...
+/workspace/HWM_PLDM/repair/calibrate.py:33: RuntimeWarning: Mean of empty slice.
+  rx = (rx - rx.mean()); ry = (ry - ry.mean())
+/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[calibrate] plots skipped: index -1 is out of bounds for axis 0 with size 0
+# CALIBRATION.md — Phase 2 (residual calibration)
+
+Source: `runs/hwm_segments.csv`  · key: `r_plan`  · moderate L = 2  · n_segments = 0
+
+## Sanity 1 — r_plan vs r_exec correlation (must be positive)
+Spearman rho = **nan**  (want > ~0.3). WEAK/FAIL — flag.
+
+## Sanity 2 — r_plan larger on FAILED episodes (must separate)
+P(r_plan_fail > r_plan_succ) = **nan**  (want > 0.5; >0.6 = clean separation).
+n_succ_segments=0  n_fail_segments=0. See `figures/calib_rplan_dist.png`.
+
+## Trigger threshold
+tau = 90th pct of r_plan over SUCCESSFUL episodes at L=2  ->  **tau = nan**
+(store per-config; sweep {p75,p90,p97} in Phase 3.4).
+
+## Verdict: RED (r_plan not a usable reachability proxy — do NOT proceed)
+
+[m2] DONE Fri Jul 10 02:52:51 UTC 2026. See repair/CALIBRATION.md + figures/calib_*.png

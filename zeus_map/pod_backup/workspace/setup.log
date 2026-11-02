@@ -1,0 +1,1017 @@
+[setup] repo=/workspace/HWM_PLDM
+[setup] apt system deps (mujoco-py / GL / build) ...
+Hit:1 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64  InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:5 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu jammy InRelease
+Hit:6 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+build-essential is already the newest version (12.9ubuntu3).
+libglew-dev is already the newest version (2.2.0-4).
+libglfw3 is already the newest version (3.3.6-1).
+libglfw3-dev is already the newest version (3.3.6-1).
+patchelf is already the newest version (0.14.3-1).
+ca-certificates is already the newest version (20260601~22.04.1).
+git is already the newest version (1:2.34.1-1ubuntu1.17).
+libgl1-mesa-dev is already the newest version (23.2.1-1ubuntu3.1~22.04.4).
+libglib2.0-0 is already the newest version (2.72.4-0ubuntu2.9).
+libosmesa6-dev is already the newest version (23.2.1-1ubuntu3.1~22.04.4).
+unzip is already the newest version (6.0-26ubuntu3.2).
+wget is already the newest version (1.21.2-2ubuntu1.1).
+libgl1-mesa-glx is already the newest version (23.0.4-0ubuntu1~22.04.1).
+xvfb is already the newest version (2:21.1.4-2ubuntu1.7~22.04.16).
+0 upgraded, 0 newly installed, 0 to remove and 160 not upgraded.
+accepted Terms of Service for https://repo.anaconda.com/pkgs/main
+accepted Terms of Service for https://repo.anaconda.com/pkgs/r
+2 channel Terms of Service accepted
+Retrieving notices: - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ done
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): / - \ | / - \ | / - \ | / - \ | / - done
+Solving environment: | done
+
+## Package Plan ##
+
+  environment location: /workspace/miniconda3/envs/pldm
+
+  added / updated specs:
+    - python=3.9
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    libnsl-2.0.0               |       h5eee18b_0          31 KB
+    pip-26.0.1                 |     pyhc872135_1         1.1 MB
+    python-3.9.25              |       h0dcde21_1        23.0 MB
+    setuptools-80.9.0          |   py39h06a4308_0         1.4 MB
+    wheel-0.45.1               |   py39h06a4308_0         114 KB
+    ------------------------------------------------------------
+                                           Total:        25.7 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main 
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-52_gnu 
+  bzip2              pkgs/main/linux-64::bzip2-1.0.8-h5eee18b_6 
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2026.5.14-h06a4308_0 
+  expat              pkgs/main/linux-64::expat-2.8.2-h7354ed3_1 
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.44-h9e0c5a2_3 
+  libexpat           pkgs/main/linux-64::libexpat-2.8.2-h7354ed3_1 
+  libffi             pkgs/main/linux-64::libffi-3.4.8-h06d3fd0_3 
+  libgcc             pkgs/main/linux-64::libgcc-15.2.0-h69a1729_8 
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-15.2.0-h166f726_8 
+  libnsl             pkgs/main/linux-64::libnsl-2.0.0-h5eee18b_0 
+  libstdcxx          pkgs/main/linux-64::libstdcxx-15.2.0-h39759b7_8 
+  libuuid            pkgs/main/linux-64::libuuid-1.41.5-h5eee18b_0 
+  libxcb             pkgs/main/linux-64::libxcb-1.17.0-h9b100fa_0 
+  libzlib            pkgs/main/linux-64::libzlib-1.3.2-h47b2149_0 
+  ncurses            pkgs/main/linux-64::ncurses-6.5-h7934f7d_0 
+  openssl            pkgs/main/linux-64::openssl-3.5.7-h1b28b03_0 
+  pip                pkgs/main/noarch::pip-26.0.1-pyhc872135_1 
+  pthread-stubs      pkgs/main/linux-64::pthread-stubs-0.3-h0ce48e5_1 
+  python             pkgs/main/linux-64::python-3.9.25-h0dcde21_1 
+  readline           pkgs/main/linux-64::readline-8.3-hc2a1206_0 
+  setuptools         pkgs/main/linux-64::setuptools-80.9.0-py39h06a4308_0 
+  sqlite             pkgs/main/linux-64::sqlite-3.53.2-h795bf6d_0 
+  tk                 pkgs/main/linux-64::tk-8.6.15-h54e0aa7_0 
+  tzdata             pkgs/main/noarch::tzdata-2026b-he532380_0 
+  wheel              pkgs/main/linux-64::wheel-0.45.1-py39h06a4308_0 
+  xorg-libx11        pkgs/main/linux-64::xorg-libx11-1.8.12-h9b100fa_1 
+  xorg-libxau        pkgs/main/linux-64::xorg-libxau-1.0.12-h9b100fa_0 
+  xorg-libxdmcp      pkgs/main/linux-64::xorg-libxdmcp-1.1.5-h9b100fa_0 
+  xorg-xorgproto     pkgs/main/linux-64::xorg-xorgproto-2024.1-h47b2149_2 
+  xz                 pkgs/main/linux-64::xz-5.8.2-h448239c_0 
+  zlib               pkgs/main/linux-64::zlib-1.3.2-h47b2149_0 
+
+
+
+Downloading and Extracting Packages: ...working...python-3.9.25        | 23.0 MB   |            |   0% 
+setuptools-80.9.0    | 1.4 MB    |            |   0% [A
+
+pip-26.0.1           | 1.1 MB    |            |   0% [A[A
+
+
+wheel-0.45.1         | 114 KB    |            |   0% [A[A[A
+
+
+
+libnsl-2.0.0         | 31 KB     |            |   0% [A[A[A[A
+
+
+
+libnsl-2.0.0         | 31 KB     | ########## | 100% [A[A[A[A
+
+
+wheel-0.45.1         | 114 KB    | ########## | 100% [A[A[Apython-3.9.25        | 23.0 MB   | 6          |   6% 
+setuptools-80.9.0    | 1.4 MB    | #########8 |  98% [A
+setuptools-80.9.0    | 1.4 MB    | ########## | 100% [A
+
+pip-26.0.1           | 1.1 MB    | ########## | 100% [A[A
+
+pip-26.0.1           | 1.1 MB    | ########## | 100% [A[Apython-3.9.25        | 23.0 MB   | #######2   |  72% 
+
+
+
+libnsl-2.0.0         | 31 KB     | ########## | 100% [A[A[A[A
+
+
+
+libnsl-2.0.0         | 31 KB     | ########## | 100% [A[A[A[Apython-3.9.25        | 23.0 MB   | ########## | 100% 
+
+
+wheel-0.45.1         | 114 KB    | ########## | 100% [A[A[A
+
+
+wheel-0.45.1         | 114 KB    | ########## | 100% [A[A[A
+
+pip-26.0.1           | 1.1 MB    | ########## | 100% [A[A
+setuptools-80.9.0    | 1.4 MB    | ########## | 100% [Apython-3.9.25        | 23.0 MB   | ########## | 100%                                                      
+                                                     [A
+
+                                                     [A[A
+
+
+                                                     [A[A[A
+
+
+
+                                                     [A[A[A[A done
+Preparing transaction: - \ | / - \ done
+Verifying transaction: / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ done
+Executing transaction: / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | done
+WARNING conda.conda_pypi.main:notify_externally_managed_future(156): 
+  Did you know? You can install many PyPI packages with conda
+  using the conda-pypi beta. Get started:
+    https://docs.conda.io/projects/conda/en/stable/new-features.html
+
+#
+# To activate this environment, use
+#
+#     $ conda activate pldm
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
+Channel "defaults" has the following notices:
+  [info] -- Tue Jun  9 00:00:00 2026
+  PyTorch 2.12 with CUDA support is now available to install with your current channel (Anaconda Main). Learn more: https://anaconda.org/main/pytorch?utm_source=channel_notices
+
+[setup] pip install requirements (this compiles mujoco-py on first import) ...
+Requirement already satisfied: pip in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (26.0.1)
+Requirement already satisfied: wheel in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (0.45.1)
+Collecting wheel
+  Downloading wheel-0.47.0-py3-none-any.whl.metadata (2.3 kB)
+Requirement already satisfied: setuptools in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (80.9.0)
+Collecting setuptools
+  Downloading setuptools-82.0.1-py3-none-any.whl.metadata (6.5 kB)
+Collecting cython==0.29.33
+  Downloading Cython-0.29.33-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl.metadata (3.1 kB)
+Collecting packaging>=24.0 (from wheel)
+  Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+Downloading Cython-0.29.33-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 1.2 MB/s  0:00:01
+Downloading wheel-0.47.0-py3-none-any.whl (32 kB)
+Downloading setuptools-82.0.1-py3-none-any.whl (1.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 2.7 MB/s  0:00:00
+Downloading packaging-26.2-py3-none-any.whl (100 kB)
+Installing collected packages: setuptools, packaging, cython, wheel
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 80.9.0
+    Uninstalling setuptools-80.9.0:
+      Successfully uninstalled setuptools-80.9.0
+  Attempting uninstall: wheel
+    Found existing installation: wheel 0.45.1
+    Uninstalling wheel-0.45.1:
+      Successfully uninstalled wheel-0.45.1
+
+Successfully installed cython-0.29.33 packaging-26.2 setuptools-82.0.1 wheel-0.47.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Collecting absl-py==1.4.0 (from -r requirements.txt (line 1))
+  Downloading absl_py-1.4.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting aiofiles==22.1.0 (from -r requirements.txt (line 2))
+  Downloading aiofiles-22.1.0-py3-none-any.whl.metadata (8.0 kB)
+Collecting aiosqlite==0.18.0 (from -r requirements.txt (line 3))
+  Downloading aiosqlite-0.18.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting antlr4-python3-runtime==4.9.3 (from -r requirements.txt (line 4))
+  Downloading antlr4-python3-runtime-4.9.3.tar.gz (117 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting anyio==3.6.2 (from -r requirements.txt (line 5))
+  Downloading anyio-3.6.2-py3-none-any.whl.metadata (4.7 kB)
+Collecting appdirs==1.4.4 (from -r requirements.txt (line 6))
+  Downloading appdirs-1.4.4-py2.py3-none-any.whl.metadata (9.0 kB)
+Collecting argon2-cffi==21.3.0 (from -r requirements.txt (line 7))
+  Downloading argon2_cffi-21.3.0-py3-none-any.whl.metadata (5.4 kB)
+Collecting argon2-cffi-bindings==21.2.0 (from -r requirements.txt (line 8))
+  Downloading argon2_cffi_bindings-21.2.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+Collecting arm_pytorch_utilities==0.4.3 (from -r requirements.txt (line 9))
+  Downloading arm_pytorch_utilities-0.4.3-py3-none-any.whl.metadata (2.6 kB)
+Collecting arrow==1.2.3 (from -r requirements.txt (line 10))
+  Downloading arrow-1.2.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting asciitree==0.3.3 (from -r requirements.txt (line 11))
+  Downloading asciitree-0.3.3.tar.gz (4.0 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting asttokens==2.2.1 (from -r requirements.txt (line 12))
+  Downloading asttokens-2.2.1-py2.py3-none-any.whl.metadata (4.8 kB)
+Collecting attrs==22.2.0 (from -r requirements.txt (line 13))
+  Downloading attrs-22.2.0-py3-none-any.whl.metadata (13 kB)
+Collecting Babel==2.11.0 (from -r requirements.txt (line 14))
+  Downloading Babel-2.11.0-py3-none-any.whl.metadata (1.4 kB)
+Collecting backcall==0.2.0 (from -r requirements.txt (line 15))
+  Downloading backcall-0.2.0-py2.py3-none-any.whl.metadata (2.0 kB)
+Collecting beautifulsoup4==4.11.2 (from -r requirements.txt (line 16))
+  Downloading beautifulsoup4-4.11.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting black==24.10.0 (from -r requirements.txt (line 17))
+  Downloading black-24.10.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+Collecting bleach==6.0.0 (from -r requirements.txt (line 18))
+  Downloading bleach-6.0.0-py3-none-any.whl.metadata (29 kB)
+Collecting cached-property==1.5.2 (from -r requirements.txt (line 19))
+  Downloading cached_property-1.5.2-py2.py3-none-any.whl.metadata (11 kB)
+Collecting certifi==2022.12.7 (from -r requirements.txt (line 20))
+  Downloading certifi-2022.12.7-py3-none-any.whl.metadata (2.9 kB)
+Collecting cffi==1.15.1 (from -r requirements.txt (line 21))
+  Downloading cffi-1.15.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.1 kB)
+Collecting charset-normalizer==3.0.1 (from -r requirements.txt (line 22))
+  Downloading charset_normalizer-3.0.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (27 kB)
+Collecting click==8.1.3 (from -r requirements.txt (line 23))
+  Downloading click-8.1.3-py3-none-any.whl.metadata (3.2 kB)
+Collecting cloudpickle==2.2.1 (from -r requirements.txt (line 24))
+  Downloading cloudpickle-2.2.1-py3-none-any.whl.metadata (6.9 kB)
+Collecting colorama==0.4.6 (from -r requirements.txt (line 25))
+  Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting comm==0.1.2 (from -r requirements.txt (line 26))
+  Downloading comm-0.1.2-py3-none-any.whl.metadata (3.9 kB)
+Collecting contextlib2==21.6.0 (from -r requirements.txt (line 27))
+  Downloading contextlib2-21.6.0-py2.py3-none-any.whl.metadata (4.1 kB)
+Collecting contourpy==1.0.7 (from -r requirements.txt (line 28))
+  Downloading contourpy-1.0.7-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)
+Collecting cycler==0.11.0 (from -r requirements.txt (line 29))
+  Downloading cycler-0.11.0-py3-none-any.whl.metadata (785 bytes)
+Requirement already satisfied: Cython==0.29.33 in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from -r requirements.txt (line 30)) (0.29.33)
+Collecting d4rl==1.1 (from -r requirements.txt (line 31))
+  Downloading d4rl-1.1-py3-none-any.whl.metadata (270 bytes)
+Collecting debugpy==1.6.6 (from -r requirements.txt (line 32))
+  Downloading debugpy-1.6.6-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.1 kB)
+Collecting decorator==4.4.2 (from -r requirements.txt (line 33))
+  Downloading decorator-4.4.2-py2.py3-none-any.whl.metadata (4.2 kB)
+Collecting defusedxml==0.7.1 (from -r requirements.txt (line 34))
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+Collecting dm-env==1.6 (from -r requirements.txt (line 35))
+  Downloading dm_env-1.6-py3-none-any.whl.metadata (966 bytes)
+Collecting dm-tree==0.1.8 (from -r requirements.txt (line 36))
+  Downloading dm_tree-0.1.8-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.9 kB)
+Collecting dm_control==1.0.26 (from -r requirements.txt (line 37))
+  Downloading dm_control-1.0.26-py3-none-any.whl.metadata (1.3 kB)
+Collecting docker-pycreds==0.4.0 (from -r requirements.txt (line 38))
+  Downloading docker_pycreds-0.4.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting etils==1.5.2 (from -r requirements.txt (line 39))
+  Downloading etils-1.5.2-py3-none-any.whl.metadata (6.3 kB)
+Collecting executing==1.2.0 (from -r requirements.txt (line 40))
+  Downloading executing-1.2.0-py2.py3-none-any.whl.metadata (8.9 kB)
+Collecting Farama-Notifications==0.0.4 (from -r requirements.txt (line 41))
+  Downloading Farama_Notifications-0.0.4-py3-none-any.whl.metadata (558 bytes)
+Collecting fasteners==0.18 (from -r requirements.txt (line 42))
+  Downloading fasteners-0.18-py3-none-any.whl.metadata (4.9 kB)
+Collecting fastjsonschema==2.16.3 (from -r requirements.txt (line 43))
+  Downloading fastjsonschema-2.16.3-py3-none-any.whl.metadata (2.0 kB)
+Collecting filelock==3.16.1 (from -r requirements.txt (line 44))
+  Downloading filelock-3.16.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting fonttools==4.38.0 (from -r requirements.txt (line 45))
+  Downloading fonttools-4.38.0-py3-none-any.whl.metadata (138 kB)
+Collecting fqdn==1.5.1 (from -r requirements.txt (line 46))
+  Downloading fqdn-1.5.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting fsspec==2024.12.0 (from -r requirements.txt (line 47))
+  Downloading fsspec-2024.12.0-py3-none-any.whl.metadata (11 kB)
+Collecting gast==0.5.3 (from -r requirements.txt (line 48))
+  Downloading gast-0.5.3-py3-none-any.whl.metadata (1.3 kB)
+Collecting gitdb==4.0.10 (from -r requirements.txt (line 49))
+  Downloading gitdb-4.0.10-py3-none-any.whl.metadata (1.1 kB)
+Collecting GitPython==3.1.30 (from -r requirements.txt (line 50))
+  Downloading GitPython-3.1.30-py3-none-any.whl.metadata (1.3 kB)
+Collecting glfw==2.5.6 (from -r requirements.txt (line 51))
+  Downloading glfw-2.5.6-py2.py27.py3.py30.py31.py32.py33.py34.py35.py36.py37.py38-none-manylinux2014_x86_64.whl.metadata (4.9 kB)
+Collecting gym==0.23.1 (from -r requirements.txt (line 52))
+  Downloading gym-0.23.1.tar.gz (626 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 626.2/626.2 kB 6.8 MB/s  0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting gym-notices==0.0.8 (from -r requirements.txt (line 53))
+  Downloading gym_notices-0.0.8-py3-none-any.whl.metadata (1.0 kB)
+Collecting gymnasium==1.0.0 (from -r requirements.txt (line 54))
+  Downloading gymnasium-1.0.0-py3-none-any.whl.metadata (9.5 kB)
+Collecting h5py==3.8.0 (from -r requirements.txt (line 55))
+  Downloading h5py-3.8.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.5 kB)
+Collecting humanize==4.11.0 (from -r requirements.txt (line 56))
+  Downloading humanize-4.11.0-py3-none-any.whl.metadata (7.8 kB)
+Collecting icecream==2.1.3 (from -r requirements.txt (line 57))
+  Downloading icecream-2.1.3-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting idna==3.4 (from -r requirements.txt (line 58))
+  Downloading idna-3.4-py3-none-any.whl.metadata (9.8 kB)
+Collecting imageio==2.25.1 (from -r requirements.txt (line 59))
+  Downloading imageio-2.25.1-py3-none-any.whl.metadata (5.0 kB)
+Collecting imageio-ffmpeg==0.4.8 (from -r requirements.txt (line 60))
+  Downloading imageio_ffmpeg-0.4.8-py3-none-manylinux2010_x86_64.whl.metadata (1.6 kB)
+Collecting importlib-metadata==6.0.0 (from -r requirements.txt (line 61))
+  Downloading importlib_metadata-6.0.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting importlib-resources==5.10.2 (from -r requirements.txt (line 62))
+  Downloading importlib_resources-5.10.2-py3-none-any.whl.metadata (4.1 kB)
+Collecting isoduration==20.11.0 (from -r requirements.txt (line 63))
+  Downloading isoduration-20.11.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting jedi==0.18.2 (from -r requirements.txt (line 64))
+  Downloading jedi-0.18.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting Jinja2==3.1.2 (from -r requirements.txt (line 65))
+  Downloading Jinja2-3.1.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting json5==0.9.11 (from -r requirements.txt (line 66))
+  Downloading json5-0.9.11-py2.py3-none-any.whl.metadata (10.0 kB)
+Collecting jsonpointer==2.3 (from -r requirements.txt (line 67))
+  Downloading jsonpointer-2.3-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting jsonschema==4.17.3 (from -r requirements.txt (line 68))
+  Downloading jsonschema-4.17.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting kiwisolver==1.4.4 (from -r requirements.txt (line 69))
+  Downloading kiwisolver-1.4.4-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.3 kB)
+Collecting labmaze==1.0.6 (from -r requirements.txt (line 70))
+  Downloading labmaze-1.0.6-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (324 bytes)
+Collecting llvmlite==0.43.0 (from -r requirements.txt (line 71))
+  Downloading llvmlite-0.43.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.8 kB)
+Collecting lxml==4.9.2 (from -r requirements.txt (line 72))
+  Downloading lxml-4.9.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl.metadata (3.6 kB)
+Collecting markdown-it-py==2.1.0 (from -r requirements.txt (line 73))
+  Downloading markdown_it_py-2.1.0-py3-none-any.whl.metadata (6.8 kB)
+Collecting MarkupSafe==2.1.2 (from -r requirements.txt (line 74))
+  Downloading MarkupSafe-2.1.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.2 kB)
+Collecting matplotlib==3.7.0 (from -r requirements.txt (line 75))
+  Downloading matplotlib-3.7.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.6 kB)
+Collecting matplotlib-inline==0.1.6 (from -r requirements.txt (line 76))
+  Downloading matplotlib_inline-0.1.6-py3-none-any.whl.metadata (2.8 kB)
+Collecting mdurl==0.1.2 (from -r requirements.txt (line 77))
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting mistune==2.0.5 (from -r requirements.txt (line 78))
+  Downloading mistune-2.0.5-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting ml_collections==0.1.1 (from -r requirements.txt (line 79))
+  Downloading ml_collections-0.1.1.tar.gz (77 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting ml_dtypes==0.5.0 (from -r requirements.txt (line 80))
+  Downloading ml_dtypes-0.5.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (21 kB)
+Collecting moviepy==1.0.3 (from -r requirements.txt (line 81))
+  Downloading moviepy-1.0.3.tar.gz (388 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting mpmath==1.3.0 (from -r requirements.txt (line 82))
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting msgpack==1.0.4 (from -r requirements.txt (line 83))
+  Downloading msgpack-1.0.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.7 kB)
+Collecting mujoco==3.2.6 (from -r requirements.txt (line 84))
+  Downloading mujoco-3.2.6-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (44 kB)
+Collecting mujoco-py==2.1.2.14 (from -r requirements.txt (line 85))
+  Downloading mujoco_py-2.1.2.14-py3-none-any.whl.metadata (669 bytes)
+Collecting mypy-extensions==1.0.0 (from -r requirements.txt (line 86))
+  Downloading mypy_extensions-1.0.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting nbclassic==0.5.2 (from -r requirements.txt (line 87))
+  Downloading nbclassic-0.5.2-py3-none-any.whl.metadata (3.3 kB)
+Collecting nbclient==0.7.2 (from -r requirements.txt (line 88))
+  Downloading nbclient-0.7.2-py3-none-any.whl.metadata (8.2 kB)
+Collecting nbconvert==7.2.9 (from -r requirements.txt (line 89))
+  Downloading nbconvert-7.2.9-py3-none-any.whl.metadata (8.3 kB)
+Collecting nbformat==5.7.3 (from -r requirements.txt (line 90))
+  Downloading nbformat-5.7.3-py3-none-any.whl.metadata (5.0 kB)
+Collecting nest-asyncio==1.5.6 (from -r requirements.txt (line 91))
+  Downloading nest_asyncio-1.5.6-py3-none-any.whl.metadata (2.7 kB)
+Collecting networkx==3.2.1 (from -r requirements.txt (line 92))
+  Downloading networkx-3.2.1-py3-none-any.whl.metadata (5.2 kB)
+Collecting numba==0.60.0 (from -r requirements.txt (line 93))
+  Downloading numba-0.60.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+Collecting numcodecs==0.12.1 (from -r requirements.txt (line 94))
+  Downloading numcodecs-0.12.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+Collecting numpy==1.26.4 (from -r requirements.txt (line 95))
+  Downloading numpy-1.26.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting nvidia-cublas-cu12==12.4.5.8 (from -r requirements.txt (line 96))
+  Downloading nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-cupti-cu12==12.4.127 (from -r requirements.txt (line 97))
+  Downloading nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cuda-nvcc-cu12==12.6.85 (from -r requirements.txt (line 98))
+  Downloading nvidia_cuda_nvcc_cu12-12.6.85-py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.4.127 (from -r requirements.txt (line 99))
+  Downloading nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-runtime-cu12==12.4.127 (from -r requirements.txt (line 100))
+  Downloading nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cudnn-cu12==9.1.0.70 (from -r requirements.txt (line 101))
+  Downloading nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cufft-cu12==11.2.1.3 (from -r requirements.txt (line 102))
+  Downloading nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-curand-cu12==10.3.5.147 (from -r requirements.txt (line 103))
+  Downloading nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cusolver-cu12==11.6.1.9 (from -r requirements.txt (line 104))
+  Downloading nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cusparse-cu12==12.3.1.170 (from -r requirements.txt (line 105))
+  Downloading nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-nccl-cu12==2.21.5 (from -r requirements.txt (line 106))
+  Downloading nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvjitlink-cu12==12.4.127 (from -r requirements.txt (line 107))
+  Downloading nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-nvtx-cu12==12.4.127 (from -r requirements.txt (line 108))
+  Downloading nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.7 kB)
+Collecting omegaconf==2.3.0 (from -r requirements.txt (line 109))
+  Downloading omegaconf-2.3.0-py3-none-any.whl.metadata (3.9 kB)
+Collecting packaging==23.0 (from -r requirements.txt (line 110))
+  Downloading packaging-23.0-py3-none-any.whl.metadata (3.1 kB)
+Collecting pandas==2.0.1 (from -r requirements.txt (line 111))
+  Downloading pandas-2.0.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Collecting pandocfilters==1.5.0 (from -r requirements.txt (line 112))
+  Downloading pandocfilters-1.5.0-py2.py3-none-any.whl.metadata (9.0 kB)
+Collecting parso==0.8.3 (from -r requirements.txt (line 113))
+  Downloading parso-0.8.3-py2.py3-none-any.whl.metadata (7.5 kB)
+Collecting pathspec==0.12.1 (from -r requirements.txt (line 114))
+  Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+Collecting pathtools==0.1.2 (from -r requirements.txt (line 115))
+  Downloading pathtools-0.1.2.tar.gz (11 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting patsy==1.0.1 (from -r requirements.txt (line 116))
+  Downloading patsy-1.0.1-py2.py3-none-any.whl.metadata (3.3 kB)
+Collecting pexpect==4.8.0 (from -r requirements.txt (line 117))
+  Downloading pexpect-4.8.0-py2.py3-none-any.whl.metadata (2.2 kB)
+Collecting pickleshare==0.7.5 (from -r requirements.txt (line 118))
+  Downloading pickleshare-0.7.5-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting Pillow==9.4.0 (from -r requirements.txt (line 119))
+  Downloading Pillow-9.4.0-cp39-cp39-manylinux_2_28_x86_64.whl.metadata (9.3 kB)
+Collecting pkgutil_resolve_name==1.3.10 (from -r requirements.txt (line 120))
+  Downloading pkgutil_resolve_name-1.3.10-py3-none-any.whl.metadata (624 bytes)
+Collecting platformdirs==3.0.0 (from -r requirements.txt (line 121))
+  Downloading platformdirs-3.0.0-py3-none-any.whl.metadata (9.5 kB)
+Collecting proglog==0.1.10 (from -r requirements.txt (line 122))
+  Downloading proglog-0.1.10-py3-none-any.whl.metadata (639 bytes)
+Collecting prometheus-client==0.16.0 (from -r requirements.txt (line 123))
+  Downloading prometheus_client-0.16.0-py3-none-any.whl.metadata (22 kB)
+Collecting prompt-toolkit==3.0.37 (from -r requirements.txt (line 124))
+  Downloading prompt_toolkit-3.0.37-py3-none-any.whl.metadata (7.0 kB)
+Collecting protobuf==4.21.12 (from -r requirements.txt (line 125))
+  Downloading protobuf-4.21.12-cp37-abi3-manylinux2014_x86_64.whl.metadata (541 bytes)
+Collecting psutil==5.9.4 (from -r requirements.txt (line 126))
+  Downloading psutil-5.9.4-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (21 kB)
+Collecting ptyprocess==0.7.0 (from -r requirements.txt (line 127))
+  Downloading ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting pure-eval==0.2.2 (from -r requirements.txt (line 128))
+  Downloading pure_eval-0.2.2-py3-none-any.whl.metadata (6.2 kB)
+Collecting pycparser==2.21 (from -r requirements.txt (line 129))
+  Downloading pycparser-2.21-py2.py3-none-any.whl.metadata (1.1 kB)
+Collecting Pygments==2.14.0 (from -r requirements.txt (line 130))
+  Downloading Pygments-2.14.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting PyOpenGL==3.1.6 (from -r requirements.txt (line 131))
+  Downloading PyOpenGL-3.1.6-py3-none-any.whl.metadata (3.2 kB)
+Collecting pyparsing==3.0.9 (from -r requirements.txt (line 132))
+  Downloading pyparsing-3.0.9-py3-none-any.whl.metadata (4.2 kB)
+Collecting pyrsistent==0.19.3 (from -r requirements.txt (line 133))
+  Downloading pyrsistent-0.19.3-py3-none-any.whl.metadata (27 kB)
+Collecting python-dateutil==2.8.2 (from -r requirements.txt (line 134))
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl.metadata (8.2 kB)
+Collecting python-json-logger==2.0.7 (from -r requirements.txt (line 135))
+  Downloading python_json_logger-2.0.7-py3-none-any.whl.metadata (6.5 kB)
+Collecting pytorch-seed==0.2.0 (from -r requirements.txt (line 136))
+  Downloading pytorch_seed-0.2.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting pytz==2022.7.1 (from -r requirements.txt (line 137))
+  Downloading pytz-2022.7.1-py2.py3-none-any.whl.metadata (21 kB)
+Collecting PyYAML==6.0 (from -r requirements.txt (line 138))
+  Downloading PyYAML-6.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (2.0 kB)
+Collecting pyzmq==25.0.0 (from -r requirements.txt (line 139))
+  Downloading pyzmq-25.0.0-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (4.8 kB)
+Collecting requests==2.28.2 (from -r requirements.txt (line 140))
+  Downloading requests-2.28.2-py3-none-any.whl.metadata (4.6 kB)
+Collecting rfc3339-validator==0.1.4 (from -r requirements.txt (line 141))
+  Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting rfc3986-validator==0.1.1 (from -r requirements.txt (line 142))
+  Downloading rfc3986_validator-0.1.1-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting rich==13.3.1 (from -r requirements.txt (line 143))
+  Downloading rich-13.3.1-py3-none-any.whl.metadata (18 kB)
+Collecting scipy==1.10.0 (from -r requirements.txt (line 144))
+  Downloading scipy-1.10.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (58 kB)
+Collecting Send2Trash==1.8.0 (from -r requirements.txt (line 145))
+  Downloading Send2Trash-1.8.0-py3-none-any.whl.metadata (6.8 kB)
+Collecting sentry-sdk==1.15.0 (from -r requirements.txt (line 146))
+  Downloading sentry_sdk-1.15.0-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting setproctitle==1.3.2 (from -r requirements.txt (line 147))
+  Downloading setproctitle-1.3.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.8 kB)
+Collecting six==1.16.0 (from -r requirements.txt (line 148))
+  Downloading six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting smmap==5.0.0 (from -r requirements.txt (line 149))
+  Downloading smmap-5.0.0-py3-none-any.whl.metadata (4.2 kB)
+Collecting sniffio==1.3.0 (from -r requirements.txt (line 150))
+  Downloading sniffio-1.3.0-py3-none-any.whl.metadata (3.6 kB)
+Collecting soupsieve==2.4 (from -r requirements.txt (line 151))
+  Downloading soupsieve-2.4-py3-none-any.whl.metadata (5.8 kB)
+Collecting stack-data==0.6.2 (from -r requirements.txt (line 152))
+  Downloading stack_data-0.6.2-py3-none-any.whl.metadata (18 kB)
+Collecting statsmodels==0.14.4 (from -r requirements.txt (line 153))
+  Downloading statsmodels-0.14.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.2 kB)
+Collecting sympy==1.13.1 (from -r requirements.txt (line 154))
+  Downloading sympy-1.13.1-py3-none-any.whl.metadata (12 kB)
+Collecting tensorstore==0.1.69 (from -r requirements.txt (line 155))
+  Downloading tensorstore-0.1.69-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.0 kB)
+Collecting termcolor==2.2.0 (from -r requirements.txt (line 156))
+  Downloading termcolor-2.2.0-py3-none-any.whl.metadata (5.3 kB)
+Collecting terminado==0.17.1 (from -r requirements.txt (line 157))
+  Downloading terminado-0.17.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting tinycss2==1.2.1 (from -r requirements.txt (line 158))
+  Downloading tinycss2-1.2.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting tomli==2.0.1 (from -r requirements.txt (line 159))
+  Downloading tomli-2.0.1-py3-none-any.whl.metadata (8.9 kB)
+Collecting toolz==0.12.0 (from -r requirements.txt (line 160))
+  Downloading toolz-0.12.0-py3-none-any.whl.metadata (5.1 kB)
+Collecting torch==2.5.1 (from -r requirements.txt (line 161))
+  Downloading torch-2.5.1-cp39-cp39-manylinux1_x86_64.whl.metadata (28 kB)
+Collecting torchvision==0.20.1 (from -r requirements.txt (line 162))
+  Downloading torchvision-0.20.1-cp39-cp39-manylinux1_x86_64.whl.metadata (6.1 kB)
+Collecting tornado==6.2 (from -r requirements.txt (line 163))
+  Downloading tornado-6.2-cp37-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.5 kB)
+Collecting tqdm==4.64.1 (from -r requirements.txt (line 164))
+  Downloading tqdm-4.64.1-py2.py3-none-any.whl.metadata (57 kB)
+Collecting traitlets==5.9.0 (from -r requirements.txt (line 165))
+  Downloading traitlets-5.9.0-py3-none-any.whl.metadata (10 kB)
+Collecting triton==3.1.0 (from -r requirements.txt (line 166))
+  Downloading triton-3.1.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.3 kB)
+Collecting typing_extensions==4.12.2 (from -r requirements.txt (line 167))
+  Downloading typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting tzdata==2024.2 (from -r requirements.txt (line 168))
+  Downloading tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting uri-template==1.2.0 (from -r requirements.txt (line 169))
+  Downloading uri_template-1.2.0-py3-none-any.whl.metadata (7.8 kB)
+Collecting urllib3==1.26.14 (from -r requirements.txt (line 170))
+  Downloading urllib3-1.26.14-py2.py3-none-any.whl.metadata (47 kB)
+Collecting wandb==0.13.10 (from -r requirements.txt (line 171))
+  Downloading wandb-0.13.10-py3-none-any.whl.metadata (7.7 kB)
+Collecting wcwidth==0.2.6 (from -r requirements.txt (line 172))
+  Downloading wcwidth-0.2.6-py2.py3-none-any.whl.metadata (11 kB)
+Collecting webcolors==1.12 (from -r requirements.txt (line 173))
+  Downloading webcolors-1.12-py3-none-any.whl.metadata (2.0 kB)
+Collecting webencodings==0.5.1 (from -r requirements.txt (line 174))
+  Downloading webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+Collecting websocket-client==1.5.1 (from -r requirements.txt (line 175))
+  Downloading websocket_client-1.5.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting y-py==0.5.9 (from -r requirements.txt (line 176))
+  Downloading y_py-0.5.9-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+Collecting zarr==2.14.2 (from -r requirements.txt (line 177))
+  Downloading zarr-2.14.2-py3-none-any.whl.metadata (5.3 kB)
+Collecting zipp==3.13.0 (from -r requirements.txt (line 178))
+  Downloading zipp-3.13.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting pybullet (from d4rl==1.1->-r requirements.txt (line 31))
+  Downloading pybullet-3.2.7-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.8 kB)
+Requirement already satisfied: setuptools!=50.0.0 in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from dm_control==1.0.26->-r requirements.txt (line 37)) (82.0.1)
+Collecting jupyter-core>=4.6.1 (from nbclassic==0.5.2->-r requirements.txt (line 87))
+  Downloading jupyter_core-5.8.1-py3-none-any.whl.metadata (1.6 kB)
+Collecting jupyter-client>=6.1.1 (from nbclassic==0.5.2->-r requirements.txt (line 87))
+  Downloading jupyter_client-8.6.3-py3-none-any.whl.metadata (8.3 kB)
+Collecting ipython-genutils (from nbclassic==0.5.2->-r requirements.txt (line 87))
+  Downloading ipython_genutils-0.2.0-py2.py3-none-any.whl.metadata (755 bytes)
+Collecting jupyter-server>=1.8 (from nbclassic==0.5.2->-r requirements.txt (line 87))
+  Downloading jupyter_server-2.18.2-py3-none-any.whl.metadata (8.5 kB)
+Collecting notebook-shim>=0.1.0 (from nbclassic==0.5.2->-r requirements.txt (line 87))
+  Downloading notebook_shim-0.2.4-py3-none-any.whl.metadata (4.0 kB)
+Collecting ipykernel (from nbclassic==0.5.2->-r requirements.txt (line 87))
+  Downloading ipykernel-6.31.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting jupyterlab-pygments (from nbconvert==7.2.9->-r requirements.txt (line 89))
+  Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting jupyter-events>=0.11.0 (from jupyter-server>=1.8->nbclassic==0.5.2->-r requirements.txt (line 87))
+  Downloading jupyter_events-0.12.1-py3-none-any.whl.metadata (5.8 kB)
+Collecting jupyter-server-terminals>=0.4.4 (from jupyter-server>=1.8->nbclassic==0.5.2->-r requirements.txt (line 87))
+  Downloading jupyter_server_terminals-0.5.4-py3-none-any.whl.metadata (5.9 kB)
+Collecting overrides>=5.0 (from jupyter-server>=1.8->nbclassic==0.5.2->-r requirements.txt (line 87))
+  Downloading overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+INFO: pip is looking at multiple versions of jupyter-server to determine which version is compatible with other requirements. This could take a while.
+Collecting jupyter-server>=1.8 (from nbclassic==0.5.2->-r requirements.txt (line 87))
+  Downloading jupyter_server-2.18.1-py3-none-any.whl.metadata (8.5 kB)
+  Downloading jupyter_server-2.18.0-py3-none-any.whl.metadata (8.5 kB)
+  Downloading jupyter_server-2.17.0-py3-none-any.whl.metadata (8.5 kB)
+  Downloading jupyter_server-2.16.0-py3-none-any.whl.metadata (8.5 kB)
+  Downloading jupyter_server-2.15.0-py3-none-any.whl.metadata (8.4 kB)
+  Downloading jupyter_server-2.14.2-py3-none-any.whl.metadata (8.4 kB)
+  Downloading jupyter_server-2.14.1-py3-none-any.whl.metadata (8.4 kB)
+INFO: pip is still looking at multiple versions of jupyter-server to determine which version is compatible with other requirements. This could take a while.
+  Downloading jupyter_server-2.14.0-py3-none-any.whl.metadata (8.4 kB)
+  Downloading jupyter_server-2.13.0-py3-none-any.whl.metadata (8.4 kB)
+  Downloading jupyter_server-2.12.5-py3-none-any.whl.metadata (8.4 kB)
+  Downloading jupyter_server-2.12.4-py3-none-any.whl.metadata (8.4 kB)
+  Downloading jupyter_server-2.12.3-py3-none-any.whl.metadata (8.4 kB)
+INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+  Downloading jupyter_server-2.12.2-py3-none-any.whl.metadata (8.4 kB)
+  Downloading jupyter_server-2.12.1-py3-none-any.whl.metadata (8.4 kB)
+  Downloading jupyter_server-2.12.0-py3-none-any.whl.metadata (8.4 kB)
+  Downloading jupyter_server-2.11.2-py3-none-any.whl.metadata (8.4 kB)
+  Downloading jupyter_server-2.11.1-py3-none-any.whl.metadata (8.4 kB)
+  Downloading jupyter_server-2.10.1-py3-none-any.whl.metadata (8.4 kB)
+  Downloading jupyter_server-2.10.0-py3-none-any.whl.metadata (8.4 kB)
+  Downloading jupyter_server-2.9.1-py3-none-any.whl.metadata (8.6 kB)
+  Downloading jupyter_server-2.9.0-py3-none-any.whl.metadata (8.6 kB)
+  Downloading jupyter_server-2.8.0-py3-none-any.whl.metadata (8.6 kB)
+  Downloading jupyter_server-2.7.3-py3-none-any.whl.metadata (8.6 kB)
+  Downloading jupyter_server-2.7.2-py3-none-any.whl.metadata (8.6 kB)
+  Downloading jupyter_server-2.7.1-py3-none-any.whl.metadata (8.6 kB)
+  Downloading jupyter_server-2.7.0-py3-none-any.whl.metadata (8.6 kB)
+INFO: pip is looking at multiple versions of jupyter-events to determine which version is compatible with other requirements. This could take a while.
+Collecting jupyter-events>=0.6.0 (from jupyter-server>=1.8->nbclassic==0.5.2->-r requirements.txt (line 87))
+  Downloading jupyter_events-0.12.0-py3-none-any.whl.metadata (5.8 kB)
+  Downloading jupyter_events-0.11.0-py3-none-any.whl.metadata (5.8 kB)
+  Downloading jupyter_events-0.10.0-py3-none-any.whl.metadata (5.9 kB)
+  Downloading jupyter_events-0.9.1-py3-none-any.whl.metadata (5.7 kB)
+  Downloading jupyter_events-0.9.0-py3-none-any.whl.metadata (5.7 kB)
+  Downloading jupyter_events-0.8.0-py3-none-any.whl.metadata (5.7 kB)
+  Downloading jupyter_events-0.7.0-py3-none-any.whl.metadata (5.5 kB)
+INFO: pip is still looking at multiple versions of jupyter-events to determine which version is compatible with other requirements. This could take a while.
+  Downloading jupyter_events-0.6.3-py3-none-any.whl.metadata (6.1 kB)
+Collecting ipython>=7.23.1 (from ipykernel->nbclassic==0.5.2->-r requirements.txt (line 87))
+  Downloading ipython-8.18.1-py3-none-any.whl.metadata (6.0 kB)
+INFO: pip is looking at multiple versions of ipython to determine which version is compatible with other requirements. This could take a while.
+  Downloading ipython-8.18.0-py3-none-any.whl.metadata (6.0 kB)
+  Downloading ipython-8.17.2-py3-none-any.whl.metadata (6.0 kB)
+  Downloading ipython-8.17.1-py3-none-any.whl.metadata (6.0 kB)
+  Downloading ipython-8.16.1-py3-none-any.whl.metadata (5.9 kB)
+  Downloading ipython-8.15.0-py3-none-any.whl.metadata (5.9 kB)
+  Downloading ipython-8.14.0-py3-none-any.whl.metadata (5.8 kB)
+  Downloading ipython-8.13.2-py3-none-any.whl.metadata (5.8 kB)
+INFO: pip is still looking at multiple versions of ipython to determine which version is compatible with other requirements. This could take a while.
+  Downloading ipython-8.13.1-py3-none-any.whl.metadata (5.8 kB)
+  Downloading ipython-8.12.3-py3-none-any.whl.metadata (5.7 kB)
+  Downloading ipython-8.12.2-py3-none-any.whl.metadata (5.8 kB)
+  Downloading ipython-8.12.1-py3-none-any.whl.metadata (5.8 kB)
+  Downloading ipython-8.12.0-py3-none-any.whl.metadata (5.8 kB)
+INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+  Downloading ipython-8.11.0-py3-none-any.whl.metadata (5.7 kB)
+  Downloading ipython-8.10.0-py3-none-any.whl.metadata (5.7 kB)
+Downloading absl_py-1.4.0-py3-none-any.whl (126 kB)
+Downloading aiofiles-22.1.0-py3-none-any.whl (14 kB)
+Downloading aiosqlite-0.18.0-py3-none-any.whl (15 kB)
+Downloading anyio-3.6.2-py3-none-any.whl (80 kB)
+Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+Downloading argon2_cffi-21.3.0-py3-none-any.whl (14 kB)
+Downloading argon2_cffi_bindings-21.2.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (86 kB)
+Downloading arm_pytorch_utilities-0.4.3-py3-none-any.whl (40 kB)
+Downloading arrow-1.2.3-py3-none-any.whl (66 kB)
+Downloading asttokens-2.2.1-py2.py3-none-any.whl (26 kB)
+Downloading attrs-22.2.0-py3-none-any.whl (60 kB)
+Downloading Babel-2.11.0-py3-none-any.whl (9.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 11.7 MB/s  0:00:00
+Downloading backcall-0.2.0-py2.py3-none-any.whl (11 kB)
+Downloading beautifulsoup4-4.11.2-py3-none-any.whl (129 kB)
+Downloading black-24.10.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 12.4 MB/s  0:00:00
+Downloading bleach-6.0.0-py3-none-any.whl (162 kB)
+Downloading cached_property-1.5.2-py2.py3-none-any.whl (7.6 kB)
+Downloading certifi-2022.12.7-py3-none-any.whl (155 kB)
+Downloading cffi-1.15.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (441 kB)
+Downloading charset_normalizer-3.0.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (198 kB)
+Downloading click-8.1.3-py3-none-any.whl (96 kB)
+Downloading cloudpickle-2.2.1-py3-none-any.whl (25 kB)
+Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading comm-0.1.2-py3-none-any.whl (6.5 kB)
+Downloading contextlib2-21.6.0-py2.py3-none-any.whl (13 kB)
+Downloading contourpy-1.0.7-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (299 kB)
+Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Downloading d4rl-1.1-py3-none-any.whl (26.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 26.4/26.4 MB 17.4 MB/s  0:00:01
+Downloading debugpy-1.6.6-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 20.2 MB/s  0:00:00
+Downloading decorator-4.4.2-py2.py3-none-any.whl (9.2 kB)
+Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Downloading dm_env-1.6-py3-none-any.whl (26 kB)
+Downloading dm_tree-0.1.8-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (153 kB)
+Downloading dm_control-1.0.26-py3-none-any.whl (56.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 23.3 MB/s  0:00:02
+Downloading docker_pycreds-0.4.0-py2.py3-none-any.whl (9.0 kB)
+Downloading etils-1.5.2-py3-none-any.whl (140 kB)
+Downloading executing-1.2.0-py2.py3-none-any.whl (24 kB)
+Downloading Farama_Notifications-0.0.4-py3-none-any.whl (2.5 kB)
+Downloading fasteners-0.18-py3-none-any.whl (18 kB)
+Downloading fastjsonschema-2.16.3-py3-none-any.whl (23 kB)
+Downloading filelock-3.16.1-py3-none-any.whl (16 kB)
+Downloading fonttools-4.38.0-py3-none-any.whl (965 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 965.4/965.4 kB 22.4 MB/s  0:00:00
+Downloading fqdn-1.5.1-py3-none-any.whl (9.1 kB)
+Downloading fsspec-2024.12.0-py3-none-any.whl (183 kB)
+Downloading gast-0.5.3-py3-none-any.whl (19 kB)
+Downloading gitdb-4.0.10-py3-none-any.whl (62 kB)
+Downloading smmap-5.0.0-py3-none-any.whl (24 kB)
+Downloading GitPython-3.1.30-py3-none-any.whl (184 kB)
+Downloading glfw-2.5.6-py2.py27.py3.py30.py31.py32.py33.py34.py35.py36.py37.py38-none-manylinux2014_x86_64.whl (207 kB)
+Downloading gym_notices-0.0.8-py3-none-any.whl (3.0 kB)
+Downloading gymnasium-1.0.0-py3-none-any.whl (958 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 958.1/958.1 kB 21.0 MB/s  0:00:00
+Downloading h5py-3.8.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 26.4 MB/s  0:00:00
+Downloading humanize-4.11.0-py3-none-any.whl (128 kB)
+Downloading icecream-2.1.3-py2.py3-none-any.whl (8.4 kB)
+Downloading idna-3.4-py3-none-any.whl (61 kB)
+Downloading imageio-2.25.1-py3-none-any.whl (3.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 28.8 MB/s  0:00:00
+Downloading imageio_ffmpeg-0.4.8-py3-none-manylinux2010_x86_64.whl (26.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 26.9/26.9 MB 33.5 MB/s  0:00:00
+Downloading importlib_metadata-6.0.0-py3-none-any.whl (21 kB)
+Downloading importlib_resources-5.10.2-py3-none-any.whl (34 kB)
+Downloading isoduration-20.11.0-py3-none-any.whl (11 kB)
+Downloading jedi-0.18.2-py2.py3-none-any.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 27.6 MB/s  0:00:00
+Downloading parso-0.8.3-py2.py3-none-any.whl (100 kB)
+Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Downloading json5-0.9.11-py2.py3-none-any.whl (19 kB)
+Downloading jsonpointer-2.3-py2.py3-none-any.whl (7.8 kB)
+Downloading jsonschema-4.17.3-py3-none-any.whl (90 kB)
+Downloading kiwisolver-1.4.4-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 28.9 MB/s  0:00:00
+Downloading labmaze-1.0.6-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 33.3 MB/s  0:00:00
+Downloading llvmlite-0.43.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (43.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.9/43.9 MB 38.2 MB/s  0:00:01
+Downloading lxml-4.9.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (7.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 38.4 MB/s  0:00:00
+Downloading markdown_it_py-2.1.0-py3-none-any.whl (84 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading MarkupSafe-2.1.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Downloading matplotlib-3.7.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 40.6 MB/s  0:00:00
+Downloading matplotlib_inline-0.1.6-py3-none-any.whl (9.4 kB)
+Downloading mistune-2.0.5-py2.py3-none-any.whl (24 kB)
+Downloading ml_dtypes-0.5.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 24.8 MB/s  0:00:00
+Downloading proglog-0.1.10-py3-none-any.whl (6.1 kB)
+Downloading requests-2.28.2-py3-none-any.whl (62 kB)
+Downloading tqdm-4.64.1-py2.py3-none-any.whl (78 kB)
+Downloading urllib3-1.26.14-py2.py3-none-any.whl (140 kB)
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 15.1 MB/s  0:00:00
+Downloading msgpack-1.0.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (322 kB)
+Downloading mujoco-3.2.6-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.4/6.4 MB 28.0 MB/s  0:00:00
+Downloading mujoco_py-2.1.2.14-py3-none-any.whl (2.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 36.3 MB/s  0:00:00
+Downloading mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Downloading nbclassic-0.5.2-py3-none-any.whl (10.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 40.7 MB/s  0:00:00
+Downloading nbclient-0.7.2-py3-none-any.whl (71 kB)
+Downloading nbconvert-7.2.9-py3-none-any.whl (274 kB)
+Downloading nbformat-5.7.3-py3-none-any.whl (78 kB)
+Downloading nest_asyncio-1.5.6-py3-none-any.whl (5.2 kB)
+Downloading networkx-3.2.1-py3-none-any.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 39.7 MB/s  0:00:00
+Downloading numba-0.60.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 40.3 MB/s  0:00:00
+Downloading numpy-1.26.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 44.5 MB/s  0:00:00
+Downloading numcodecs-0.12.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.7/7.7 MB 44.3 MB/s  0:00:00
+Downloading nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl (363.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 363.4/363.4 MB 63.9 MB/s  0:00:05
+Downloading nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (13.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.8/13.8 MB 70.2 MB/s  0:00:00
+Downloading nvidia_cuda_nvcc_cu12-12.6.85-py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl (21.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.2/21.2 MB 71.3 MB/s  0:00:00
+Downloading nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (24.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.6/24.6 MB 71.9 MB/s  0:00:00
+Downloading nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (883 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 883.7/883.7 kB 58.8 MB/s  0:00:00
+Downloading nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl (664.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.8/664.8 MB 41.5 MB/s  0:00:10
+Downloading nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl (211.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.5/211.5 MB 65.6 MB/s  0:00:03
+Downloading nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl (56.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 50.5 MB/s  0:00:01
+Downloading nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl (127.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 127.9/127.9 MB 90.4 MB/s  0:00:01
+Downloading nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl (207.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 207.5/207.5 MB 49.9 MB/s  0:00:04
+Downloading nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl (188.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.7/188.7 MB 56.4 MB/s  0:00:03
+Downloading nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (21.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.1/21.1 MB 55.4 MB/s  0:00:00
+Downloading nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (99 kB)
+Downloading omegaconf-2.3.0-py3-none-any.whl (79 kB)
+Downloading packaging-23.0-py3-none-any.whl (42 kB)
+Downloading pandas-2.0.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 24.2 MB/s  0:00:00
+Downloading pandocfilters-1.5.0-py2.py3-none-any.whl (8.7 kB)
+Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+Downloading patsy-1.0.1-py2.py3-none-any.whl (232 kB)
+Downloading pexpect-4.8.0-py2.py3-none-any.whl (59 kB)
+Downloading pickleshare-0.7.5-py2.py3-none-any.whl (6.9 kB)
+Downloading Pillow-9.4.0-cp39-cp39-manylinux_2_28_x86_64.whl (3.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 53.2 MB/s  0:00:00
+Downloading pkgutil_resolve_name-1.3.10-py3-none-any.whl (4.7 kB)
+Downloading platformdirs-3.0.0-py3-none-any.whl (14 kB)
+Downloading prometheus_client-0.16.0-py3-none-any.whl (122 kB)
+Downloading prompt_toolkit-3.0.37-py3-none-any.whl (385 kB)
+Downloading protobuf-4.21.12-cp37-abi3-manylinux2014_x86_64.whl (409 kB)
+Downloading psutil-5.9.4-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (280 kB)
+Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Downloading pure_eval-0.2.2-py3-none-any.whl (11 kB)
+Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Downloading Pygments-2.14.0-py3-none-any.whl (1.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 26.4 MB/s  0:00:00
+Downloading PyOpenGL-3.1.6-py3-none-any.whl (2.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 108.6 MB/s  0:00:00
+Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+Downloading pyrsistent-0.19.3-py3-none-any.whl (57 kB)
+Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Downloading python_json_logger-2.0.7-py3-none-any.whl (8.1 kB)
+Downloading pytorch_seed-0.2.0-py3-none-any.whl (4.2 kB)
+Downloading pytz-2022.7.1-py2.py3-none-any.whl (499 kB)
+Downloading PyYAML-6.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (661 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 661.8/661.8 kB 46.5 MB/s  0:00:00
+Downloading pyzmq-25.0.0-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 86.8 MB/s  0:00:00
+Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+Downloading rfc3986_validator-0.1.1-py2.py3-none-any.whl (4.2 kB)
+Downloading rich-13.3.1-py3-none-any.whl (239 kB)
+Downloading scipy-1.10.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 34.4/34.4 MB 29.4 MB/s  0:00:01
+Downloading Send2Trash-1.8.0-py3-none-any.whl (18 kB)
+Downloading sentry_sdk-1.15.0-py2.py3-none-any.whl (181 kB)
+Downloading setproctitle-1.3.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (30 kB)
+Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Downloading sniffio-1.3.0-py3-none-any.whl (10 kB)
+Downloading soupsieve-2.4-py3-none-any.whl (37 kB)
+Downloading stack_data-0.6.2-py3-none-any.whl (24 kB)
+Downloading statsmodels-0.14.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.8/10.8 MB 37.7 MB/s  0:00:00
+Downloading sympy-1.13.1-py3-none-any.whl (6.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 50.2 MB/s  0:00:00
+Downloading tensorstore-0.1.69-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.5/17.5 MB 42.0 MB/s  0:00:00
+Downloading termcolor-2.2.0-py3-none-any.whl (6.6 kB)
+Downloading terminado-0.17.1-py3-none-any.whl (17 kB)
+Downloading tinycss2-1.2.1-py3-none-any.whl (21 kB)
+Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+Downloading toolz-0.12.0-py3-none-any.whl (55 kB)
+Downloading torch-2.5.1-cp39-cp39-manylinux1_x86_64.whl (906.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 906.5/906.5 MB 22.6 MB/s  0:00:16
+Downloading torchvision-0.20.1-cp39-cp39-manylinux1_x86_64.whl (7.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 68.3 MB/s  0:00:00
+Downloading tornado-6.2-cp37-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (423 kB)
+Downloading traitlets-5.9.0-py3-none-any.whl (117 kB)
+Downloading triton-3.1.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (209.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.5/209.5 MB 54.0 MB/s  0:00:03
+Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Downloading tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+Downloading uri_template-1.2.0-py3-none-any.whl (10 kB)
+Downloading wandb-0.13.10-py3-none-any.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 129.8 MB/s  0:00:00
+Downloading wcwidth-0.2.6-py2.py3-none-any.whl (29 kB)
+Downloading webcolors-1.12-py3-none-any.whl (9.9 kB)
+Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Downloading websocket_client-1.5.1-py3-none-any.whl (55 kB)
+Downloading y_py-0.5.9-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 112.3 MB/s  0:00:00
+Downloading zarr-2.14.2-py3-none-any.whl (203 kB)
+Downloading zipp-3.13.0-py3-none-any.whl (6.7 kB)
+Downloading jupyter_client-8.6.3-py3-none-any.whl (106 kB)
+Downloading jupyter_core-5.8.1-py3-none-any.whl (28 kB)
+Downloading jupyter_server-2.7.0-py3-none-any.whl (375 kB)
+Downloading jupyter_events-0.6.3-py3-none-any.whl (18 kB)
+Downloading notebook_shim-0.2.4-py3-none-any.whl (13 kB)
+Downloading ipykernel-6.31.0-py3-none-any.whl (117 kB)
+Downloading ipython-8.10.0-py3-none-any.whl (784 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 784.3/784.3 kB 66.5 MB/s  0:00:00
+Downloading ipython_genutils-0.2.0-py2.py3-none-any.whl (26 kB)
+Downloading jupyter_server_terminals-0.5.4-py3-none-any.whl (13 kB)
+Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl (15 kB)
+Downloading overrides-7.7.0-py3-none-any.whl (17 kB)
+Downloading pybullet-3.2.7-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (103.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.2/103.2 MB 46.6 MB/s  0:00:02
+Building wheels for collected packages: antlr4-python3-runtime, asciitree, gym, ml_collections, moviepy, pathtools
+  Building wheel for antlr4-python3-runtime (pyproject.toml): started
+  Building wheel for antlr4-python3-runtime (pyproject.toml): finished with status 'done'
+  Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.9.3-py3-none-any.whl size=144590 sha256=a3283614271e24bb7dcff8b2179e2a5355e70a706ca4559e66d4d3eaa4bd6752
+  Stored in directory: /root/.cache/pip/wheels/23/cf/80/f3efa822e6ab23277902ee9165fe772eeb1dfb8014f359020a
+  Building wheel for asciitree (pyproject.toml): started
+  Building wheel for asciitree (pyproject.toml): finished with status 'done'
+  Created wheel for asciitree: filename=asciitree-0.3.3-py3-none-any.whl size=5095 sha256=b8ae431bf401a9aa46447d8e334da07d70dc7dbde961b3c93210ae05245ac699
+  Stored in directory: /root/.cache/pip/wheels/07/00/bc/937e878be0d781a569792a1e0e5acf149e463d4536453ec978
+  Building wheel for gym (pyproject.toml): started
+  Building wheel for gym (pyproject.toml): finished with status 'done'
+  Created wheel for gym: filename=gym-0.23.1-py3-none-any.whl size=701456 sha256=0b613500b1cce3ca76aadc485ae01f1de5dd3cb41867a22e6df7bcce4b5686fb
+  Stored in directory: /root/.cache/pip/wheels/4e/be/7e/92a54668db96883e38ce60a9249dc55de7cd6eee49e7311940
+  Building wheel for ml_collections (pyproject.toml): started
+  Building wheel for ml_collections (pyproject.toml): finished with status 'done'
+  Created wheel for ml_collections: filename=ml_collections-0.1.1-py3-none-any.whl size=94612 sha256=df55495e0d0bd78a286301269c73f42e9985d54e1d3710d6d8efdfccb9d240a8
+  Stored in directory: /root/.cache/pip/wheels/fd/c2/0d/5d94d95e5875ea17b85a9f1f99b8dd2e50517137c8042c6468
+  Building wheel for moviepy (pyproject.toml): started
+  Building wheel for moviepy (pyproject.toml): finished with status 'done'
+  Created wheel for moviepy: filename=moviepy-1.0.3-py3-none-any.whl size=110796 sha256=57354201c8f234077215062636fbd2a4d8bf9b340b3ff3d120e3b32b5383f16f
+  Stored in directory: /root/.cache/pip/wheels/29/15/e4/4f790bec6acd51a00b67e8ee1394f0bc6e0135c315f8ff399a
+  Building wheel for pathtools (pyproject.toml): started
+  Building wheel for pathtools (pyproject.toml): finished with status 'done'
+  Created wheel for pathtools: filename=pathtools-0.1.2-py3-none-any.whl size=8883 sha256=7a909c566b29938acff41c16fcb8770db99f0cf8d6872d93341a98eb4698d8b7
+  Stored in directory: /root/.cache/pip/wheels/b7/0a/67/ada2a22079218c75a88361c0782855cc72aebc4d18d0289d05
+Successfully built antlr4-python3-runtime asciitree gym ml_collections moviepy pathtools
+Installing collected packages: y-py, webencodings, wcwidth, Send2Trash, pytz, PyOpenGL, pybullet, pure-eval, ptyprocess, pickleshare, pathtools, msgpack, mpmath, mistune, json5, ipython-genutils, gym-notices, glfw, fastjsonschema, Farama-Notifications, executing, dm-tree, charset-normalizer, cached-property, backcall, asciitree, appdirs, antlr4-python3-runtime, zipp, websocket-client, webcolors, urllib3, uri-template, tzdata, typing_extensions, traitlets, tqdm, tornado, toolz, tomli, tinycss2, termcolor, sympy, soupsieve, sniffio, smmap, six, setproctitle, rfc3986-validator, pyzmq, PyYAML, python-json-logger, pyrsistent, pyparsing, Pygments, pycparser, psutil, protobuf, prompt-toolkit, prometheus-client, platformdirs, pkgutil_resolve_name, Pillow, pexpect, pathspec, parso, pandocfilters, packaging, overrides, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufft-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-nvcc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, nest-asyncio, mypy-extensions, mdurl, MarkupSafe, lxml, llvmlite, kiwisolver, jupyterlab-pygments, jsonpointer, imageio-ffmpeg, idna, humanize, gast, fsspec, fqdn, fonttools, filelock, fasteners, etils, defusedxml, decorator, debugpy, cycler, contextlib2, colorama, cloudpickle, click, certifi, Babel, attrs, aiosqlite, aiofiles, absl-py, triton, terminado, sentry-sdk, scipy, rfc3339-validator, requests, python-dateutil, proglog, patsy, omegaconf, nvidia-cusparse-cu12, nvidia-cudnn-cu12, numcodecs, numba, ml_dtypes, ml_collections, matplotlib-inline, markdown-it-py, labmaze, jupyter-core, jsonschema, Jinja2, jedi, importlib-resources, importlib-metadata, imageio, h5py, gitdb, docker-pycreds, dm-env, contourpy, comm, cffi, bleach, black, beautifulsoup4, asttokens, anyio, zarr, tensorstore, stack-data, rich, pandas, nvidia-cusolver-cu12, nbformat, mujoco-py, moviepy, matplotlib, jupyter-server-terminals, jupyter-client, icecream, gymnasium, gym, GitPython, arrow, argon2-cffi-bindings, wandb, torch, statsmodels, nbclient, mujoco, isoduration, ipython, argon2-cffi, torchvision, pytorch-seed, nbconvert, ipykernel, dm_control, jupyter-events, d4rl, arm_pytorch_utilities, jupyter-server, notebook-shim, nbclassic
+  Attempting uninstall: packaging
+    Found existing installation: packaging 26.2
+    Uninstalling packaging-26.2:
+      Successfully uninstalled packaging-26.2
+
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+wheel 0.47.0 requires packaging>=24.0, but you have packaging 23.0 which is incompatible.
+Successfully installed Babel-2.11.0 Farama-Notifications-0.0.4 GitPython-3.1.30 Jinja2-3.1.2 MarkupSafe-2.1.2 Pillow-9.4.0 PyOpenGL-3.1.6 PyYAML-6.0 Pygments-2.14.0 Send2Trash-1.8.0 absl-py-1.4.0 aiofiles-22.1.0 aiosqlite-0.18.0 antlr4-python3-runtime-4.9.3 anyio-3.6.2 appdirs-1.4.4 argon2-cffi-21.3.0 argon2-cffi-bindings-21.2.0 arm_pytorch_utilities-0.4.3 arrow-1.2.3 asciitree-0.3.3 asttokens-2.2.1 attrs-22.2.0 backcall-0.2.0 beautifulsoup4-4.11.2 black-24.10.0 bleach-6.0.0 cached-property-1.5.2 certifi-2022.12.7 cffi-1.15.1 charset-normalizer-3.0.1 click-8.1.3 cloudpickle-2.2.1 colorama-0.4.6 comm-0.1.2 contextlib2-21.6.0 contourpy-1.0.7 cycler-0.11.0 d4rl-1.1 debugpy-1.6.6 decorator-4.4.2 defusedxml-0.7.1 dm-env-1.6 dm-tree-0.1.8 dm_control-1.0.26 docker-pycreds-0.4.0 etils-1.5.2 executing-1.2.0 fasteners-0.18 fastjsonschema-2.16.3 filelock-3.16.1 fonttools-4.38.0 fqdn-1.5.1 fsspec-2024.12.0 gast-0.5.3 gitdb-4.0.10 glfw-2.5.6 gym-0.23.1 gym-notices-0.0.8 gymnasium-1.0.0 h5py-3.8.0 humanize-4.11.0 icecream-2.1.3 idna-3.4 imageio-2.25.1 imageio-ffmpeg-0.4.8 importlib-metadata-6.0.0 importlib-resources-5.10.2 ipykernel-6.31.0 ipython-8.10.0 ipython-genutils-0.2.0 isoduration-20.11.0 jedi-0.18.2 json5-0.9.11 jsonpointer-2.3 jsonschema-4.17.3 jupyter-client-8.6.3 jupyter-core-5.8.1 jupyter-events-0.6.3 jupyter-server-2.7.0 jupyter-server-terminals-0.5.4 jupyterlab-pygments-0.3.0 kiwisolver-1.4.4 labmaze-1.0.6 llvmlite-0.43.0 lxml-4.9.2 markdown-it-py-2.1.0 matplotlib-3.7.0 matplotlib-inline-0.1.6 mdurl-0.1.2 mistune-2.0.5 ml_collections-0.1.1 ml_dtypes-0.5.0 moviepy-1.0.3 mpmath-1.3.0 msgpack-1.0.4 mujoco-3.2.6 mujoco-py-2.1.2.14 mypy-extensions-1.0.0 nbclassic-0.5.2 nbclient-0.7.2 nbconvert-7.2.9 nbformat-5.7.3 nest-asyncio-1.5.6 networkx-3.2.1 notebook-shim-0.2.4 numba-0.60.0 numcodecs-0.12.1 numpy-1.26.4 nvidia-cublas-cu12-12.4.5.8 nvidia-cuda-cupti-cu12-12.4.127 nvidia-cuda-nvcc-cu12-12.6.85 nvidia-cuda-nvrtc-cu12-12.4.127 nvidia-cuda-runtime-cu12-12.4.127 nvidia-cudnn-cu12-9.1.0.70 nvidia-cufft-cu12-11.2.1.3 nvidia-curand-cu12-10.3.5.147 nvidia-cusolver-cu12-11.6.1.9 nvidia-cusparse-cu12-12.3.1.170 nvidia-nccl-cu12-2.21.5 nvidia-nvjitlink-cu12-12.4.127 nvidia-nvtx-cu12-12.4.127 omegaconf-2.3.0 overrides-7.7.0 packaging-23.0 pandas-2.0.1 pandocfilters-1.5.0 parso-0.8.3 pathspec-0.12.1 pathtools-0.1.2 patsy-1.0.1 pexpect-4.8.0 pickleshare-0.7.5 pkgutil_resolve_name-1.3.10 platformdirs-3.0.0 proglog-0.1.10 prometheus-client-0.16.0 prompt-toolkit-3.0.37 protobuf-4.21.12 psutil-5.9.4 ptyprocess-0.7.0 pure-eval-0.2.2 pybullet-3.2.7 pycparser-2.21 pyparsing-3.0.9 pyrsistent-0.19.3 python-dateutil-2.8.2 python-json-logger-2.0.7 pytorch-seed-0.2.0 pytz-2022.7.1 pyzmq-25.0.0 requests-2.28.2 rfc3339-validator-0.1.4 rfc3986-validator-0.1.1 rich-13.3.1 scipy-1.10.0 sentry-sdk-1.15.0 setproctitle-1.3.2 six-1.16.0 smmap-5.0.0 sniffio-1.3.0 soupsieve-2.4 stack-data-0.6.2 statsmodels-0.14.4 sympy-1.13.1 tensorstore-0.1.69 termcolor-2.2.0 terminado-0.17.1 tinycss2-1.2.1 tomli-2.0.1 toolz-0.12.0 torch-2.5.1 torchvision-0.20.1 tornado-6.2 tqdm-4.64.1 traitlets-5.9.0 triton-3.1.0 typing_extensions-4.12.2 tzdata-2024.2 uri-template-1.2.0 urllib3-1.26.14 wandb-0.13.10 wcwidth-0.2.6 webcolors-1.12 webencodings-0.5.1 websocket-client-1.5.1 y-py-0.5.9 zarr-2.14.2 zipp-3.13.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Obtaining file:///workspace/HWM_PLDM
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: pldm
+  Building editable for pldm (pyproject.toml): started
+  Building editable for pldm (pyproject.toml): finished with status 'done'
+  Created wheel for pldm: filename=pldm-1.0.0-py3-none-any.whl size=937 sha256=8c0626e4cb9ed693e794b5e9aa2c618f21eef8c464d57fd0a2920829ae0fb4b9
+  Stored in directory: /tmp/pip-ephem-wheel-cache-xz_q7uzs/wheels/6b/18/03/895dae2e9531e0ffe056c767a8ea8884777351fb60d7be775d
+Successfully built pldm
+Installing collected packages: pldm
+Successfully installed pldm-1.0.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Collecting huggingface_hub>=0.23
+  Downloading huggingface_hub-1.8.0-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: filelock>=3.10.0 in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from huggingface_hub>=0.23) (3.16.1)
+Requirement already satisfied: fsspec>=2023.5.0 in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from huggingface_hub>=0.23) (2024.12.0)
+Collecting hf-xet<2.0.0,>=1.4.2 (from huggingface_hub>=0.23)
+  Downloading hf_xet-1.5.1-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+Collecting httpx<1,>=0.23.0 (from huggingface_hub>=0.23)
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Requirement already satisfied: packaging>=20.9 in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from huggingface_hub>=0.23) (23.0)
+Requirement already satisfied: pyyaml>=5.1 in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from huggingface_hub>=0.23) (6.0)
+Requirement already satisfied: tqdm>=4.42.1 in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from huggingface_hub>=0.23) (4.64.1)
+Collecting typer (from huggingface_hub>=0.23)
+  Downloading typer-0.23.2-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: typing-extensions>=4.1.0 in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from huggingface_hub>=0.23) (4.12.2)
+Requirement already satisfied: anyio in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from httpx<1,>=0.23.0->huggingface_hub>=0.23) (3.6.2)
+Requirement already satisfied: certifi in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from httpx<1,>=0.23.0->huggingface_hub>=0.23) (2022.12.7)
+Collecting httpcore==1.* (from httpx<1,>=0.23.0->huggingface_hub>=0.23)
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Requirement already satisfied: idna in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from httpx<1,>=0.23.0->huggingface_hub>=0.23) (3.4)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.23.0->huggingface_hub>=0.23)
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Requirement already satisfied: sniffio>=1.1 in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from anyio->httpx<1,>=0.23.0->huggingface_hub>=0.23) (1.3.0)
+Requirement already satisfied: click>=8.0.0 in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from typer->huggingface_hub>=0.23) (8.1.3)
+Collecting shellingham>=1.3.0 (from typer->huggingface_hub>=0.23)
+  Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Requirement already satisfied: rich>=12.3.0 in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from typer->huggingface_hub>=0.23) (13.3.1)
+Collecting annotated-doc>=0.0.2 (from typer->huggingface_hub>=0.23)
+  Downloading annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+Requirement already satisfied: markdown-it-py<3.0.0,>=2.1.0 in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from rich>=12.3.0->typer->huggingface_hub>=0.23) (2.1.0)
+Requirement already satisfied: pygments<3.0.0,>=2.14.0 in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from rich>=12.3.0->typer->huggingface_hub>=0.23) (2.14.0)
+Requirement already satisfied: mdurl~=0.1 in /workspace/miniconda3/envs/pldm/lib/python3.9/site-packages (from markdown-it-py<3.0.0,>=2.1.0->rich>=12.3.0->typer->huggingface_hub>=0.23) (0.1.2)
+Downloading huggingface_hub-1.8.0-py3-none-any.whl (625 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 625.2/625.2 kB 16.6 MB/s  0:00:00
+Downloading hf_xet-1.5.1-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 90.4 MB/s  0:00:00
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading typer-0.23.2-py3-none-any.whl (56 kB)
+Downloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Installing collected packages: shellingham, hf-xet, h11, annotated-doc, httpcore, typer, httpx, huggingface_hub
+
+Successfully installed annotated-doc-0.0.4 h11-0.16.0 hf-xet-1.5.1 httpcore-1.0.9 httpx-0.28.1 huggingface_hub-1.8.0 shellingham-1.5.4 typer-0.23.2
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[setup] verifying ...
+torch 2.5.1+cu124 cuda True NVIDIA GeForce RTX 3090
+INFO:absl:MUJOCO_GL=egl, attempting to import specified OpenGL backend.
+INFO:OpenGL.acceleratesupport:No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+INFO:absl:MuJoCo library version is: 3.2.6
+pybullet build time: Jan 29 2025 23:20:52
+mujoco_py OK
+d4rl OK
+[setup] DONE. Now: source activate_env.sh   (every new shell)

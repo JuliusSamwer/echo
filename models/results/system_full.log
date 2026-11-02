@@ -1,0 +1,54 @@
+[system] collecting 3000 Π triples (true-env reaches) ...
+  [triples] 250/3000
+  [triples] 500/3000
+  [triples] 750/3000
+  [triples] 1000/3000
+  [triples] 1250/3000
+  [triples] 1500/3000
+  [triples] 1750/3000
+  [triples] 2000/3000
+  [triples] 2250/3000
+  [triples] 2500/3000
+  [triples] 2750/3000
+  [triples] 3000/3000
+[system] training G (coarse achieved-endpoint model) ...
+  [G] ep   0 mse=1.4396e-01
+  [G] ep  37 mse=3.2165e-02
+  [G] ep  74 mse=2.7433e-02
+  [G] ep 111 mse=2.6937e-02
+  [G] ep 148 mse=2.6930e-02
+  [G] ep 185 mse=2.6221e-02
+  [G] ep 222 mse=2.6233e-02
+  [G] ep 259 mse=2.5911e-02
+  [G] ep 296 mse=2.5836e-02
+  [G] ep 299 mse=2.6107e-02
+  [triples] 250/400
+[check G] achieved-MAE  open=0.109  across-wall=0.230 (n_open=189 n_wall=211)
+
+[system] LOOP-1 DESCENT eval (loss+G, no F) ...
+   descent L=2: success=0.07
+   descent L=3: success=0.00
+   descent L=4: success=0.00
+
+[system] training F on 360 pairs (amortize closed-loop through G) ...
+/Users/juliius/Nobel30/Zeus/zeus_maze/rung3_system.py:183: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:837.)
+  opt.zero_grad(); L.backward(); opt.step(); acc += float(L)
+  [F] ep   0 closed_loop_L=17.018
+  [F] ep  31 closed_loop_L=3.229
+  [F] ep  62 closed_loop_L=3.202
+  [F] ep  93 closed_loop_L=3.216
+  [F] ep 124 closed_loop_L=3.212
+  [F] ep 155 closed_loop_L=3.185
+  [F] ep 186 closed_loop_L=3.180
+  [F] ep 217 closed_loop_L=3.136
+  [F] ep 248 closed_loop_L=3.166
+  [F] ep 249 closed_loop_L=3.161
+
+[system] F (amortized) eval ...
+
+[system] RESULT (success vs L | refs: flat~0.15 HWM~0.25 REINFORCE~0 BC~0.05 oracle~0.85):
+   L | DESCENT(loop1) | F(amortized)
+   2 |     0.07      |    0.03
+   3 |     0.00      |    0.03
+   4 |     0.00      |    0.00

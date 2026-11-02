@@ -1,0 +1,4 @@
+[shard 0] maze 0 L= 4 n=10 | flat 0.50 hier 0.70
+[shard 0] maze 0 L= 5 n=10 | flat 0.70 hier 0.70
+[shard 0] maze 0 L= 6 n=10 | flat 0.60 hier 0.30
+[shard 0] maze 0 L= 8 n=10 | flat 0.00 hier 0.10

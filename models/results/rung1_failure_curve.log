@@ -1,0 +1,18 @@
+collecting coverage data on the 9x9 maze ...
+coverage=100%, transitions=117940
+trained + cached rung1 model
+[frozen model] RMSE @1=0.091 @25=0.483 tunnel=0%
+[fixed budget] H=25 N=256 cem_iters=5  (planner cost/plan = 6400)
+
+  L |  success | mean steps | rollout_mse
+--------------------------------------------
+  2 |  100.0% |        8.0 | 1.43e-02
+  3 |   85.0% |       17.2 | 1.46e-01
+  4 |   80.0% |       23.0 | 2.86e-01
+  5 |   65.0% |       35.8 | 5.75e-01
+  6 |   70.0% |       36.8 | 1.87e+00
+  8 |   50.0% |       58.2 | 1.86e+00
+ 10 |   10.0% |       97.8 | 3.30e+00
+ 12 |    5.0% |      116.5 | 5.93e+00
+
+wrote /Users/juliius/Nobel30/Zeus/figures/rung1_failure_curve.png

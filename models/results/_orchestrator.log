@@ -1,0 +1,4 @@
+[substrate] 10 models already present — skipping train
+===== [rung1_failure_curve] START 11:29:04 =====
+===== [rung1_failure_curve] DONE exit=0 11:48:25 =====
+===== [rung2_pipeline] START 11:48:25 =====

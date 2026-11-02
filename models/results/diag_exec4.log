@@ -1,0 +1,6 @@
+--- need=1.0 k=3 ---
+L=2: EXTRACTED(true)=0.50 | per-hop reach=0.80 (20/25) | mean#subs=2.00 | sub->door=0.11
+L=3: EXTRACTED(true)=0.50 | per-hop reach=0.84 (27/32) | mean#subs=3.10 | sub->door=0.11
+L=4: EXTRACTED(true)=0.50 | per-hop reach=0.74 (23/31) | mean#subs=4.40 | sub->door=0.11
+elapsed 216s
+DONE

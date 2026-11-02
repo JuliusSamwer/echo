@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+.pytest_cache/
+~$*
+.claude/
+# upstream clone, not vendored (see README "Not vendored")
+zeus_map/HWM_PLDM/

@@ -1,0 +1,29 @@
+[system] EXACT-G mode: differentiable collision hop (architecture test, no learned G)
+
+[system] LOOP-1 DESCENT eval (loss+G, no F) ...
+   descent L=2: success=0.07
+   descent L=3: success=0.00
+   descent L=4: success=0.00
+
+[system] training F on 360 pairs (amortize closed-loop through G) ...
+/Users/juliius/Nobel30/Zeus/zeus_maze/rung3_system.py:232: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:837.)
+  opt.zero_grad(); L.backward(); opt.step(); acc += float(L)
+  [F] ep   0 closed_loop_L=57.493
+  [F] ep  31 closed_loop_L=13.857
+  [F] ep  62 closed_loop_L=13.805
+  [F] ep  93 closed_loop_L=13.974
+  [F] ep 124 closed_loop_L=13.952
+  [F] ep 155 closed_loop_L=13.913
+  [F] ep 186 closed_loop_L=13.834
+  [F] ep 217 closed_loop_L=13.760
+  [F] ep 248 closed_loop_L=13.742
+  [F] ep 249 closed_loop_L=13.723
+
+[system] F (amortized) eval ...
+
+[system] RESULT (success vs L | refs: flat~0.15 HWM~0.25 REINFORCE~0 BC~0.05 oracle~0.85):
+   L | DESCENT(loop1) | F(amortized)
+   2 |     0.07      |    0.07
+   3 |     0.00      |    0.00
+   4 |     0.00      |    0.00

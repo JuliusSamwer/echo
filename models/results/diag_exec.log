@@ -1,0 +1,4 @@
+L=2: ORACLE-doorway(true)=1.00 | EXTRACTED(true)=0.10 | ext per-hop reach=0.43 (6/14) | mean#subs=1.20
+L=3: ORACLE-doorway(true)=0.70 | EXTRACTED(true)=0.00 | ext per-hop reach=0.09 (1/11) | mean#subs=1.70
+L=4: ORACLE-doorway(true)=0.60 | EXTRACTED(true)=0.00 | ext per-hop reach=0.00 (0/10) | mean#subs=2.60
+DONE

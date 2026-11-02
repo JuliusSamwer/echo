@@ -1,0 +1,22 @@
+[demos] precomputing fine-geodesic adjacency (for eval shaping) ...
+[demos] generated 240 optimal demos (80/L).
+[demos] extracting planning-optimal subgoals via the frozen MPC (imagined under P) ...
+[demos] EXTRACTED-subgoal localization: lift=2.05 (P(door|subgoal)=0.85 base=0.41) | mean #subgoals by L={2: 2.0625, 3: 3.0875, 4: 4.125} (ideal ~= L-1 hops-1)
+
+[demos] DATA-EFFICIENCY SWEEP (BC), eval n=20/L  | refs: flat~0.15 HWM~0.25 REINFORCE~0.00 oracle~0.85
+  demos/L | L=2 | L=3 | L=4 | #BC pairs
+  -------------------------------------
+/Users/juliius/Nobel30/Zeus/zeus_maze/rung3_reinforce.py:52: RuntimeWarning: divide by zero encountered in log
+  logp = (-0.5 * ((d - mean) / std) ** 2 - np.log(std) - 0.5 * np.log(2 * np.pi)).sum(-1)
+        2 | 0.05 | 0.00 | 0.00 | 24
+        5 | 0.00 | 0.10 | 0.05 | 63
+       10 | 0.00 | 0.00 | 0.00 | 122
+       20 | 0.15 | 0.10 | 0.05 | 249
+       40 | 0.00 | 0.05 | 0.00 | 492
+       80 | 0.10 | 0.00 | 0.00 | 982
+
+[demos] FINAL BC policy (all 80 demos/L), eval n=40/L:
+   L=2: success=0.07
+   L=3: success=0.03
+   L=4: success=0.00
+[demos] saved BC policy -> /Users/juliius/Nobel30/Zeus/models/rung3_bc_policy.pt

@@ -1,0 +1,13 @@
+=== sweep done, running snapped comparison ===
+[eval_snapped] loaded /Users/juliius/Nobel30/Zeus/models/rung3_bc_policy.pt (max_hop=1.6)
+[eval_snapped] PLAIN eval (n=40/L) ...
+/Users/juliius/Nobel30/Zeus/zeus_maze/rung3_reinforce.py:52: RuntimeWarning: divide by zero encountered in log
+  logp = (-0.5 * ((d - mean) / std) ** 2 - np.log(std) - 0.5 * np.log(2 * np.pi)).sum(-1)
+[eval_snapped] SNAPPED eval (n=40/L) ...
+
+[eval_snapped] refs: flat~0.15 HWM~0.25 REINFORCE~0.00 oracle(GT@H10)=0.92/0.80/0.82
+   L |  PLAIN | SNAPPED
+   2 |  0.07  |  0.05
+   3 |  0.03  |  0.03
+   4 |  0.00  |  0.05
+SNAPPED_DONE

@@ -1,0 +1,1817 @@
++ cd /workspace/HWM_PLDM
++ source /workspace/HWM_PLDM/activate_env.sh
+++ ZP1=/workspace
+++ source /workspace/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/workspace/miniconda3/bin/conda
++++ CONDA_EXE=/workspace/miniconda3/bin/conda
++++ export _CONDA_EXE=/workspace/miniconda3/bin/conda
++++ _CONDA_EXE=/workspace/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/workspace/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/workspace/miniconda3/bin/python
++++ export _CONDA_ROOT=/workspace/miniconda3
++++ _CONDA_ROOT=/workspace/miniconda3
++++ '[' -z '' ']'
++++ export CONDA_SHLVL=0
++++ CONDA_SHLVL=0
++++ '[' -n '' ']'
++++++ dirname /workspace/miniconda3/bin/conda
+++++ dirname /workspace/miniconda3/bin
++++ PATH=/workspace/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
++++ export PATH
++++ '[' -z '' ']'
++++ PS1=
+++ conda activate pldm
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate pldm
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1=
++++ __conda_exe shell.posix activate pldm
++++ '[' -n '' ']'
++++ /workspace/miniconda3/bin/conda shell.posix activate pldm
+++ ask_conda='export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(pldm) '\''
+export PATH='\''/workspace/miniconda3/envs/pldm/bin:/workspace/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'\''
+export CONDA_PREFIX='\''/workspace/miniconda3/envs/pldm'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''pldm'\''
+export CONDA_PROMPT_MODIFIER='\''(pldm) '\''
+export CONDA_EXE='\''/workspace/miniconda3/bin/conda'\''
+export _CONDA_EXE='\''/workspace/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/workspace/miniconda3/bin/python'\''
+export _CONDA_ROOT='\''/workspace/miniconda3'\'''
+++ eval 'export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(pldm) '\''
+export PATH='\''/workspace/miniconda3/envs/pldm/bin:/workspace/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'\''
+export CONDA_PREFIX='\''/workspace/miniconda3/envs/pldm'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''pldm'\''
+export CONDA_PROMPT_MODIFIER='\''(pldm) '\''
+export CONDA_EXE='\''/workspace/miniconda3/bin/conda'\''
+export _CONDA_EXE='\''/workspace/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/workspace/miniconda3/bin/python'\''
+export _CONDA_ROOT='\''/workspace/miniconda3'\'''
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ PS1='(pldm) '
++++ export PATH=/workspace/miniconda3/envs/pldm/bin:/workspace/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
++++ PATH=/workspace/miniconda3/envs/pldm/bin:/workspace/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
++++ export CONDA_PREFIX=/workspace/miniconda3/envs/pldm
++++ CONDA_PREFIX=/workspace/miniconda3/envs/pldm
++++ export CONDA_SHLVL=1
++++ CONDA_SHLVL=1
++++ export CONDA_DEFAULT_ENV=pldm
++++ CONDA_DEFAULT_ENV=pldm
++++ export 'CONDA_PROMPT_MODIFIER=(pldm) '
++++ CONDA_PROMPT_MODIFIER='(pldm) '
++++ export CONDA_EXE=/workspace/miniconda3/bin/conda
++++ CONDA_EXE=/workspace/miniconda3/bin/conda
++++ export _CONDA_EXE=/workspace/miniconda3/bin/conda
++++ _CONDA_EXE=/workspace/miniconda3/bin/conda
++++ export CONDA_PYTHON_EXE=/workspace/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/workspace/miniconda3/bin/python
++++ export _CONDA_ROOT=/workspace/miniconda3
++++ _CONDA_ROOT=/workspace/miniconda3
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
+++ export MUJOCO_PY_MUJOCO_PATH=/workspace/.mujoco/mujoco210
+++ MUJOCO_PY_MUJOCO_PATH=/workspace/.mujoco/mujoco210
+++ export LD_LIBRARY_PATH=:/workspace/.mujoco/mujoco210/bin:/usr/lib/nvidia
+++ LD_LIBRARY_PATH=:/workspace/.mujoco/mujoco210/bin:/usr/lib/nvidia
+++ export MUJOCO_GL=egl
+++ MUJOCO_GL=egl
+++ export D4RL_SUPPRESS_IMPORT_ERROR=1
+++ D4RL_SUPPRESS_IMPORT_ERROR=1
+++ export WANDB_MODE=offline
+++ WANDB_MODE=offline
++++ python -c 'import torch;print(torch.cuda.is_available())'
+++ echo '[env] pldm active | MUJOCO_GL=egl | cuda=True'
+[env] pldm active | MUJOCO_GL=egl | cuda=True
++ bash eval.sh hwm
+[eval] HWM (2-level hierarchical) ...
+/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/wandb/apis/public.py:3111: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import parse_version
+/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/wandb/apis/public.py:3111: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import parse_version
+wandb: Tracking run with wandb version 0.13.10
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:62: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.splits = torch.load(self.config.path)
+loading saved dataset from /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/data.p
+states will contain images
+loading /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/images.npy
+shape of images is: (101000, 98, 98, 3)
+40000 samples in  dataset
+estimating mean stds:   0%|          | 0/78 [00:00<?, ?it/s]/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:92: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  torch.from_numpy(self.images_tensor[index : index + length : skip_frame])
+estimating mean stds:   1%|▏         | 1/78 [00:03<03:58,  3.09s/it]estimating mean stds:   3%|▎         | 2/78 [00:05<03:30,  2.77s/it]estimating mean stds:   4%|▍         | 3/78 [00:07<03:03,  2.45s/it]estimating mean stds:   5%|▌         | 4/78 [00:09<02:50,  2.30s/it]estimating mean stds:   6%|▋         | 5/78 [00:11<02:43,  2.24s/it]estimating mean stds:   8%|▊         | 6/78 [00:13<02:33,  2.13s/it]estimating mean stds:   9%|▉         | 7/78 [00:15<02:22,  2.00s/it]estimating mean stds:  10%|█         | 8/78 [00:17<02:13,  1.91s/it]estimating mean stds:  12%|█▏        | 9/78 [00:19<02:08,  1.86s/it]estimating mean stds:  13%|█▎        | 10/78 [00:20<01:58,  1.74s/it]estimating mean stds:  14%|█▍        | 11/78 [00:21<01:49,  1.63s/it]estimating mean stds:  15%|█▌        | 12/78 [00:23<01:43,  1.57s/it]estimating mean stds:  17%|█▋        | 13/78 [00:24<01:40,  1.55s/it]estimating mean stds:  18%|█▊        | 14/78 [00:26<01:34,  1.47s/it]estimating mean stds:  19%|█▉        | 15/78 [00:27<01:29,  1.42s/it]estimating mean stds:  21%|██        | 16/78 [00:28<01:24,  1.37s/it]estimating mean stds:  22%|██▏       | 17/78 [00:29<01:20,  1.33s/it]estimating mean stds:  23%|██▎       | 18/78 [00:31<01:19,  1.32s/it]estimating mean stds:  24%|██▍       | 19/78 [00:32<01:14,  1.25s/it]estimating mean stds:  26%|██▌       | 20/78 [00:33<01:09,  1.20s/it]estimating mean stds:  27%|██▋       | 21/78 [00:34<01:03,  1.12s/it]estimating mean stds:  28%|██▊       | 22/78 [00:35<01:01,  1.09s/it]estimating mean stds:  29%|██▉       | 23/78 [00:36<00:58,  1.06s/it]estimating mean stds:  31%|███       | 24/78 [00:37<00:56,  1.04s/it]estimating mean stds:  32%|███▏      | 25/78 [00:38<00:53,  1.00s/it]estimating mean stds:  33%|███▎      | 26/78 [00:39<00:50,  1.04it/s]estimating mean stds:  35%|███▍      | 27/78 [00:39<00:45,  1.11it/s]estimating mean stds:  36%|███▌      | 28/78 [00:40<00:42,  1.19it/s]estimating mean stds:  37%|███▋      | 29/78 [00:41<00:40,  1.20it/s]estimating mean stds:  38%|███▊      | 30/78 [00:42<00:38,  1.25it/s]estimating mean stds:  40%|███▉      | 31/78 [00:42<00:35,  1.32it/s]estimating mean stds:  41%|████      | 32/78 [00:43<00:34,  1.33it/s]estimating mean stds:  42%|████▏     | 33/78 [00:44<00:34,  1.29it/s]estimating mean stds:  44%|████▎     | 34/78 [00:45<00:33,  1.31it/s]estimating mean stds:  45%|████▍     | 35/78 [00:45<00:32,  1.34it/s]estimating mean stds:  46%|████▌     | 36/78 [00:46<00:30,  1.40it/s]estimating mean stds:  47%|████▋     | 37/78 [00:47<00:29,  1.41it/s]estimating mean stds:  49%|████▊     | 38/78 [00:47<00:27,  1.43it/s]estimating mean stds:  50%|█████     | 39/78 [00:48<00:26,  1.48it/s]estimating mean stds:  51%|█████▏    | 40/78 [00:49<00:25,  1.51it/s]estimating mean stds:  53%|█████▎    | 41/78 [00:49<00:24,  1.52it/s]estimating mean stds:  54%|█████▍    | 42/78 [00:50<00:23,  1.55it/s]estimating mean stds:  55%|█████▌    | 43/78 [00:50<00:21,  1.64it/s]estimating mean stds:  56%|█████▋    | 44/78 [00:51<00:20,  1.68it/s]estimating mean stds:  58%|█████▊    | 45/78 [00:51<00:19,  1.70it/s]estimating mean stds:  59%|█████▉    | 46/78 [00:52<00:19,  1.65it/s]estimating mean stds:  60%|██████    | 47/78 [00:53<00:17,  1.76it/s]estimating mean stds:  62%|██████▏   | 48/78 [00:53<00:16,  1.86it/s]estimating mean stds:  63%|██████▎   | 49/78 [00:54<00:15,  1.93it/s]estimating mean stds:  64%|██████▍   | 50/78 [00:54<00:13,  2.02it/s]estimating mean stds:  65%|██████▌   | 51/78 [00:54<00:13,  2.01it/s]estimating mean stds:  67%|██████▋   | 52/78 [00:55<00:13,  1.98it/s]estimating mean stds:  68%|██████▊   | 53/78 [00:55<00:12,  2.04it/s]estimating mean stds:  69%|██████▉   | 54/78 [00:56<00:11,  2.06it/s]estimating mean stds:  71%|███████   | 55/78 [00:56<00:10,  2.17it/s]estimating mean stds:  72%|███████▏  | 56/78 [00:57<00:09,  2.23it/s]estimating mean stds:  73%|███████▎  | 57/78 [00:57<00:09,  2.19it/s]estimating mean stds:  74%|███████▍  | 58/78 [00:58<00:08,  2.24it/s]estimating mean stds:  76%|███████▌  | 59/78 [00:58<00:08,  2.27it/s]estimating mean stds:  77%|███████▋  | 60/78 [00:59<00:08,  2.22it/s]estimating mean stds:  78%|███████▊  | 61/78 [00:59<00:07,  2.31it/s]estimating mean stds:  79%|███████▉  | 62/78 [00:59<00:06,  2.32it/s]estimating mean stds:  81%|████████  | 63/78 [01:00<00:06,  2.44it/s]estimating mean stds:  82%|████████▏ | 64/78 [01:00<00:05,  2.36it/s]estimating mean stds:  83%|████████▎ | 65/78 [01:01<00:05,  2.49it/s]estimating mean stds:  85%|████████▍ | 66/78 [01:01<00:04,  2.54it/s]estimating mean stds:  86%|████████▌ | 67/78 [01:01<00:04,  2.48it/s]estimating mean stds:  87%|████████▋ | 68/78 [01:02<00:03,  2.53it/s]estimating mean stds:  88%|████████▊ | 69/78 [01:02<00:03,  2.64it/s]estimating mean stds:  90%|████████▉ | 70/78 [01:02<00:03,  2.64it/s]estimating mean stds:  91%|█████████ | 71/78 [01:03<00:02,  2.55it/s]estimating mean stds:  92%|█████████▏| 72/78 [01:03<00:02,  2.75it/s]estimating mean stds:  94%|█████████▎| 73/78 [01:04<00:01,  2.68it/s]estimating mean stds:  95%|█████████▍| 74/78 [01:04<00:01,  2.73it/s]estimating mean stds:  96%|█████████▌| 75/78 [01:04<00:01,  2.85it/s]estimating mean stds:  97%|█████████▋| 76/78 [01:05<00:00,  2.91it/s]estimating mean stds:  99%|█████████▊| 77/78 [01:05<00:00,  2.86it/s]estimating mean stds: 100%|██████████| 78/78 [01:05<00:00,  2.86it/s]estimating mean stds: 100%|██████████| 78/78 [01:05<00:00,  1.19it/s]
+/workspace/HWM_PLDM/pldm/train.py:389: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(load_checkpoint_path)
+loading saved dataset from /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/data.p
+states will contain images
+loading /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/images.npy
+shape of images is: (101000, 98, 98, 3)
+40000 samples in probe_train dataset
+loading saved dataset from /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/data.p
+states will contain images
+loading /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/images.npy
+shape of images is: (101000, 98, 98, 3)
+40000 samples in probe_val dataset
+loading saved dataset from /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/data.p
+states will contain images
+loading /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/images.npy
+shape of images is: (101000, 98, 98, 3)
+10000 samples in l2_probe_train dataset
+loading saved dataset from /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/data.p
+states will contain images
+loading /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/images.npy
+shape of images is: (101000, 98, 98, 3)
+10000 samples in l2_probe_val dataset
+Inferred input_dim: torch.Size([3, 98, 98])
+loaded model from /workspace/HWM_PLDM/pldm/pretrained/load_from_l1248-seed248_epoch=5_sample_step=10789632.ckpt
+freezing first level weights
+number of params in level 1: 0
+number of params in level 2: 182334
+compiling model
+compilation finished after 1.913s
+Computing L2 latent bounds:   0%|          | 0/100 [00:00<?, ?it/s]Computing L2 latent bounds:   1%|          | 1/100 [00:00<01:36,  1.03it/s]Computing L2 latent bounds:   2%|▏         | 2/100 [00:01<01:11,  1.38it/s]Computing L2 latent bounds:   3%|▎         | 3/100 [00:01<00:56,  1.72it/s]Computing L2 latent bounds:   4%|▍         | 4/100 [00:02<00:50,  1.92it/s]Computing L2 latent bounds:   5%|▌         | 5/100 [00:02<00:47,  1.99it/s]Computing L2 latent bounds:   6%|▌         | 6/100 [00:03<00:44,  2.10it/s]Computing L2 latent bounds:   7%|▋         | 7/100 [00:03<00:42,  2.18it/s]Computing L2 latent bounds:   8%|▊         | 8/100 [00:04<00:41,  2.21it/s]Computing L2 latent bounds:   9%|▉         | 9/100 [00:04<00:40,  2.25it/s]Computing L2 latent bounds:  10%|█         | 10/100 [00:04<00:39,  2.26it/s]Computing L2 latent bounds:  11%|█         | 11/100 [00:05<00:38,  2.30it/s]Computing L2 latent bounds:  12%|█▏        | 12/100 [00:05<00:38,  2.31it/s]Computing L2 latent bounds:  13%|█▎        | 13/100 [00:06<00:37,  2.34it/s]Computing L2 latent bounds:  14%|█▍        | 14/100 [00:06<00:36,  2.37it/s]Computing L2 latent bounds:  15%|█▌        | 15/100 [00:07<00:36,  2.31it/s]Computing L2 latent bounds:  16%|█▌        | 16/100 [00:07<00:36,  2.32it/s]Computing L2 latent bounds:  17%|█▋        | 17/100 [00:07<00:36,  2.28it/s]Computing L2 latent bounds:  18%|█▊        | 18/100 [00:08<00:35,  2.31it/s]Computing L2 latent bounds:  19%|█▉        | 19/100 [00:08<00:35,  2.31it/s]Computing L2 latent bounds:  20%|██        | 20/100 [00:09<00:34,  2.35it/s]Computing L2 latent bounds:  21%|██        | 21/100 [00:09<00:33,  2.36it/s]Computing L2 latent bounds:  22%|██▏       | 22/100 [00:10<00:32,  2.39it/s]Computing L2 latent bounds:  23%|██▎       | 23/100 [00:10<00:32,  2.37it/s]Computing L2 latent bounds:  24%|██▍       | 24/100 [00:10<00:31,  2.39it/s]Computing L2 latent bounds:  25%|██▌       | 25/100 [00:11<00:31,  2.42it/s]Computing L2 latent bounds:  26%|██▌       | 26/100 [00:11<00:29,  2.48it/s]Computing L2 latent bounds:  27%|██▋       | 27/100 [00:12<00:29,  2.50it/s]Computing L2 latent bounds:  28%|██▊       | 28/100 [00:12<00:28,  2.52it/s]Computing L2 latent bounds:  29%|██▉       | 29/100 [00:12<00:27,  2.55it/s]Computing L2 latent bounds:  30%|███       | 30/100 [00:13<00:27,  2.53it/s]Computing L2 latent bounds:  31%|███       | 31/100 [00:13<00:27,  2.54it/s]Computing L2 latent bounds:  32%|███▏      | 32/100 [00:14<00:26,  2.55it/s]Computing L2 latent bounds:  33%|███▎      | 33/100 [00:14<00:25,  2.59it/s]Computing L2 latent bounds:  34%|███▍      | 34/100 [00:14<00:25,  2.60it/s]Computing L2 latent bounds:  35%|███▌      | 35/100 [00:15<00:25,  2.52it/s]Computing L2 latent bounds:  36%|███▌      | 36/100 [00:15<00:25,  2.54it/s]Computing L2 latent bounds:  37%|███▋      | 37/100 [00:16<00:24,  2.53it/s]Computing L2 latent bounds:  38%|███▊      | 38/100 [00:16<00:24,  2.55it/s]Computing L2 latent bounds:  39%|███▉      | 39/100 [00:16<00:23,  2.54it/s]Computing L2 latent bounds:  40%|████      | 40/100 [00:17<00:23,  2.57it/s]Computing L2 latent bounds:  41%|████      | 41/100 [00:17<00:23,  2.55it/s]Computing L2 latent bounds:  42%|████▏     | 42/100 [00:17<00:22,  2.56it/s]Computing L2 latent bounds:  43%|████▎     | 43/100 [00:18<00:22,  2.54it/s]Computing L2 latent bounds:  44%|████▍     | 44/100 [00:18<00:21,  2.57it/s]Computing L2 latent bounds:  45%|████▌     | 45/100 [00:19<00:21,  2.52it/s]Computing L2 latent bounds:  46%|████▌     | 46/100 [00:19<00:21,  2.51it/s]Computing L2 latent bounds:  47%|████▋     | 47/100 [00:19<00:20,  2.55it/s]Computing L2 latent bounds:  48%|████▊     | 48/100 [00:20<00:20,  2.58it/s]Computing L2 latent bounds:  49%|████▉     | 49/100 [00:20<00:19,  2.58it/s]Computing L2 latent bounds:  50%|█████     | 50/100 [00:21<00:19,  2.55it/s]Computing L2 latent bounds:  51%|█████     | 51/100 [00:21<00:19,  2.58it/s]Computing L2 latent bounds:  52%|█████▏    | 52/100 [00:21<00:18,  2.58it/s]Computing L2 latent bounds:  53%|█████▎    | 53/100 [00:22<00:18,  2.55it/s]Computing L2 latent bounds:  54%|█████▍    | 54/100 [00:22<00:17,  2.59it/s]Computing L2 latent bounds:  55%|█████▌    | 55/100 [00:23<00:17,  2.63it/s]Computing L2 latent bounds:  56%|█████▌    | 56/100 [00:23<00:16,  2.61it/s]Computing L2 latent bounds:  57%|█████▋    | 57/100 [00:23<00:16,  2.65it/s]Computing L2 latent bounds:  58%|█████▊    | 58/100 [00:24<00:15,  2.68it/s]Computing L2 latent bounds:  59%|█████▉    | 59/100 [00:24<00:15,  2.68it/s]Computing L2 latent bounds:  60%|██████    | 60/100 [00:24<00:14,  2.69it/s]Computing L2 latent bounds:  61%|██████    | 61/100 [00:25<00:14,  2.65it/s]Computing L2 latent bounds:  62%|██████▏   | 62/100 [00:25<00:14,  2.70it/s]Computing L2 latent bounds:  63%|██████▎   | 63/100 [00:25<00:13,  2.74it/s]Computing L2 latent bounds:  64%|██████▍   | 64/100 [00:26<00:12,  2.79it/s]Computing L2 latent bounds:  65%|██████▌   | 65/100 [00:26<00:12,  2.82it/s]Computing L2 latent bounds:  66%|██████▌   | 66/100 [00:27<00:12,  2.81it/s]Computing L2 latent bounds:  67%|██████▋   | 67/100 [00:27<00:11,  2.79it/s]Computing L2 latent bounds:  68%|██████▊   | 68/100 [00:27<00:11,  2.81it/s]Computing L2 latent bounds:  69%|██████▉   | 69/100 [00:28<00:11,  2.82it/s]Computing L2 latent bounds:  70%|███████   | 70/100 [00:28<00:10,  2.82it/s]Computing L2 latent bounds:  71%|███████   | 71/100 [00:28<00:10,  2.80it/s]Computing L2 latent bounds:  72%|███████▏  | 72/100 [00:29<00:10,  2.79it/s]Computing L2 latent bounds:  73%|███████▎  | 73/100 [00:29<00:09,  2.79it/s]Computing L2 latent bounds:  74%|███████▍  | 74/100 [00:29<00:09,  2.79it/s]Computing L2 latent bounds:  75%|███████▌  | 75/100 [00:30<00:09,  2.74it/s]Computing L2 latent bounds:  76%|███████▌  | 76/100 [00:30<00:08,  2.73it/s]Computing L2 latent bounds:  77%|███████▋  | 77/100 [00:31<00:08,  2.70it/s]Computing L2 latent bounds:  78%|███████▊  | 78/100 [00:31<00:08,  2.71it/s]Computing L2 latent bounds:  79%|███████▉  | 79/100 [00:31<00:07,  2.73it/s]Computing L2 latent bounds:  80%|████████  | 80/100 [00:32<00:07,  2.73it/s]Computing L2 latent bounds:  81%|████████  | 81/100 [00:32<00:06,  2.77it/s]Computing L2 latent bounds:  82%|████████▏ | 82/100 [00:32<00:06,  2.77it/s]Computing L2 latent bounds:  83%|████████▎ | 83/100 [00:33<00:06,  2.78it/s]Computing L2 latent bounds:  84%|████████▍ | 84/100 [00:33<00:05,  2.80it/s]Computing L2 latent bounds:  85%|████████▌ | 85/100 [00:33<00:05,  2.80it/s]Computing L2 latent bounds:  86%|████████▌ | 86/100 [00:34<00:05,  2.78it/s]Computing L2 latent bounds:  87%|████████▋ | 87/100 [00:34<00:04,  2.76it/s]Computing L2 latent bounds:  88%|████████▊ | 88/100 [00:34<00:04,  2.77it/s]Computing L2 latent bounds:  89%|████████▉ | 89/100 [00:35<00:03,  2.77it/s]Computing L2 latent bounds:  90%|█████████ | 90/100 [00:35<00:03,  2.77it/s]Computing L2 latent bounds:  91%|█████████ | 91/100 [00:36<00:03,  2.75it/s]Computing L2 latent bounds:  92%|█████████▏| 92/100 [00:36<00:02,  2.74it/s]Computing L2 latent bounds:  93%|█████████▎| 93/100 [00:36<00:02,  2.91it/s]Computing L2 latent bounds:  94%|█████████▍| 94/100 [00:37<00:01,  3.02it/s]Computing L2 latent bounds:  95%|█████████▌| 95/100 [00:37<00:01,  3.06it/s]Computing L2 latent bounds:  96%|█████████▌| 96/100 [00:37<00:01,  3.14it/s]Computing L2 latent bounds:  97%|█████████▋| 97/100 [00:37<00:00,  3.20it/s]Computing L2 latent bounds:  98%|█████████▊| 98/100 [00:38<00:00,  3.25it/s]Computing L2 latent bounds:  99%|█████████▉| 99/100 [00:38<00:00,  3.28it/s]Computing L2 latent bounds: 100%|██████████| 100/100 [00:38<00:00,  3.29it/s]Computing L2 latent bounds: 100%|██████████| 100/100 [00:38<00:00,  2.58it/s]
+Probe l2 prediction epochs:   0%|          | 0/30 [00:00<?, ?it/s]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:02<03:44,  2.91s/it][A
+Probe prediction step:   3%|▎         | 2/78 [00:03<02:00,  1.58s/it][A
+Probe prediction step:   4%|▍         | 3/78 [00:04<01:19,  1.06s/it][A
+Probe prediction step:   5%|▌         | 4/78 [00:04<00:59,  1.23it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:04<00:48,  1.49it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:05<00:42,  1.70it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:05<00:37,  1.87it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:06<00:34,  2.02it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:06<00:33,  2.07it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:06<00:31,  2.17it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:07<00:29,  2.25it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:07<00:28,  2.32it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:08<00:27,  2.36it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:08<00:26,  2.39it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:09<00:26,  2.42it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:09<00:25,  2.41it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:09<00:25,  2.41it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:10<00:24,  2.43it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:10<00:24,  2.43it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:11<00:23,  2.44it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:11<00:23,  2.47it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:11<00:22,  2.44it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:12<00:22,  2.43it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:12<00:22,  2.40it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:13<00:21,  2.42it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:13<00:21,  2.45it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:13<00:20,  2.43it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:14<00:20,  2.42it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:14<00:20,  2.42it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:15<00:19,  2.42it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:15<00:19,  2.41it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:16<00:18,  2.43it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:16<00:18,  2.44it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:16<00:18,  2.43it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:17<00:17,  2.43it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:17<00:17,  2.43it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:18<00:16,  2.43it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:18<00:16,  2.44it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:18<00:16,  2.43it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:19<00:15,  2.43it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:19<00:15,  2.44it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:20<00:14,  2.43it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:20<00:14,  2.42it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:20<00:13,  2.43it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:21<00:13,  2.43it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:21<00:13,  2.43it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:22<00:12,  2.44it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:22<00:12,  2.44it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:22<00:11,  2.44it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:23<00:11,  2.43it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:23<00:11,  2.43it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:24<00:10,  2.43it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:24<00:10,  2.44it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:25<00:09,  2.44it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:25<00:09,  2.44it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:25<00:08,  2.45it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:26<00:08,  2.46it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:26<00:08,  2.46it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:27<00:07,  2.46it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:27<00:07,  2.46it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:27<00:06,  2.46it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:28<00:06,  2.46it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:28<00:06,  2.45it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:29<00:05,  2.45it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:29<00:05,  2.47it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:29<00:04,  2.46it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:30<00:04,  2.46it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:30<00:04,  2.46it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:31<00:03,  2.46it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:31<00:03,  2.46it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:31<00:02,  2.46it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:32<00:02,  2.45it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:32<00:02,  2.46it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:33<00:01,  2.45it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:33<00:01,  2.42it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:34<00:00,  2.42it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:34<00:00,  2.43it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:34<00:00,  2.43it/s][AProbe prediction step: 100%|██████████| 78/78 [00:34<00:00,  2.24it/s]
+Probe l2 prediction epochs:   3%|▎         | 1/30 [00:34<16:50, 34.84s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:31,  2.47it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:30,  2.46it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:30,  2.49it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:29,  2.47it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:29,  2.46it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:29,  2.45it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:28,  2.46it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:28,  2.46it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:27,  2.47it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:04<00:27,  2.47it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:27,  2.47it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:26,  2.47it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:26,  2.48it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:25,  2.47it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:25,  2.47it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:25,  2.47it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:24,  2.46it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:24,  2.47it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:23,  2.47it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:23,  2.47it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:23,  2.47it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:22,  2.47it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:22,  2.46it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:21,  2.47it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:10<00:21,  2.47it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:21,  2.47it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:10<00:20,  2.47it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:20,  2.47it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:19,  2.46it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:12<00:19,  2.46it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:19,  2.46it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:12<00:18,  2.47it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:18,  2.47it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:17,  2.49it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:14<00:17,  2.50it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:16,  2.51it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:14<00:16,  2.50it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.49it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:15,  2.48it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:16<00:15,  2.47it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:14,  2.48it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:16<00:14,  2.46it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.44it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:14,  2.43it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:18<00:13,  2.44it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:13,  2.44it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:19<00:12,  2.44it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:12,  2.41it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:11,  2.44it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:20<00:11,  2.47it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:10,  2.49it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:21<00:10,  2.52it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:09,  2.55it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:09,  2.54it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:22<00:09,  2.54it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:08,  2.52it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:23<00:08,  2.49it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:23<00:07,  2.51it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:23<00:07,  2.51it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:24<00:07,  2.53it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:06,  2.54it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:25<00:06,  2.53it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:05,  2.52it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:25<00:05,  2.49it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:26<00:05,  2.49it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:26<00:04,  2.47it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:27<00:04,  2.46it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:27<00:04,  2.41it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:27<00:03,  2.39it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:28<00:03,  2.42it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:28<00:02,  2.44it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:29<00:02,  2.47it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:29<00:02,  2.46it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:29<00:01,  2.48it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:30<00:01,  2.48it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:30<00:00,  2.47it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:31<00:00,  2.48it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.46it/s][AProbe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.47it/s]
+Probe l2 prediction epochs:   7%|▋         | 2/30 [01:06<15:21, 32.90s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:31,  2.46it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:30,  2.45it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:30,  2.49it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:29,  2.51it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:29,  2.49it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:28,  2.50it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:28,  2.48it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:28,  2.47it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:28,  2.44it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:04<00:27,  2.43it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:27,  2.44it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:26,  2.46it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:26,  2.42it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:26,  2.43it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:25,  2.44it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:25,  2.44it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:24,  2.47it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:24,  2.44it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:24,  2.43it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:23,  2.44it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:23,  2.46it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:22,  2.47it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:22,  2.47it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:21,  2.47it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:10<00:21,  2.48it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:20,  2.48it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:10<00:20,  2.48it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:20,  2.48it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:19,  2.48it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:12<00:19,  2.48it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:18,  2.48it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:12<00:18,  2.48it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:18,  2.46it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:17,  2.45it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:14<00:17,  2.46it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:16,  2.47it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:15<00:16,  2.47it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.47it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:15,  2.47it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:16<00:15,  2.45it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:14,  2.47it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:17<00:14,  2.48it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.49it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:13,  2.51it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:18<00:13,  2.49it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:12,  2.48it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:19<00:12,  2.49it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:12,  2.48it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:11,  2.51it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:20<00:11,  2.51it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:10,  2.51it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:21<00:10,  2.52it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:09,  2.54it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:09,  2.57it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:22<00:08,  2.61it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:08,  2.62it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:22<00:08,  2.61it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:23<00:07,  2.60it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:23<00:07,  2.59it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:24<00:06,  2.59it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:06,  2.58it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:24<00:06,  2.56it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:05,  2.55it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:25<00:05,  2.54it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:26<00:05,  2.54it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:26<00:04,  2.53it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:26<00:04,  2.52it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:27<00:03,  2.51it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:27<00:03,  2.51it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:28<00:03,  2.51it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:28<00:02,  2.51it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:28<00:02,  2.50it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:29<00:01,  2.50it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:29<00:01,  2.48it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:30<00:01,  2.48it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:30<00:00,  2.48it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:30<00:00,  2.48it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.49it/s][AProbe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.49it/s]
+Probe l2 prediction epochs:  10%|█         | 3/30 [01:37<14:28, 32.16s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:30,  2.51it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:30,  2.51it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:30,  2.50it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:29,  2.49it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:29,  2.49it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:28,  2.49it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:28,  2.50it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:27,  2.50it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:27,  2.50it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:04<00:27,  2.49it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:26,  2.48it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:26,  2.47it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:26,  2.47it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:25,  2.47it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:25,  2.45it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:28,  2.18it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:07<00:27,  2.19it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:26,  2.29it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:24,  2.36it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:24,  2.41it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:23,  2.47it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:09<00:22,  2.53it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:21,  2.55it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:20,  2.60it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:10<00:20,  2.62it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:19,  2.66it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:10<00:20,  2.54it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:19,  2.57it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:19,  2.56it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:12<00:18,  2.58it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:18,  2.59it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:12<00:17,  2.61it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:17,  2.52it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:17,  2.57it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:14<00:16,  2.58it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:16,  2.59it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:14<00:15,  2.59it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:15,  2.59it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:14,  2.60it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:15<00:14,  2.59it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:14,  2.58it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:16<00:14,  2.57it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:13,  2.57it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:13,  2.56it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:17<00:12,  2.55it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:12,  2.55it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:18<00:12,  2.55it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:11,  2.55it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:11,  2.56it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:19<00:10,  2.56it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:10,  2.56it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:20<00:10,  2.55it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:09,  2.55it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:09,  2.56it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:21<00:08,  2.56it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:08,  2.55it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:22<00:08,  2.56it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:23<00:07,  2.55it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:23<00:07,  2.56it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:23<00:07,  2.56it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:06,  2.56it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:24<00:06,  2.51it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:06,  2.47it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:25<00:05,  2.47it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:25<00:05,  2.47it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:26<00:04,  2.46it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:26<00:04,  2.45it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:27<00:04,  2.43it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:27<00:03,  2.44it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:27<00:03,  2.44it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:28<00:02,  2.45it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:28<00:02,  2.43it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:29<00:02,  2.44it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:29<00:01,  2.46it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:29<00:01,  2.47it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:30<00:00,  2.48it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:30<00:00,  2.47it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.47it/s][AProbe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.51it/s]
+Probe l2 prediction epochs:  13%|█▎        | 4/30 [02:08<13:45, 31.75s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:31,  2.45it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:30,  2.46it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:30,  2.45it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:30,  2.44it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:29,  2.44it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:29,  2.44it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:29,  2.45it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:28,  2.45it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:28,  2.44it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:04<00:27,  2.46it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:27,  2.45it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:26,  2.45it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:26,  2.46it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:25,  2.46it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:25,  2.47it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:25,  2.47it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:24,  2.47it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:24,  2.47it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:23,  2.46it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:23,  2.47it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:23,  2.47it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:22,  2.46it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:22,  2.46it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:21,  2.47it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:10<00:21,  2.47it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:21,  2.47it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:10<00:20,  2.47it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:20,  2.47it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:19,  2.47it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:12<00:19,  2.47it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:19,  2.47it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:13<00:18,  2.45it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:18,  2.45it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:17,  2.45it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:14<00:17,  2.45it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:17,  2.45it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:15<00:16,  2.46it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.46it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:15,  2.46it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:16<00:15,  2.46it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:15,  2.46it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:17<00:14,  2.46it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.46it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:13,  2.46it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:18<00:13,  2.46it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:12,  2.46it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:19<00:12,  2.45it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:12,  2.46it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:11,  2.47it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:20<00:11,  2.49it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:10,  2.49it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:21<00:10,  2.48it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:10,  2.48it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:09,  2.47it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:22<00:09,  2.47it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:08,  2.46it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:23<00:08,  2.42it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:23<00:08,  2.43it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:23<00:07,  2.43it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:24<00:07,  2.44it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:06,  2.45it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:25<00:06,  2.42it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:06,  2.41it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:26<00:05,  2.44it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:26<00:05,  2.47it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:26<00:04,  2.42it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:27<00:04,  2.42it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:27<00:04,  2.44it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:28<00:03,  2.45it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:28<00:03,  2.47it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:28<00:02,  2.49it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:29<00:02,  2.49it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:29<00:02,  2.48it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:30<00:01,  2.48it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:30<00:01,  2.47it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:30<00:00,  2.44it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:31<00:00,  2.46it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.49it/s][AProbe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.46it/s]
+Probe l2 prediction epochs:  17%|█▋        | 5/30 [02:40<13:13, 31.74s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:30,  2.55it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:29,  2.57it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:29,  2.54it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:28,  2.58it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:01<00:28,  2.59it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:27,  2.60it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:27,  2.55it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:27,  2.52it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:27,  2.54it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:03<00:26,  2.56it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:26,  2.56it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:25,  2.57it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:24,  2.61it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:24,  2.62it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:05<00:23,  2.63it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:23,  2.63it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:23,  2.61it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:06<00:23,  2.60it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:22,  2.61it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:07<00:22,  2.60it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:21,  2.61it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:21,  2.61it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:08<00:21,  2.59it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:20,  2.58it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:09<00:20,  2.58it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:20,  2.57it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:10<00:19,  2.57it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:10<00:19,  2.55it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:19,  2.55it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:11<00:19,  2.52it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:18,  2.53it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:12<00:18,  2.52it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:12<00:17,  2.53it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:17,  2.54it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:13<00:16,  2.57it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:13<00:16,  2.57it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:14<00:16,  2.54it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:14<00:15,  2.53it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:15,  2.52it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:15<00:15,  2.51it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:15<00:14,  2.51it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:16<00:14,  2.50it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:16<00:13,  2.52it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:13,  2.53it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:17<00:12,  2.54it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:17<00:12,  2.55it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:18<00:12,  2.52it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:18<00:11,  2.51it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:11,  2.46it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:19<00:11,  2.47it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:19<00:10,  2.48it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:20<00:10,  2.48it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:20<00:10,  2.49it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:09,  2.50it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:21<00:09,  2.51it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:21<00:08,  2.51it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:22<00:08,  2.50it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:22<00:08,  2.48it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:23<00:07,  2.48it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:23<00:07,  2.47it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:06,  2.47it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:24<00:06,  2.46it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:24<00:06,  2.46it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:25<00:05,  2.46it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:25<00:05,  2.48it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:26<00:04,  2.46it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:26<00:04,  2.47it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:26<00:04,  2.47it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:27<00:03,  2.48it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:27<00:03,  2.49it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:28<00:02,  2.50it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:28<00:02,  2.51it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:28<00:01,  2.51it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:29<00:01,  2.49it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:29<00:01,  2.49it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:30<00:00,  2.46it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:30<00:00,  2.45it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:30<00:00,  2.47it/s][AProbe prediction step: 100%|██████████| 78/78 [00:30<00:00,  2.53it/s]
+Probe l2 prediction epochs:  20%|██        | 6/30 [03:11<12:34, 31.45s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:30,  2.52it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:30,  2.52it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:30,  2.48it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:29,  2.47it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:29,  2.49it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:28,  2.49it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:28,  2.47it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:28,  2.47it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:27,  2.47it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:04<00:27,  2.47it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:27,  2.47it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:26,  2.46it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:26,  2.47it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:25,  2.47it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:25,  2.46it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:25,  2.46it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:24,  2.48it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:24,  2.49it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:23,  2.51it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:23,  2.51it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:22,  2.49it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:22,  2.49it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:22,  2.50it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:21,  2.51it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:10<00:21,  2.48it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:21,  2.46it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:10<00:20,  2.45it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:20,  2.46it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:19,  2.45it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:12<00:19,  2.45it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:19,  2.45it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:12<00:18,  2.45it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:18,  2.45it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:17,  2.45it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:14<00:17,  2.46it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:16,  2.48it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:14<00:16,  2.48it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.49it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:15,  2.50it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:16<00:15,  2.49it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:14,  2.49it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:16<00:14,  2.47it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.46it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:13,  2.46it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:18<00:13,  2.46it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:13,  2.46it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:19<00:12,  2.46it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:12,  2.45it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:12,  2.41it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:20<00:11,  2.41it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:11,  2.42it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:21<00:11,  2.33it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:10,  2.35it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:10,  2.38it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:22<00:09,  2.40it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:09,  2.32it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:23<00:08,  2.37it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:23<00:08,  2.39it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:24<00:07,  2.43it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:24<00:07,  2.39it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:07,  2.42it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:25<00:06,  2.41it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:06,  2.42it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:26<00:05,  2.42it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:26<00:05,  2.42it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:26<00:04,  2.42it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:27<00:04,  2.42it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:27<00:04,  2.42it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:28<00:03,  2.39it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:28<00:03,  2.41it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:29<00:02,  2.42it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:29<00:02,  2.43it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:29<00:02,  2.42it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:30<00:01,  2.42it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:30<00:01,  2.43it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:31<00:00,  2.44it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:31<00:00,  2.44it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.44it/s][AProbe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.45it/s]
+Probe l2 prediction epochs:  23%|██▎       | 7/30 [03:43<12:06, 31.59s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:31,  2.44it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:31,  2.44it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:30,  2.44it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:30,  2.45it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:29,  2.44it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:29,  2.44it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:28,  2.47it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:28,  2.47it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:28,  2.46it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:04<00:27,  2.45it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:27,  2.46it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:26,  2.46it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:26,  2.45it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:25,  2.47it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:25,  2.50it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:24,  2.50it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:24,  2.51it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:23,  2.51it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:23,  2.51it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:22,  2.53it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:22,  2.54it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:22,  2.50it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:22,  2.49it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:21,  2.49it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:10<00:21,  2.48it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:20,  2.48it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:10<00:20,  2.48it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:20,  2.47it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:19,  2.48it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:12<00:19,  2.47it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:19,  2.47it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:12<00:18,  2.47it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:18,  2.45it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:17,  2.45it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:14<00:17,  2.42it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:17,  2.41it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:14<00:16,  2.41it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.42it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:16,  2.43it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:16<00:15,  2.44it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:15,  2.44it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:17<00:14,  2.44it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.44it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:13,  2.45it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:18<00:13,  2.45it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:13,  2.45it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:19<00:12,  2.45it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:12,  2.45it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:11,  2.46it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:20<00:11,  2.45it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:11,  2.44it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:21<00:10,  2.43it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:10,  2.45it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:09,  2.47it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:22<00:09,  2.47it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:08,  2.48it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:23<00:08,  2.51it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:23<00:07,  2.50it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:23<00:07,  2.50it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:24<00:07,  2.47it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:06,  2.45it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:25<00:06,  2.46it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:06,  2.46it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:25<00:05,  2.45it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:26<00:05,  2.37it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:26<00:04,  2.40it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:27<00:04,  2.38it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:27<00:04,  2.39it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:28<00:03,  2.40it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:28<00:03,  2.41it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:28<00:02,  2.42it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:29<00:02,  2.47it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:29<00:01,  2.53it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:30<00:01,  2.54it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:30<00:01,  2.51it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:30<00:00,  2.52it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:31<00:00,  2.50it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.51it/s][AProbe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.46it/s]
+Probe l2 prediction epochs:  27%|██▋       | 8/30 [04:14<11:35, 31.62s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:31,  2.47it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:31,  2.40it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:31,  2.41it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:30,  2.43it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:30,  2.43it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:29,  2.45it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:28,  2.48it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:28,  2.48it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:28,  2.46it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:04<00:28,  2.42it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:27,  2.42it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:27,  2.42it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:26,  2.48it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:25,  2.55it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:24,  2.54it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:24,  2.52it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:24,  2.53it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:23,  2.55it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:23,  2.54it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:22,  2.53it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:22,  2.56it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:21,  2.60it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:21,  2.62it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:20,  2.62it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:09<00:20,  2.61it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:19,  2.60it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:10<00:19,  2.61it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:19,  2.61it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:18,  2.59it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:11<00:18,  2.57it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:18,  2.60it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:12<00:17,  2.62it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:17,  2.51it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:17,  2.53it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:13<00:16,  2.55it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:16,  2.58it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:14<00:15,  2.59it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:14<00:15,  2.60it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:15,  2.58it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:15<00:14,  2.56it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:14,  2.56it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:16<00:13,  2.57it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:16<00:13,  2.56it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:13,  2.55it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:17<00:12,  2.54it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:12,  2.53it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:18<00:12,  2.54it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:18<00:11,  2.52it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:11,  2.50it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:19<00:11,  2.51it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:10,  2.50it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:20<00:10,  2.53it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:20<00:09,  2.52it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:09,  2.54it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:21<00:08,  2.56it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:08,  2.55it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:22<00:08,  2.56it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:22<00:07,  2.54it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:23<00:07,  2.53it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:23<00:07,  2.52it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:06,  2.51it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:24<00:06,  2.51it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:24<00:05,  2.51it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:25<00:05,  2.46it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:25<00:05,  2.45it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:26<00:04,  2.45it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:26<00:04,  2.45it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:26<00:04,  2.45it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:27<00:03,  2.45it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:27<00:03,  2.45it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:28<00:02,  2.45it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:28<00:02,  2.45it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:28<00:02,  2.45it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:29<00:01,  2.42it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:29<00:01,  2.44it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:30<00:00,  2.46it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:30<00:00,  2.47it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:30<00:00,  2.49it/s][AProbe prediction step: 100%|██████████| 78/78 [00:30<00:00,  2.52it/s]
+Probe l2 prediction epochs:  30%|███       | 9/30 [04:45<10:59, 31.42s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:30,  2.53it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:30,  2.52it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:29,  2.53it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:29,  2.52it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:01<00:28,  2.52it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:28,  2.54it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:28,  2.53it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:27,  2.52it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:27,  2.52it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:03<00:27,  2.51it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:26,  2.51it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:26,  2.50it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:25,  2.50it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:25,  2.50it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:05<00:25,  2.49it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:24,  2.49it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:24,  2.49it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:24,  2.49it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:23,  2.49it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:07<00:23,  2.51it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:22,  2.52it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:22,  2.51it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:21,  2.50it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:21,  2.49it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:09<00:21,  2.48it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:21,  2.46it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:10<00:20,  2.46it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:20,  2.46it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:20,  2.40it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:12<00:20,  2.38it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:19,  2.38it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:12<00:19,  2.37it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:19,  2.35it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:18,  2.35it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:14<00:18,  2.34it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:17,  2.34it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:15<00:17,  2.35it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.37it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:16,  2.40it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:16<00:15,  2.41it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:15,  2.43it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:17<00:14,  2.46it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.48it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:13,  2.49it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:18<00:13,  2.50it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:12,  2.53it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:19<00:12,  2.53it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:11,  2.53it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:11,  2.51it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:20<00:11,  2.49it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:10,  2.48it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:21<00:10,  2.47it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:10,  2.47it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:09,  2.46it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:22<00:09,  2.44it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:09,  2.38it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:23<00:08,  2.35it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:23<00:08,  2.34it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:24<00:08,  2.31it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:24<00:07,  2.30it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:07,  2.30it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:25<00:06,  2.29it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:06,  2.28it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:26<00:06,  2.30it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:26<00:05,  2.30it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:27<00:05,  2.29it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:27<00:04,  2.29it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:28<00:04,  2.29it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:28<00:03,  2.28it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:28<00:03,  2.28it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:29<00:03,  2.28it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:29<00:02,  2.22it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:30<00:02,  2.24it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:30<00:01,  2.15it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:31<00:01,  2.17it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:31<00:00,  2.22it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:32<00:00,  2.16it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:32<00:00,  2.18it/s][AProbe prediction step: 100%|██████████| 78/78 [00:32<00:00,  2.39it/s]
+Probe l2 prediction epochs:  33%|███▎      | 10/30 [05:18<10:35, 31.78s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:34,  2.25it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:33,  2.25it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:32,  2.31it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:31,  2.34it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:30,  2.38it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:29,  2.40it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:29,  2.40it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:28,  2.41it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:28,  2.42it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:04<00:28,  2.43it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:27,  2.43it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:05<00:27,  2.44it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:26,  2.44it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:25,  2.47it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:25,  2.47it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:25,  2.47it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:07<00:24,  2.47it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:24,  2.47it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:23,  2.47it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:23,  2.45it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:23,  2.44it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:09<00:22,  2.44it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:22,  2.44it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:22,  2.42it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:10<00:21,  2.43it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:21,  2.44it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:11<00:20,  2.44it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:20,  2.44it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:20,  2.42it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:12<00:19,  2.43it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:19,  2.43it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:13<00:18,  2.43it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:18,  2.43it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:14<00:17,  2.45it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:14<00:17,  2.46it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:17,  2.45it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:15<00:16,  2.44it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.44it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:16<00:15,  2.44it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:16<00:15,  2.44it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:15,  2.44it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:17<00:14,  2.43it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.43it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:18<00:13,  2.46it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:18<00:13,  2.45it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:13,  2.44it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:19<00:12,  2.45it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:12,  2.46it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:20<00:11,  2.45it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:20<00:11,  2.45it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:11,  2.42it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:21<00:10,  2.42it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:10,  2.46it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:22<00:09,  2.48it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:22<00:09,  2.50it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:08,  2.51it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:23<00:08,  2.51it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:23<00:07,  2.52it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:24<00:07,  2.51it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:24<00:07,  2.52it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:06,  2.52it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:25<00:06,  2.50it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:05,  2.52it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:26<00:05,  2.54it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:26<00:05,  2.56it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:26<00:04,  2.54it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:27<00:04,  2.52it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:27<00:04,  2.49it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:28<00:03,  2.48it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:28<00:03,  2.49it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:28<00:02,  2.53it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:29<00:02,  2.56it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:29<00:01,  2.56it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:30<00:01,  2.58it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:30<00:01,  2.60it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:30<00:00,  2.57it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:31<00:00,  2.59it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.52it/s][AProbe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.47it/s]
+Probe l2 prediction epochs:  37%|███▋      | 11/30 [05:50<10:02, 31.74s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:29,  2.61it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:28,  2.63it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:28,  2.59it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:28,  2.63it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:01<00:27,  2.62it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:27,  2.62it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:26,  2.64it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:26,  2.64it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:26,  2.60it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:03<00:26,  2.59it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:26,  2.57it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:25,  2.56it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:25,  2.56it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:24,  2.58it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:05<00:24,  2.57it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:24,  2.57it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:23,  2.58it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:06<00:23,  2.57it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:22,  2.57it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:07<00:22,  2.58it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:22,  2.55it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:21,  2.55it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:08<00:21,  2.53it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:21,  2.53it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:09<00:21,  2.52it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:20,  2.48it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:10<00:20,  2.48it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:10<00:20,  2.49it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:19,  2.49it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:11<00:19,  2.48it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:18,  2.49it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:12<00:18,  2.49it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:12<00:18,  2.49it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:17,  2.49it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:13<00:17,  2.48it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:16,  2.48it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:14<00:16,  2.48it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.41it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:16,  2.43it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:15<00:15,  2.46it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:14,  2.49it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:16<00:14,  2.47it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.44it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:14,  2.41it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:17<00:13,  2.42it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:13,  2.43it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:18<00:12,  2.44it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:12,  2.45it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:11,  2.45it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:19<00:11,  2.45it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:11,  2.45it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:20<00:10,  2.45it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:10,  2.46it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:09,  2.48it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:21<00:09,  2.46it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:08,  2.47it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:22<00:08,  2.48it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:23<00:08,  2.48it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:23<00:07,  2.47it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:23<00:07,  2.46it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:06,  2.47it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:24<00:06,  2.47it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:06,  2.47it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:25<00:05,  2.46it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:25<00:05,  2.46it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:26<00:04,  2.44it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:26<00:04,  2.44it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:27<00:04,  2.44it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:27<00:03,  2.42it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:28<00:03,  2.41it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:28<00:02,  2.39it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:28<00:02,  2.40it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:29<00:02,  2.42it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:29<00:01,  2.44it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:30<00:01,  2.45it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:30<00:00,  2.45it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:30<00:00,  2.46it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.45it/s][AProbe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.49it/s]
+Probe l2 prediction epochs:  40%|████      | 12/30 [06:21<09:28, 31.61s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:31,  2.46it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:30,  2.48it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:30,  2.49it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:29,  2.52it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:01<00:29,  2.51it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:28,  2.51it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:27,  2.56it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:26,  2.60it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:26,  2.60it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:03<00:26,  2.60it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:25,  2.58it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:25,  2.58it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:25,  2.57it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:24,  2.58it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:05<00:24,  2.58it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:24,  2.57it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:23,  2.57it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:23,  2.57it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:23,  2.56it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:07<00:22,  2.56it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:22,  2.55it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:21,  2.55it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:08<00:21,  2.55it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:21,  2.55it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:09<00:20,  2.54it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:20,  2.53it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:10<00:20,  2.53it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:10<00:19,  2.52it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:19,  2.50it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:11<00:19,  2.45it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:19,  2.43it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:12<00:18,  2.43it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:18,  2.43it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:18,  2.44it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:13<00:17,  2.44it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:17,  2.41it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:14<00:17,  2.39it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.40it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:16,  2.42it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:15<00:15,  2.44it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:15,  2.46it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:16<00:14,  2.47it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.47it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:13,  2.45it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:17<00:13,  2.45it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:13,  2.44it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:18<00:12,  2.47it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:11,  2.50it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:11,  2.52it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:19<00:11,  2.53it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:10,  2.54it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:20<00:10,  2.53it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:09,  2.54it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:09,  2.55it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:21<00:08,  2.60it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:08,  2.64it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:22<00:07,  2.65it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:22<00:07,  2.66it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:23<00:07,  2.65it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:23<00:06,  2.64it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:06,  2.65it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:24<00:06,  2.64it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:24<00:05,  2.62it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:25<00:05,  2.62it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:25<00:05,  2.60it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:26<00:04,  2.60it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:26<00:04,  2.60it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:26<00:03,  2.59it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:27<00:03,  2.57it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:27<00:03,  2.54it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:28<00:02,  2.55it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:28<00:02,  2.56it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:28<00:01,  2.56it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:29<00:01,  2.56it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:29<00:01,  2.56it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:29<00:00,  2.55it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:30<00:00,  2.55it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:30<00:00,  2.54it/s][AProbe prediction step: 100%|██████████| 78/78 [00:30<00:00,  2.54it/s]
+Probe l2 prediction epochs:  43%|████▎     | 13/30 [06:52<08:53, 31.36s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:30,  2.56it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:29,  2.55it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:29,  2.54it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:29,  2.54it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:01<00:28,  2.54it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:28,  2.54it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:28,  2.53it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:27,  2.55it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:27,  2.50it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:03<00:27,  2.49it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:27,  2.47it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:26,  2.47it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:26,  2.47it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:25,  2.47it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:25,  2.46it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:25,  2.46it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:24,  2.46it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:24,  2.46it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:24,  2.42it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:23,  2.43it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:23,  2.43it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:23,  2.34it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:23,  2.38it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:23,  2.32it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:10<00:22,  2.36it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:21,  2.39it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:11<00:21,  2.41it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:20,  2.43it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:20,  2.44it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:12<00:19,  2.45it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:19,  2.43it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:13<00:19,  2.42it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:18,  2.43it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:18,  2.43it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:14<00:17,  2.40it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:17,  2.37it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:15<00:17,  2.35it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.37it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:16<00:16,  2.39it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:16<00:15,  2.41it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:15,  2.42it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:17<00:14,  2.43it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.43it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:18<00:14,  2.41it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:18<00:13,  2.42it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:13,  2.45it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:19<00:12,  2.47it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:12,  2.41it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:20<00:11,  2.42it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:20<00:11,  2.43it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:11,  2.43it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:21<00:10,  2.40it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:10,  2.40it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:22<00:09,  2.41it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:22<00:09,  2.44it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:08,  2.45it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:23<00:08,  2.47it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:23<00:08,  2.48it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:24<00:07,  2.49it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:24<00:07,  2.49it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:06,  2.50it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:25<00:06,  2.49it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:06,  2.47it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:26<00:05,  2.47it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:26<00:05,  2.47it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:27<00:04,  2.44it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:27<00:04,  2.46it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:27<00:04,  2.47it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:28<00:03,  2.48it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:28<00:03,  2.50it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:29<00:02,  2.49it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:29<00:02,  2.52it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:29<00:01,  2.54it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:30<00:01,  2.56it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:30<00:01,  2.55it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:30<00:00,  2.58it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:31<00:00,  2.61it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.62it/s][AProbe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.46it/s]
+Probe l2 prediction epochs:  47%|████▋     | 14/30 [07:23<08:23, 31.46s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:29,  2.65it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:28,  2.68it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:27,  2.70it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:27,  2.66it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:01<00:28,  2.59it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:27,  2.59it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:27,  2.61it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:26,  2.61it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:26,  2.59it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:03<00:26,  2.59it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:26,  2.58it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:25,  2.59it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:04<00:25,  2.58it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:25,  2.54it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:05<00:24,  2.53it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:24,  2.53it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:24,  2.54it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:06<00:23,  2.56it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:22,  2.60it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:07<00:22,  2.60it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:21,  2.62it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:21,  2.57it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:08<00:21,  2.53it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:21,  2.50it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:09<00:21,  2.47it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:21,  2.44it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:10<00:20,  2.45it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:10<00:20,  2.45it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:19,  2.45it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:11<00:19,  2.46it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:19,  2.46it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:12<00:18,  2.42it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:18,  2.43it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:18,  2.44it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:13<00:17,  2.43it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:17,  2.46it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:14<00:16,  2.42it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.42it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:16,  2.43it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:15<00:15,  2.43it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:15,  2.46it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:16<00:14,  2.47it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.45it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:13,  2.45it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:17<00:13,  2.49it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:12,  2.53it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:18<00:12,  2.57it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:11,  2.58it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:11,  2.60it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:19<00:10,  2.64it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:10,  2.64it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:20<00:09,  2.64it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:20<00:09,  2.65it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:09,  2.65it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:21<00:09,  2.55it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:08,  2.51it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:22<00:08,  2.48it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:22<00:08,  2.46it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:23<00:07,  2.45it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:23<00:07,  2.44it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:07,  2.42it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:24<00:06,  2.43it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:06,  2.43it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:25<00:05,  2.42it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:25<00:05,  2.43it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:26<00:04,  2.43it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:26<00:04,  2.44it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:27<00:04,  2.44it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:27<00:03,  2.46it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:27<00:03,  2.45it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:28<00:02,  2.45it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:28<00:02,  2.44it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:29<00:02,  2.44it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:29<00:01,  2.44it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:29<00:01,  2.44it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:30<00:00,  2.44it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:30<00:00,  2.43it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.43it/s][AProbe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.50it/s]
+Probe l2 prediction epochs:  50%|█████     | 15/30 [07:55<07:50, 31.38s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:31,  2.42it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:31,  2.41it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:31,  2.41it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:30,  2.41it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:30,  2.41it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:29,  2.42it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:29,  2.42it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:28,  2.42it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:28,  2.42it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:04<00:28,  2.42it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:27,  2.42it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:27,  2.42it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:26,  2.43it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:26,  2.43it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:25,  2.43it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:25,  2.45it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:07<00:24,  2.44it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:24,  2.44it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:24,  2.43it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:24,  2.38it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:23,  2.39it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:09<00:23,  2.41it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:22,  2.42it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:22,  2.43it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:10<00:21,  2.43it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:21,  2.44it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:11<00:20,  2.44it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:20,  2.44it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:20,  2.43it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:12<00:19,  2.44it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:19,  2.43it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:13<00:18,  2.43it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:18,  2.43it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:14<00:18,  2.43it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:14<00:17,  2.44it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:17,  2.44it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:15<00:16,  2.44it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.44it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:16<00:16,  2.41it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:16<00:15,  2.44it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:15,  2.44it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:17<00:14,  2.44it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.44it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:18<00:13,  2.45it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:18<00:13,  2.44it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:13,  2.45it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:19<00:12,  2.45it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:12,  2.45it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:20<00:11,  2.45it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:20<00:11,  2.44it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:11,  2.45it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:21<00:10,  2.45it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:10,  2.46it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:22<00:09,  2.47it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:22<00:09,  2.45it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:23<00:08,  2.45it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:23<00:08,  2.46it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:23<00:08,  2.46it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:24<00:07,  2.45it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:24<00:07,  2.44it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:25<00:06,  2.44it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:25<00:06,  2.44it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:06,  2.43it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:26<00:05,  2.46it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:26<00:05,  2.46it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:27<00:04,  2.48it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:27<00:04,  2.47it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:27<00:04,  2.47it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:28<00:03,  2.46it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:28<00:03,  2.45it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:29<00:02,  2.45it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:29<00:02,  2.45it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:29<00:02,  2.45it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:30<00:01,  2.44it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:30<00:01,  2.47it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:31<00:00,  2.44it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:31<00:00,  2.45it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.45it/s][AProbe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.44it/s]
+Probe l2 prediction epochs:  53%|█████▎    | 16/30 [08:27<07:21, 31.56s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:31,  2.46it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:30,  2.45it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:30,  2.45it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:29,  2.47it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:29,  2.46it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:29,  2.46it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:28,  2.47it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:28,  2.46it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:28,  2.43it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:04<00:28,  2.42it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:27,  2.40it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:27,  2.41it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:26,  2.42it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:26,  2.42it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:26,  2.42it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:25,  2.44it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:25,  2.44it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:24,  2.44it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:24,  2.45it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:23,  2.44it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:23,  2.42it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:09<00:23,  2.43it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:22,  2.42it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:22,  2.43it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:10<00:21,  2.43it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:21,  2.43it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:11<00:20,  2.43it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:20,  2.43it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:20,  2.44it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:12<00:19,  2.44it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:19,  2.44it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:13<00:18,  2.43it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:18,  2.43it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:18,  2.43it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:14<00:18,  2.37it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:17,  2.38it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:15<00:16,  2.41it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.45it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:16<00:15,  2.44it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:16<00:15,  2.45it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:14,  2.47it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:17<00:14,  2.47it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.44it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:18<00:13,  2.45it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:18<00:13,  2.44it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:14,  2.25it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:19<00:13,  2.27it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:13,  2.26it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:20<00:12,  2.33it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:20<00:11,  2.39it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:21<00:11,  2.43it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:21<00:12,  2.13it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:22<00:11,  2.20it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:22<00:10,  2.24it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:22<00:09,  2.31it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:23<00:09,  2.36it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:23<00:08,  2.42it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:24<00:08,  2.47it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:24<00:07,  2.51it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:24<00:07,  2.54it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:25<00:06,  2.49it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:25<00:06,  2.50it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:26<00:05,  2.51it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:26<00:05,  2.47it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:26<00:05,  2.45it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:27<00:04,  2.45it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:27<00:04,  2.45it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:28<00:04,  2.45it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:28<00:03,  2.46it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:28<00:03,  2.43it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:29<00:02,  2.40it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:29<00:02,  2.41it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:30<00:02,  2.41it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:30<00:01,  2.43it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:31<00:01,  2.41it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:31<00:00,  2.41it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:31<00:00,  2.42it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:32<00:00,  2.43it/s][AProbe prediction step: 100%|██████████| 78/78 [00:32<00:00,  2.42it/s]
+Probe l2 prediction epochs:  57%|█████▋    | 17/30 [08:59<06:53, 31.78s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:31,  2.45it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:31,  2.45it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:30,  2.45it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:30,  2.45it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:29,  2.44it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:29,  2.43it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:29,  2.43it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:28,  2.45it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:27,  2.46it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:04<00:27,  2.46it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:27,  2.45it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:26,  2.46it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:26,  2.43it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:26,  2.42it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:25,  2.43it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:25,  2.44it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:24,  2.44it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:24,  2.46it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:23,  2.49it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:23,  2.50it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:23,  2.48it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:22,  2.47it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:22,  2.41it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:22,  2.41it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:10<00:21,  2.44it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:21,  2.45it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:11<00:20,  2.49it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:20,  2.49it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:19,  2.47it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:12<00:19,  2.47it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:18,  2.50it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:13<00:18,  2.50it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:17,  2.52it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:17,  2.50it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:14<00:17,  2.53it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:16,  2.51it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:15<00:16,  2.52it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:15,  2.50it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:15,  2.51it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:16<00:15,  2.50it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:14,  2.48it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:17<00:14,  2.47it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.47it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:13,  2.45it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:18<00:13,  2.45it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:13,  2.45it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:19<00:12,  2.45it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:12,  2.44it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:11,  2.43it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:20<00:11,  2.42it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:11,  2.43it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:21<00:10,  2.46it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:10,  2.45it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:09,  2.44it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:22<00:09,  2.43it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:09,  2.44it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:23<00:08,  2.44it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:23<00:08,  2.44it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:23<00:07,  2.44it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:24<00:07,  2.44it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:06,  2.44it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:25<00:06,  2.45it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:06,  2.46it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:26<00:05,  2.45it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:26<00:05,  2.45it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:26<00:04,  2.45it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:27<00:04,  2.45it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:27<00:04,  2.46it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:28<00:03,  2.45it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:28<00:03,  2.45it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:28<00:02,  2.45it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:29<00:02,  2.45it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:29<00:02,  2.45it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:30<00:01,  2.45it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:30<00:01,  2.44it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:30<00:00,  2.44it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:31<00:00,  2.44it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.44it/s][AProbe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.46it/s]
+Probe l2 prediction epochs:  60%|██████    | 18/30 [09:31<06:21, 31.77s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:31,  2.47it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:30,  2.46it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:30,  2.46it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:30,  2.45it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:29,  2.45it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:29,  2.45it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:28,  2.45it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:28,  2.45it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:28,  2.45it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:04<00:27,  2.45it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:27,  2.45it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:26,  2.45it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:26,  2.46it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:26,  2.46it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:25,  2.44it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:25,  2.44it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:24,  2.45it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:24,  2.45it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:23,  2.46it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:23,  2.46it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:23,  2.46it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:22,  2.46it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:22,  2.46it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:21,  2.48it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:10<00:21,  2.48it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:21,  2.47it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:10<00:20,  2.46it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:20,  2.45it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:19,  2.46it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:12<00:19,  2.46it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:19,  2.45it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:13<00:18,  2.45it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:18,  2.47it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:17,  2.47it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:14<00:17,  2.46it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:17,  2.46it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:15<00:16,  2.46it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.45it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:15,  2.46it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:16<00:15,  2.45it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:15,  2.45it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:17<00:14,  2.45it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.45it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:13,  2.45it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:18<00:13,  2.45it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:13,  2.45it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:19<00:12,  2.44it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:12,  2.44it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:11,  2.44it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:20<00:11,  2.47it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:10,  2.48it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:21<00:10,  2.46it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:10,  2.45it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:09,  2.44it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:22<00:09,  2.41it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:09,  2.42it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:23<00:08,  2.43it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:23<00:08,  2.34it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:24<00:08,  2.37it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:24<00:07,  2.41it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:06,  2.44it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:25<00:06,  2.47it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:06,  2.48it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:26<00:05,  2.50it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:26<00:05,  2.51it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:26<00:04,  2.52it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:27<00:04,  2.48it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:27<00:04,  2.48it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:28<00:03,  2.47it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:28<00:03,  2.47it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:28<00:02,  2.46it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:29<00:02,  2.46it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:29<00:02,  2.46it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:30<00:01,  2.46it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:30<00:01,  2.47it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:30<00:00,  2.48it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:31<00:00,  2.49it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.50it/s][AProbe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.46it/s]
+Probe l2 prediction epochs:  63%|██████▎   | 19/30 [10:02<05:49, 31.77s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:31,  2.43it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:31,  2.42it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:30,  2.45it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:30,  2.46it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:29,  2.47it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:29,  2.46it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:28,  2.47it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:28,  2.46it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:28,  2.46it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:04<00:27,  2.47it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:27,  2.48it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:26,  2.48it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:26,  2.48it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:25,  2.48it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:25,  2.48it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:25,  2.48it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:24,  2.48it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:24,  2.46it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:24,  2.45it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:23,  2.45it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:23,  2.42it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:23,  2.39it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:23,  2.38it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:22,  2.39it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:10<00:22,  2.40it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:21,  2.40it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:11<00:21,  2.41it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:20,  2.40it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:20,  2.40it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:12<00:19,  2.41it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:19,  2.41it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:13<00:19,  2.42it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:18,  2.41it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:18,  2.40it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:14<00:17,  2.42it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:17,  2.43it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:15<00:16,  2.43it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.44it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:15,  2.46it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:16<00:15,  2.47it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:14,  2.48it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:17<00:14,  2.51it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:13,  2.51it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:13,  2.49it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:18<00:13,  2.46it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:12,  2.48it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:19<00:12,  2.50it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:11,  2.51it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:11,  2.50it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:20<00:11,  2.49it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:10,  2.50it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:21<00:10,  2.52it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:09,  2.51it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:09,  2.52it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:22<00:09,  2.52it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:08,  2.50it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:23<00:08,  2.47it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:23<00:08,  2.46it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:24<00:07,  2.44it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:24<00:07,  2.44it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:06,  2.45it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:25<00:06,  2.48it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:06,  2.50it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:26<00:05,  2.48it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:26<00:05,  2.49it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:26<00:04,  2.50it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:27<00:04,  2.37it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:27<00:04,  2.40it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:28<00:03,  2.42it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:28<00:03,  2.28it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:29<00:03,  2.33it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:29<00:02,  2.37it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:29<00:02,  2.40it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:30<00:01,  2.44it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:30<00:01,  2.49it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:30<00:00,  2.51it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:31<00:00,  2.52it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.53it/s][AProbe prediction step: 100%|██████████| 78/78 [00:31<00:00,  2.45it/s]
+Probe l2 prediction epochs:  67%|██████▋   | 20/30 [10:34<05:17, 31.77s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:30,  2.55it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:30,  2.49it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:29,  2.51it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:29,  2.53it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:29,  2.48it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:28,  2.49it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:02<00:28,  2.49it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:27,  2.52it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:27,  2.51it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:03<00:27,  2.50it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:27,  2.47it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:04<00:26,  2.45it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:26,  2.46it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:05<00:26,  2.46it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:25,  2.46it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:25,  2.45it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:06<00:24,  2.45it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:24,  2.46it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:07<00:23,  2.47it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:23,  2.48it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:08<00:23,  2.47it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:08<00:22,  2.47it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:09<00:22,  2.47it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:09<00:21,  2.49it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:10<00:21,  2.47it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:10<00:21,  2.46it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:10<00:21,  2.43it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:11<00:20,  2.42it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:11<00:20,  2.42it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:12<00:19,  2.44it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:12<00:19,  2.44it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:12<00:18,  2.46it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:13<00:18,  2.46it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:13<00:17,  2.45it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:14<00:17,  2.44it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:14<00:17,  2.44it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:15<00:16,  2.42it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:15<00:16,  2.43it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:15<00:15,  2.45it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:16<00:15,  2.45it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:16<00:15,  2.43it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:17<00:14,  2.41it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:17<00:14,  2.42it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:17<00:14,  2.43it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:18<00:13,  2.43it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:18<00:13,  2.43it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:19<00:12,  2.44it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:19<00:12,  2.44it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:19<00:11,  2.45it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:20<00:11,  2.44it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:20<00:11,  2.45it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:21<00:10,  2.43it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:21<00:10,  2.44it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:21<00:09,  2.45it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:22<00:09,  2.45it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:22<00:09,  2.44it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:23<00:08,  2.44it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:23<00:08,  2.44it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:24<00:07,  2.45it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:24<00:07,  2.45it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:24<00:06,  2.46it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:25<00:06,  2.45it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:25<00:06,  2.45it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:26<00:05,  2.45it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:26<00:05,  2.44it/s][Aeval.sh: line 47: 67024 Killed                  python train.py --config configs/diverse_maze/icml/large_diverse_25maps_l2.yaml --values $COMMON load_l1_only=false load_checkpoint_path="$HWM_CKPT" 2>&1
+     67025 Done                    | tee "$REPO/eval_hwm.log"

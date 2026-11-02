@@ -1,0 +1,17 @@
+[system] EXACT-G mode: differentiable collision hop (architecture test, no learned G)
+
+[system] LOOP-1 DESCENT eval (loss+G, no F) ...
+   descent L=2: success=0.13
+   descent L=3: success=0.00
+   descent L=4: success=0.00
+
+[system] training F on 360 pairs (amortize closed-loop through G) ...
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/juliius/Nobel30/Zeus/zeus_maze/rung3_system.py", line 313, in <module>
+    train_F(F, G, pairs, arena, epochs=100 if smoke else 250, eps=eps, temp=temp, beta=beta, delta=delta)
+  File "/Users/juliius/Nobel30/Zeus/zeus_maze/rung3_system.py", line 205, in train_F
+    for p in G.parameters():
+             ^^^^^^^^^^^^
+AttributeError: 'CollisionHop' object has no attribute 'parameters'

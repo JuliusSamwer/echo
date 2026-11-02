@@ -1,0 +1,755 @@
+<title>Zeus — System Overview</title>
+<style>
+  :root{
+    --ground:#0b0f14; --ground2:#0e141b; --panel:#121b25; --panel2:#16212d;
+    --line:#223141; --line2:#2c3e50;
+    --ink:#e7eef6; --muted:#8a9bb0; --faint:#5c6e83;
+    --teal:#4fd6c9; --teal-soft:rgba(79,214,201,.14); --teal-line:rgba(79,214,201,.42);
+    --amber:#f2b45c; --amber-soft:rgba(242,180,92,.14);
+    --green:#6ee7a8; --red:#f0736f; --violet:#9b8cff;
+    --mono:ui-monospace,"SF Mono","JetBrains Mono","Fira Code",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(79,214,201,.06), transparent 60%),
+      radial-gradient(900px 500px at 0% 10%, rgba(155,140,255,.05), transparent 55%),
+      var(--ground);
+    color:var(--ink); font-family:var(--sans); line-height:1.62;
+    -webkit-font-smoothing:antialiased; font-size:16px;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+  a{color:var(--teal); text-decoration:none}
+
+  /* ---------- type ---------- */
+  .eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--teal); font-weight:600}
+  h1{font-family:var(--mono); font-weight:700; letter-spacing:-.01em; line-height:1.02;
+     font-size:clamp(38px,7vw,74px); margin:0; text-wrap:balance}
+  h2{font-family:var(--mono); font-weight:600; letter-spacing:.02em; text-transform:uppercase;
+     font-size:clamp(19px,2.4vw,24px); margin:0 0 4px; text-wrap:balance}
+  h3{font-family:var(--mono); font-weight:600; font-size:14px; letter-spacing:.06em; text-transform:uppercase; margin:0 0 8px; color:var(--ink)}
+  p{margin:0 0 14px; max-width:70ch; color:#d3dde8}
+  .lead{font-size:clamp(17px,2vw,20px); color:#c3d0dd; max-width:64ch}
+  .mut{color:var(--muted)}
+  code,.k{font-family:var(--mono); font-size:.88em}
+  .k{color:var(--teal); background:var(--teal-soft); padding:1px 6px; border-radius:5px; white-space:nowrap}
+  .ka{color:var(--amber); background:var(--amber-soft)}
+  strong{color:#fff; font-weight:600}
+
+  /* ---------- section scaffold ---------- */
+  section{padding:64px 0; border-top:1px solid var(--line)}
+  .sec-head{display:flex; align-items:baseline; gap:16px; margin-bottom:28px}
+  .sec-no{font-family:var(--mono); font-size:12px; color:var(--faint); letter-spacing:.15em; padding-top:6px; min-width:44px}
+  .sec-head .txt{flex:1}
+
+  /* ---------- hero ---------- */
+  header{padding:76px 0 40px}
+  .thesis{margin-top:26px; padding:20px 24px; border-left:2px solid var(--teal);
+    background:linear-gradient(90deg, var(--teal-soft), transparent); border-radius:0 10px 10px 0}
+  .thesis p{margin:0; font-size:clamp(16px,1.9vw,19px); color:#e7eef6}
+  .metarow{display:flex; flex-wrap:wrap; gap:10px; margin-top:26px}
+  .tag{font-family:var(--mono); font-size:12px; letter-spacing:.04em; color:var(--muted);
+    border:1px solid var(--line2); border-radius:999px; padding:5px 12px; background:var(--panel)}
+  .tag b{color:var(--teal); font-weight:600}
+
+  /* ---------- the seam pipeline ---------- */
+  .seam{margin:20px 0 6px; padding:26px 20px; background:var(--panel); border:1px solid var(--line); border-radius:14px; position:relative; overflow-x:auto}
+  .pipe{display:flex; align-items:center; gap:8px; min-width:640px}
+  .node{display:flex; flex-direction:column; align-items:center; gap:7px; text-align:center; flex:0 0 auto}
+  .cell{font-family:var(--mono); font-weight:600; font-size:15px; padding:14px 16px; border-radius:11px; min-width:78px}
+  .cell.io{background:transparent; border:1px dashed var(--line2); color:var(--muted)}
+  .cell.lat{background:var(--amber-soft); border:1px solid rgba(242,180,92,.4); color:var(--amber)}
+  .cell.mod{background:var(--teal-soft); border:1px solid var(--teal-line); color:var(--teal); box-shadow:0 0 0 1px rgba(79,214,201,.08), 0 6px 22px -12px rgba(79,214,201,.5)}
+  .cap{font-family:var(--mono); font-size:10.5px; letter-spacing:.03em; color:var(--faint); max-width:96px; line-height:1.35}
+  .arr{color:var(--faint); font-size:20px; flex:0 0 auto; padding:0 2px; align-self:flex-start; margin-top:16px}
+  .loopnote{display:flex; align-items:center; gap:8px; margin-top:16px; font-family:var(--mono); font-size:11.5px; color:var(--faint); letter-spacing:.03em}
+  .loopnote::before{content:""; height:1px; width:26px; background:repeating-linear-gradient(90deg,var(--line2) 0 6px,transparent 6px 11px)}
+
+  /* ---------- grids / cards ---------- */
+  .grid{display:grid; gap:18px}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px; transition:border-color .2s, transform .2s}
+  .card:hover{border-color:var(--line2); transform:translateY(-2px)}
+  .card h3 .sub{font-family:var(--mono); font-weight:400; text-transform:none; letter-spacing:0; color:var(--faint); font-size:12px}
+  .io{font-family:var(--mono); font-size:12.5px; color:var(--muted); line-height:1.7; margin-top:10px}
+  .io b{color:var(--teal); font-weight:600}
+  .io .out{color:var(--amber)}
+
+  /* ---------- canvas frames ---------- */
+  .viz{background:var(--ground2); border:1px solid var(--line); border-radius:14px; padding:16px}
+  .viz canvas{width:100%; display:block; border-radius:8px}
+  .legend{display:flex; flex-wrap:wrap; gap:14px; margin-top:12px; font-family:var(--mono); font-size:11.5px; color:var(--muted)}
+  .legend span{display:inline-flex; align-items:center; gap:6px}
+  .dot{width:9px; height:9px; border-radius:50%; display:inline-block}
+  .dsh{width:14px; height:0; border-top:2px dashed currentColor; display:inline-block}
+
+  /* ---------- ladder ---------- */
+  .rung{display:grid; grid-template-columns:56px 1fr; gap:0; position:relative}
+  .rung + .rung{margin-top:2px}
+  .rail{display:flex; flex-direction:column; align-items:center}
+  .rnum{font-family:var(--mono); font-weight:700; font-size:15px; width:40px; height:40px; border-radius:10px;
+    display:flex; align-items:center; justify-content:center; background:var(--panel2); border:1px solid var(--line2); color:var(--ink)}
+  .rline{flex:1; width:2px; background:var(--line); margin:4px 0; min-height:14px}
+  .rbody{padding:2px 0 26px 18px}
+  .rhead{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:6px}
+  .rhead h3{margin:0}
+  .chip{font-family:var(--mono); font-size:10.5px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:3px 9px; border-radius:999px}
+  .chip.pass{color:var(--green); background:rgba(110,231,168,.12); border:1px solid rgba(110,231,168,.3)}
+  .chip.open{color:var(--amber); background:var(--amber-soft); border:1px solid rgba(242,180,92,.3)}
+  .chip.wait{color:var(--muted); background:var(--panel2); border:1px solid var(--line2)}
+  .rung.active .rnum{background:var(--teal-soft); border-color:var(--teal-line); color:var(--teal); box-shadow:0 0 22px -6px rgba(79,214,201,.6)}
+
+  /* ---------- bars (rung 1) ---------- */
+  .bars{display:flex; align-items:flex-end; gap:7px; height:120px; margin:6px 0 8px}
+  .bar{flex:1; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; gap:6px; height:100%}
+  .bar .fill{width:100%; border-radius:4px 4px 0 0; background:linear-gradient(180deg,var(--teal),rgba(79,214,201,.25)); min-height:2px}
+  .bar.lo .fill{background:linear-gradient(180deg,var(--red),rgba(240,115,111,.2))}
+  .bar .lab{font-family:var(--mono); font-size:11px; color:var(--muted)}
+  .bar .val{font-family:var(--mono); font-size:10.5px; color:var(--faint)}
+
+  /* ---------- table ---------- */
+  .tbl{width:100%; border-collapse:collapse; font-family:var(--mono); font-size:13px; margin-top:8px}
+  .tbl th,.tbl td{text-align:left; padding:9px 12px; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums}
+  .tbl th{color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.06em; font-size:11px}
+  .tbl td.num{text-align:right}
+  .tbl .pass td{color:var(--ink)}
+  .tbl tr td:last-child{color:var(--green)}
+
+  /* ---------- three-condition strip ---------- */
+  .cond{display:grid; grid-template-columns:auto 1fr; gap:10px 14px; align-items:center; font-family:var(--mono); font-size:12.5px}
+  .cond .k2{font-weight:600; letter-spacing:.06em}
+  .badge{font-family:var(--mono); font-size:11px; padding:2px 8px; border-radius:6px}
+
+  .note{font-family:var(--mono); font-size:12.5px; color:var(--faint); margin-top:16px; padding:12px 14px; border:1px dashed var(--line2); border-radius:10px}
+  .note b{color:var(--amber)}
+
+  footer{padding:52px 0 80px; border-top:1px solid var(--line); color:var(--muted); font-family:var(--mono); font-size:13px}
+  footer .fl{display:flex; flex-wrap:wrap; gap:8px 22px}
+
+  @media (max-width:820px){
+    .g2,.g3,.g4{grid-template-columns:1fr}
+    .g4.keep2{grid-template-columns:1fr 1fr}
+    .sec-no{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+
+<div class="wrap">
+
+  <!-- ================= HERO ================= -->
+  <header>
+    <div class="eyebrow">World-Model Planning Ladder · rung 0 → 3</div>
+    <h1>Zeus</h1>
+    <p class="lead" style="margin-top:18px">
+      A reward-free agent that reaches goals by <em>imagining</em> rollouts in a learned model
+      and steering toward the goal in latent space — built one falsifiable rung at a time.
+    </p>
+
+    <div class="thesis">
+      <p><strong>Thesis.</strong> A flat world model + sampling planner is enough for short horizons,
+      but breaks <em>predictably</em> as the path grows. The remedy — temporal abstraction — should be
+      <strong>earned by planning</strong>, not fixed by hand or found by compression. Each rung proves the
+      floor, finds the break, adds hierarchy, then asks whether the abstraction can <em>emerge</em> at the
+      maze's decision points.</p>
+    </div>
+
+    <div class="metarow">
+      <span class="tag">state obs <b>(x,y)</b> · walls unseen</span>
+      <span class="tag">latent dim <b>2</b> · identity E</span>
+      <span class="tag">planner <b>CEM / MPPI</b></span>
+      <span class="tag">difficulty knob <b>L</b> = path length</span>
+      <span class="tag">env certified <b>✓</b></span>
+    </div>
+
+    <!-- the seam -->
+    <div class="seam" aria-label="E to P to MPC control loop">
+      <div class="pipe">
+        <div class="node"><div class="cell io">obs</div><div class="cap">(x,y) position</div></div>
+        <div class="arr">→</div>
+        <div class="node"><div class="cell mod">E</div><div class="cap">encoder<br>affine, invertible</div></div>
+        <div class="arr">→</div>
+        <div class="node"><div class="cell lat">z</div><div class="cap">latent<br>= normalized state</div></div>
+        <div class="arr">→</div>
+        <div class="node"><div class="cell mod">P</div><div class="cap">forward model<br>z′ = z + P(z,a)</div></div>
+        <div class="arr">→</div>
+        <div class="node"><div class="cell lat">ẑ′</div><div class="cap">imagined<br>next latent</div></div>
+        <div class="arr">→</div>
+        <div class="node"><div class="cell mod">MPC</div><div class="cap">planner<br>min‖z_goal − rollout‖</div></div>
+        <div class="arr">→</div>
+        <div class="node"><div class="cell io">action</div><div class="cap">(dx,dy)</div></div>
+      </div>
+      <div class="loopnote">action drives the env → new obs → replan (receding horizon, execute&nbsp;k,&nbsp;warm-start)</div>
+    </div>
+    <p class="mut" style="font-family:var(--mono); font-size:12px; margin-top:12px">
+      The three modules are the <em>only</em> seam. Every rung swaps exactly one — nothing else moves — so
+      comparisons stay apples-to-apples.
+    </p>
+  </header>
+
+  <!-- ================= ENVIRONMENTS ================= -->
+  <section>
+    <div class="sec-head"><div class="sec-no">ENV</div><div class="txt">
+      <h2>The worlds</h2>
+      <p class="mut">Two mazes. The agent sees only its position — never the walls — so a single flat model is
+      necessarily <em>one-maze-specific</em>. That limit is the whole reason to graduate the encoder later.</p>
+    </div></div>
+
+    <div class="grid g2">
+      <div class="viz">
+        <h3 style="margin-bottom:12px">Grid point-maze <span style="font-family:var(--mono);font-weight:400;color:var(--faint);text-transform:none;letter-spacing:0">· rungs 0–2</span></h3>
+        <canvas id="cvMaze" height="360"></canvas>
+        <div class="legend">
+          <span><i class="dot" style="background:var(--teal)"></i>start</span>
+          <span><i class="dot" style="background:var(--amber)"></i>goal (ε=0.2)</span>
+          <span><i class="dsh" style="color:var(--amber)"></i>optimal path (BFS = L)</span>
+          <span><i class="dsh" style="color:var(--teal)"></i>planned trajectory</span>
+        </div>
+        <p class="mut" style="font-size:13px;margin-top:12px;margin-bottom:0">
+          Perfect maze (unique path). Action <span class="ka k">±0.4</span> per axis, &lt; 1 cell → each step
+          crosses at most one wall. Reward is always 0; success = inside the goal radius.
+        </p>
+      </div>
+
+      <div class="viz">
+        <h3 style="margin-bottom:12px">Bottleneck maze <span style="font-family:var(--mono);font-weight:400;color:var(--faint);text-transform:none;letter-spacing:0">· rung 3, certified</span></h3>
+        <canvas id="cvRooms" height="360"></canvas>
+        <div class="legend">
+          <span><i class="dot" style="background:var(--green)"></i>doorway (bottleneck)</span>
+          <span><i class="dsh" style="color:var(--teal)"></i>GT — threads doors</span>
+          <span><i class="dsh" style="color:var(--red)"></i>ADV — stalls at wall</span>
+        </div>
+        <p class="mut" style="font-size:13px;margin-top:12px;margin-bottom:0">
+          3×3 rooms joined by <strong>off-center</strong> doorways. A subgoal <em>at</em> a doorway succeeds where
+          one placed elsewhere on the same route fails — placement is causally load-bearing. <em>L</em> = doorways
+          on the route.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MODELS ================= -->
+  <section>
+    <div class="sec-head"><div class="sec-no">MODELS</div><div class="txt">
+      <h2>The learned pieces</h2>
+      <p class="mut">Small, deliberate, mostly frozen. Everything speaks <em>latents</em>; the planner never touches raw obs.</p>
+    </div></div>
+
+    <div class="grid g4 keep2">
+      <div class="card">
+        <h3>E <span class="sub">/ encoder</span></h3>
+        <p class="mut" style="font-size:13.5px;margin:0">Affine, invertible normalizer. Latent <em>is</em> the state, rescaled to O(1). The graduation seam — swap for a pixel encoder later.</p>
+        <div class="io">in&nbsp;&nbsp;<b>obs (·,2)</b><br>out <span class="out">z = (obs−μ)/σ</span></div>
+      </div>
+      <div class="card">
+        <h3>P <span class="sub">/ forward model</span></h3>
+        <p class="mut" style="font-size:13.5px;margin:0">Residual MLP. A <em>zero-init linear skip</em> learns free-space motion; the MLP only fits the sparse wall corrections. 3×256, GELU.</p>
+        <div class="io">in&nbsp;&nbsp;<b>z, a</b><br>out <span class="out">Δz</span> → z′ = z + Δz<br><span style="color:var(--faint)">err ≈ 0.09–0.11 cell/step</span></div>
+      </div>
+      <div class="card">
+        <h3>G <span class="sub">/ coarse dynamics</span></h3>
+        <p class="mut" style="font-size:13.5px;margin:0">One-shot k-step jump in latent space over a <em>macro-action</em> m (a VAE-encoded action chunk). No intra-macro compounding.</p>
+        <div class="io">in&nbsp;&nbsp;<b>z_b, m</b><br>out <span class="out">Δz to next boundary</span></div>
+      </div>
+      <div class="card">
+        <h3>B <span class="sub">/ boundary gate</span></h3>
+        <p class="mut" style="font-size:13.5px;margin:0">Reads <span class="k">[z, z−z₋₁]</span> → g∈[0,1]: "is this a chunk boundary?" Gumbel-sigmoid, self-sharpens. The <em>emergent</em> abstraction.</p>
+        <div class="io">in&nbsp;&nbsp;<b>z_t, z_{t−1}</b><br>out <span class="out">g_t ∈ [0,1]</span></div>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:18px">
+      <b>Training P:</b> offline random-walk transitions, latent-space loss
+      = <span class="k">1-step teacher-forced MSE</span> + <span class="k">K=8-step autoregressive rollout MSE</span>.
+      Only P is learned; E is fixed. At rung 3, E and P are <b>frozen</b> — B, G and the action-VAE learn on top.
+    </div>
+  </section>
+
+  <!-- ================= PLANNER ================= -->
+  <section>
+    <div class="sec-head"><div class="sec-no">PLAN</div><div class="txt">
+      <h2>How the planner thinks</h2>
+      <p class="mut">Sampling MPC. No gradients through actions — it <em>guesses</em> action sequences, scores them by
+      imagined rollout, and refines toward the goal.</p>
+    </div></div>
+
+    <div class="grid g2" style="align-items:start">
+      <div class="viz">
+        <canvas id="cvPlan" height="380"></canvas>
+        <div class="legend">
+          <span><i class="dsh" style="color:var(--faint)"></i>sampled rollouts (N)</span>
+          <span><i class="dsh" style="color:var(--teal)"></i>elite set</span>
+          <span><i class="dsh" style="color:var(--amber)"></i>refined mean plan</span>
+          <span><i class="dot" style="background:var(--amber)"></i>goal</span>
+        </div>
+        <p class="mut" style="font-size:12.5px;margin-top:10px;margin-bottom:0">
+          A cartoon of one CEM step: fan out N action sequences from the start, keep the ones whose imagined
+          rollout gets <em>closest</em> to the goal, refit, repeat.
+        </p>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom:14px">CEM / MPPI — one planning call</h3>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div class="card" style="padding:14px 16px"><b style="font-family:var(--mono);color:var(--teal)">1 · sample</b>
+            <span class="mut" style="font-size:13.5px"> — draw <span class="k">N</span> action seqs <span class="k">(N,H,2)</span> ~ 𝒩(mean, std), clip to ±a_max.</span></div>
+          <div class="card" style="padding:14px 16px"><b style="font-family:var(--mono);color:var(--teal)">2 · imagine</b>
+            <span class="mut" style="font-size:13.5px"> — roll P forward: <span class="k">(N,H,D)</span> latent trajectories.</span></div>
+          <div class="card" style="padding:14px 16px"><b style="font-family:var(--mono);color:var(--teal)">3 · score</b>
+            <span class="mut" style="font-size:13.5px"> — goal energy = <span class="ka k">min over horizon</span> ‖z_goal − rollout‖. "Did it <em>ever</em> reach?" — robust to overshoot & wall detours.</span></div>
+          <div class="card" style="padding:14px 16px"><b style="font-family:var(--mono);color:var(--teal)">4 · refine</b>
+            <span class="mut" style="font-size:13.5px"> — CEM keeps top elites & refits (std floored to keep exploring); MPPI takes a softmax-weighted mean.</span></div>
+        </div>
+        <div class="note"><b>Receding horizon:</b> execute the first <span class="k">k</span> actions, warm-start the next
+          plan, replan. Stalled? cold-start + inject exploration to break the wall-hugging deadlock.
+          Planner cost = <span class="k">N·H</span> per plan.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LADDER ================= -->
+  <section>
+    <div class="sec-head"><div class="sec-no">LADDER</div><div class="txt">
+      <h2>The four rungs</h2>
+      <p class="mut">Climb only when the current gate passes. The numbers below the rung are the actual result.</p>
+    </div></div>
+
+    <div class="rung">
+      <div class="rail"><div class="rnum">0</div><div class="rline"></div></div>
+      <div class="rbody">
+        <div class="rhead"><h3>The floor</h3><span class="chip pass">passed</span></div>
+        <p class="mut" style="font-size:14px;margin-bottom:0">Flat <span class="k">E→P→MPC</span> clears easy mazes ≥ 95%. Strip everything exciting; prove the loop closes.</p>
+      </div>
+    </div>
+
+    <div class="rung">
+      <div class="rail"><div class="rnum">1</div><div class="rline"></div></div>
+      <div class="rbody">
+        <div class="rhead"><h3>The failure curve</h3><span class="chip pass">reproduced</span></div>
+        <p class="mut" style="font-size:14px;margin-bottom:14px">Freeze the model + planner budget; sweep only <em>L</em>. Flat success collapses — the proof this env now <em>needs</em> hierarchy.</p>
+        <div class="bars" id="rung1bars"></div>
+        <p class="mut" style="font-family:var(--mono);font-size:11.5px;margin:0">success vs L · fixed budget H=25 N=256 · rollout error climbs ~400× across the sweep</p>
+      </div>
+    </div>
+
+    <div class="rung">
+      <div class="rail"><div class="rnum">2</div><div class="rline"></div></div>
+      <div class="rbody">
+        <div class="rhead"><h3>Imposed hierarchy (HWM)</h3><span class="chip pass">substrate ready</span></div>
+        <p class="mut" style="font-size:14px;margin-bottom:0">A learned <em>coarse</em> model plans over macro-actions; its first predicted latent becomes a <span class="ka k">subgoal</span> the flat MPC reaches. Two levels, fixed stride k. Swaps the <em>planner</em> only.</p>
+      </div>
+    </div>
+
+    <div class="rung active">
+      <div class="rail"><div class="rnum">3</div></div>
+      <div class="rbody">
+        <div class="rhead"><h3>Emergent abstraction</h3><span class="chip open">frontier</span></div>
+        <p class="mut" style="font-size:14px;margin-bottom:0">No fixed stride. The boundary gate <span class="k">B</span> decides <em>where</em> chunks break. The open
+        question: do boundaries <strong>emerge at decision points</strong> — and does that need planning pressure,
+        not compression?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RUNG 3 DETAIL ================= -->
+  <section>
+    <div class="sec-head"><div class="sec-no">RUNG 3</div><div class="txt">
+      <h2>Where abstraction must come from</h2>
+      <p class="mut">Same boundary net, three different pressures. The contrast <em>is</em> the experiment.</p>
+    </div></div>
+
+    <div class="viz" style="margin-bottom:20px">
+      <canvas id="cvBound" height="150"></canvas>
+      <p class="mut" style="font-size:12.5px;margin:12px 0 0">
+        A trajectory's boundary gates. Spikes = chunk breaks. The claim under test: with the right pressure,
+        the spikes land on <span style="color:var(--green)">junctions / doorways</span> — measured by
+        <b style="color:var(--ink)">junction lift</b> = P(junction | boundary) ÷ P(junction | any step).
+        <span style="color:var(--faint)">Lift = 1 → random. Lift &gt; 1 → structure found.</span>
+      </p>
+    </div>
+
+    <div class="grid g3">
+      <div class="card">
+        <div class="rhead" style="margin-bottom:8px"><h3 style="margin:0">SSL-only</h3><span class="chip wait">control</span></div>
+        <p class="mut" style="font-size:13px;margin:0">Sufficiency + closure + rate. Pure compression. <strong>Prediction: lift ≈ 1.0</strong> — compression alone <em>cannot</em> find decision points.</p>
+      </div>
+      <div class="card" style="border-color:var(--teal-line)">
+        <div class="rhead" style="margin-bottom:8px"><h3 style="margin:0;color:var(--teal)">Planning-pressure</h3><span class="chip open">test</span></div>
+        <p class="mut" style="font-size:13px;margin:0">B chases the <em>reachability residual</em> — which spikes exactly where a chunk would hit a wall or round a turn. Reward the longest reachable chunk. <strong>Hypothesis: lift &gt; 1.</strong></p>
+      </div>
+      <div class="card">
+        <div class="rhead" style="margin-bottom:8px"><h3 style="margin:0">REINFORCE probe</h3><span class="chip open">de-risk</span></div>
+        <p class="mut" style="font-size:13px;margin:0">One binary question on the real planner: does the residual push boundaries toward junctions <em>at all</em>? Gate: <strong>lift &gt; 1.15.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CERTIFICATION ================= -->
+  <section>
+    <div class="sec-head"><div class="sec-no">GATE</div><div class="txt">
+      <h2>Certifying the env before training</h2>
+      <p class="mut">Junction lift only means something if placement <em>actually helps</em>. The probe proves it — hand-placed
+      subgoals, no learning — for the cost of zero gradient steps.</p>
+    </div></div>
+
+    <div class="grid g2" style="align-items:start">
+      <div>
+        <div class="cond" style="margin-bottom:18px">
+          <span class="badge" style="background:var(--teal-soft);color:var(--teal)">GT</span>
+          <span class="mut" style="font-size:13px">subgoals <em>at</em> the doorways — known-optimal placement</span>
+          <span class="badge" style="background:var(--panel2);color:var(--muted)">RANDOM</span>
+          <span class="mut" style="font-size:13px">same count, random free points — the weak baseline</span>
+          <span class="badge" style="background:var(--amber-soft);color:var(--amber)">ADVERSARIAL</span>
+          <span class="mut" style="font-size:13px">room centers — <em>right route, wrong precise spot</em> (the sharp test)</span>
+        </div>
+        <table class="tbl" aria-label="certification result at H=10">
+          <thead><tr><th>L</th><th class="num">GT</th><th class="num">RAND</th><th class="num">ADV</th><th class="num">GT−ADV (95% CI)</th><th></th></tr></thead>
+          <tbody>
+            <tr class="pass"><td>2</td><td class="num">0.92</td><td class="num">0.01</td><td class="num">0.59</td><td class="num">+0.33 [.22,.44]</td><td>PASS</td></tr>
+            <tr class="pass"><td>3</td><td class="num">0.80</td><td class="num">0.00</td><td class="num">0.53</td><td class="num">+0.27 [.14,.40]</td><td>PASS</td></tr>
+            <tr class="pass"><td>4</td><td class="num">0.82</td><td class="num">0.00</td><td class="num">0.38</td><td class="num">+0.44 [.32,.56]</td><td>PASS</td></tr>
+          </tbody>
+        </table>
+        <p class="mut" style="font-family:var(--mono);font-size:12px;margin-top:12px">
+          100 instances/L · paired bootstrap · <b style="color:var(--green)">PASS at H=10 only</b>.
+        </p>
+      </div>
+
+      <div class="viz">
+        <canvas id="cvBand" height="300"></canvas>
+        <p class="mut" style="font-size:12.5px;margin:12px 0 0">
+          A <strong>narrow placement-critical band</strong>. Too little budget (H=8) → even GT fails. Too much
+          (H≥11) → the low-level threads doorways unaided and the GT−ADV gap collapses. H=10 is the sweet spot.
+        </p>
+        <div class="legend">
+          <span><i class="dot" style="background:var(--teal)"></i>GT</span>
+          <span><i class="dot" style="background:var(--amber)"></i>ADVERSARIAL</span>
+          <span><i class="dot" style="background:var(--green)"></i>gap (certifies)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:20px">
+      <b>Why off-center doorways?</b> With <em>centered</em> doors, a room-center subgoal sits collinear with the
+      gap — so aiming at the room threads the door for free and placement never bites. Jitter breaks that
+      collinearity. This is the one design change that turned a failing env into a certified one.
+    </div>
+  </section>
+
+  <!-- ================= STATUS ================= -->
+  <footer>
+    <div style="color:var(--ink);font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:12px;margin-bottom:14px">Now / next</div>
+    <div class="fl" style="margin-bottom:20px">
+      <span>✓ env certified (placement load-bearing)</span>
+      <span>✓ substrate models regenerated</span>
+      <span>◦ next: freeze + validate base model</span>
+      <span>◦ decide: surrogate R<sub>ψ</sub> vs REINFORCE</span>
+      <span>◦ then: write rung-3 bodies</span>
+    </div>
+    <div style="color:var(--faint)">
+      Full technical reference: <span style="color:var(--muted)">docs/ZEUS_OVERVIEW.md</span> ·
+      certification record: <span style="color:var(--muted)">zeus_maze/CERTIFIED.md</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+(() => {
+  const RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const T = getComputedStyle(document.documentElement);
+  const C = n => T.getPropertyValue(n).trim();
+  const teal=C('--teal'), amber=C('--amber'), green=C('--green'), red=C('--red'),
+        line=C('--line'), faint=C('--faint'), muted=C('--muted'), ink=C('--ink');
+
+  // seeded PRNG (deterministic renders)
+  function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+
+  function fit(cv, h){
+    const dpr = Math.min(window.devicePixelRatio||1, 2);
+    const w = cv.clientWidth || cv.parentElement.clientWidth;
+    cv.width = w*dpr; cv.height = h*dpr;
+    cv.style.height = h+'px';
+    const ctx = cv.getContext('2d'); ctx.setTransform(dpr,0,0,dpr,0,0);
+    return {ctx, w, h};
+  }
+
+  /* ---------- grid maze (recursive backtracker) ---------- */
+  function genMaze(n, rnd){
+    const R = Array.from({length:n},()=>Array.from({length:n},()=>({r:false,u:false,v:false})));
+    const st=[[0,0]]; R[0][0].v=true;
+    while(st.length){
+      const [x,y]=st[st.length-1];
+      const nb=[];
+      if(x+1<n&&!R[x+1][y].v)nb.push([x+1,y,'R']);
+      if(x-1>=0&&!R[x-1][y].v)nb.push([x-1,y,'L']);
+      if(y+1<n&&!R[x][y+1].v)nb.push([x,y+1,'U']);
+      if(y-1>=0&&!R[x][y-1].v)nb.push([x,y-1,'D']);
+      if(!nb.length){st.pop();continue;}
+      const [nx,ny,d]=nb[Math.floor(rnd()*nb.length)];
+      if(d==='R')R[x][y].r=true; if(d==='L')R[nx][ny].r=true;
+      if(d==='U')R[x][y].u=true; if(d==='D')R[nx][ny].u=true;
+      R[nx][ny].v=true; st.push([nx,ny]);
+    }
+    return R;
+  }
+  function bfs(R,n,s,g){
+    const key=(x,y)=>x+','+y; const prev={}; const q=[s]; prev[key(...s)]=null;
+    while(q.length){
+      const [x,y]=q.shift(); if(x===g[0]&&y===g[1])break;
+      const mv=[];
+      if(R[x][y].r)mv.push([x+1,y]); if(x-1>=0&&R[x-1][y].r)mv.push([x-1,y]);
+      if(R[x][y].u)mv.push([x,y+1]); if(y-1>=0&&R[x][y-1].u)mv.push([x,y-1]);
+      for(const m of mv){if(!(key(...m) in prev)){prev[key(...m)]=[x,y];q.push(m);}}
+    }
+    const path=[]; let c=g; while(c){path.push(c); c=prev[key(...c)];} return path.reverse();
+  }
+
+  const mazeCv=document.getElementById('cvMaze');
+  function drawMaze(){
+    const n=8, {ctx,w,h}=fit(mazeCv, 360);
+    const rnd=mulberry32(7); const R=genMaze(n,rnd);
+    const pad=14, S=(Math.min(w,h)-2*pad)/n, ox=(w-S*n)/2, oy=pad;
+    ctx.clearRect(0,0,w,h);
+    const px=(cx,fx)=>ox+(cx+fx)*S, py=(cy,fy)=>oy+(n-1-cy+fy)*S;
+    // walls
+    ctx.strokeStyle=line; ctx.lineWidth=2; ctx.lineCap='round';
+    ctx.strokeRect(ox,oy,S*n,S*n);
+    ctx.strokeStyle='#2a3b4d';
+    for(let x=0;x<n;x++)for(let y=0;y<n;y++){
+      if(!R[x][y].r && x+1<n){ctx.beginPath();ctx.moveTo(px(x+1,0),py(y,0));ctx.lineTo(px(x+1,0),py(y,1));ctx.stroke();}
+      if(!R[x][y].u && y+1<n){ctx.beginPath();ctx.moveTo(px(x,0),py(y+1,0));ctx.lineTo(px(x,1),py(y+1,0));ctx.stroke();}
+    }
+    const s=[0,0], g=[n-1,n-1], path=bfs(R,n,s,g);
+    const cx=c=>ox+(c[0]+0.5)*S, cy=c=>oy+(n-1-c[1]+0.5)*S;
+    // optimal path (amber dashed)
+    ctx.setLineDash([2,5]); ctx.strokeStyle=amber; ctx.lineWidth=2; ctx.globalAlpha=.9;
+    ctx.beginPath(); path.forEach((c,i)=>{const X=cx(c),Y=cy(c); i?ctx.lineTo(X,Y):ctx.moveTo(X,Y);}); ctx.stroke();
+    ctx.setLineDash([]); ctx.globalAlpha=1;
+    // planned trajectory (teal, wiggly, drawn progressively)
+    const jr=mulberry32(3);
+    const traj=path.map(c=>[cx(c)+(jr()-.5)*S*.34, cy(c)+(jr()-.5)*S*.34]);
+    const drawTraj=(frac)=>{
+      ctx.strokeStyle=teal; ctx.lineWidth=2.4; ctx.globalAlpha=.95;
+      ctx.shadowColor=teal; ctx.shadowBlur=8;
+      ctx.beginPath();
+      const N=Math.max(2,Math.floor(traj.length*frac));
+      for(let i=0;i<N;i++){const [X,Y]=traj[i]; i?ctx.lineTo(X,Y):ctx.moveTo(X,Y);}
+      ctx.stroke(); ctx.shadowBlur=0; ctx.globalAlpha=1;
+    };
+    const markers=()=>{
+      ctx.fillStyle=teal; ctx.beginPath(); ctx.arc(cx(s),cy(s),5.5,0,7); ctx.fill();
+      ctx.fillStyle=amber; star(ctx,cx(g),cy(g),6.5);
+    };
+    if(RM){drawTraj(1);markers();}
+    else{let f=0;(function anim(){f+=0.035;drawTraj(Math.min(f,1));markers();if(f<1)requestAnimationFrame(anim);})();}
+  }
+  function star(ctx,x,y,r){ctx.beginPath();for(let i=0;i<10;i++){const a=Math.PI/5*i-Math.PI/2;const rr=i%2?r*.45:r;ctx.lineTo(x+Math.cos(a)*rr,y+Math.sin(a)*rr);}ctx.closePath();ctx.fill();}
+
+  /* ---------- bottleneck rooms ---------- */
+  const roomsCv=document.getElementById('cvRooms');
+  function drawRooms(){
+    const {ctx,w,h}=fit(roomsCv,360); ctx.clearRect(0,0,w,h);
+    const pad=18, G=Math.min(w,h)-2*pad, ox=(w-G)/2, oy=pad, rs=G/3;
+    const X=v=>ox+v*rs, Y=v=>oy+(3-v)*rs; // world y up
+    const dw=0.22; // doorway half-in-cells for gap drawing
+    // off-center doorway offsets (jitter) per shared edge — deterministic
+    const jit=mulberry32(11);
+    const vd={}, hd={}; // vertical door y-offset per (i,j); horizontal door x-offset per (i,j)
+    for(let i=0;i<2;i++)for(let j=0;j<3;j++)vd[i+'_'+j]=0.5+(jit()-.5)*0.62;
+    for(let j=0;j<2;j++)for(let i=0;i<3;i++)hd[i+'_'+j]=0.5+(jit()-.5)*0.62;
+    // walls with gaps
+    ctx.strokeStyle='#33475b'; ctx.lineWidth=2.5; ctx.lineCap='round';
+    ctx.strokeRect(ox,oy,G,G);
+    const seg=(x1,y1,x2,y2)=>{ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();};
+    const doors=[];
+    // vertical internal walls between col i,i+1
+    for(let i=0;i<2;i++)for(let j=0;j<3;j++){
+      const gc=vd[i+'_'+j]; const x=X(i+1);
+      seg(x,Y(j), x, Y(j+gc-dw)); seg(x, Y(j+gc+dw), x, Y(j+1));
+      doors.push([i+1, j+gc]);
+    }
+    // horizontal internal walls between row j,j+1
+    for(let j=0;j<2;j++)for(let i=0;i<3;i++){
+      const gc=hd[i+'_'+j]; const y=Y(j+1);
+      seg(X(i), y, X(i+gc-dw), y); seg(X(i+gc+dw), y, X(i+1), y);
+      doors.push([i+gc, j+1]);
+    }
+    // doorway markers
+    ctx.fillStyle=green;
+    doors.forEach(([dx,dy])=>{ctx.globalAlpha=.85;ctx.fillRect(X(dx)-3,Y(dy)-3,6,6);});
+    ctx.globalAlpha=1;
+    const start=[0.5,0.5], goal=[2.5,2.5];
+    // GT route: through doorways bottom-left -> right along row0 door -> up col2 doors
+    const d_r0 = vd['1_0'], d_r0b=vd['0_0'];
+    const gt=[ start,
+      [1, 0+vd['0_0']],   // door col0->1 row0
+      [2, 0+vd['1_0']],   // door col1->2 row0
+      [2.5, 1+hd['2_0']], // door row0->1 col2
+      [2.5, 2+hd['2_1']], // door row1->2 col2
+      goal];
+    // GT executed (teal, threads)
+    drawChain(ctx,gt,X,Y,teal,true);
+    // ADV: aim at room centers along the same route; stalls at an off-center wall
+    const adv=[ start,[1.5,0.5],[2.5,0.5],[2.5,1.5] ];
+    drawChain(ctx,adv,X,Y,red,false);
+    // stall marker at last adv point pushed to wall
+    const sp=[X(2.5),Y(1.35)];
+    ctx.strokeStyle=red; ctx.lineWidth=2; ctx.globalAlpha=.9;
+    ctx.beginPath();ctx.moveTo(sp[0]-5,sp[1]-5);ctx.lineTo(sp[0]+5,sp[1]+5);ctx.moveTo(sp[0]+5,sp[1]-5);ctx.lineTo(sp[0]-5,sp[1]+5);ctx.stroke();
+    ctx.globalAlpha=1;
+    // start/goal
+    ctx.fillStyle=teal;ctx.beginPath();ctx.arc(X(start[0]),Y(start[1]),5.5,0,7);ctx.fill();
+    ctx.fillStyle=amber;star(ctx,X(goal[0]),Y(goal[1]),7);
+  }
+  function drawChain(ctx,pts,X,Y,col,thread){
+    ctx.strokeStyle=col; ctx.setLineDash(thread?[]:[3,4]); ctx.lineWidth=2.4; ctx.globalAlpha=.9;
+    if(thread){ctx.shadowColor=col;ctx.shadowBlur=6;}
+    ctx.beginPath(); pts.forEach((p,i)=>{const x=X(p[0]),y=Y(p[1]); i?ctx.lineTo(x,y):ctx.moveTo(x,y);}); ctx.stroke();
+    ctx.shadowBlur=0; ctx.setLineDash([]); ctx.globalAlpha=1;
+    // subgoal x-marks (skip endpoints)
+    ctx.strokeStyle=col; ctx.lineWidth=1.8;
+    pts.slice(1,thread?-1:pts.length).forEach(p=>{const x=X(p[0]),y=Y(p[1]);ctx.beginPath();ctx.moveTo(x-4,y-4);ctx.lineTo(x+4,y+4);ctx.moveTo(x+4,y-4);ctx.lineTo(x-4,y+4);ctx.stroke();});
+  }
+
+  /* ---------- planner sampling fan ---------- */
+  const planCv=document.getElementById('cvPlan');
+  function drawPlan(){
+    const {ctx,w,h}=fit(planCv,380); ctx.clearRect(0,0,w,h);
+    const start=[w*0.16,h*0.8], goal=[w*0.84,h*0.24];
+    const rnd=mulberry32(21);
+    const H=16, steps=[];
+    // generate N rollouts as bounded random walks biased toward goal
+    const N=110, rolls=[];
+    for(let k=0;k<N;k++){
+      let p=[...start]; const path=[p.slice()]; let mind=1e9;
+      const bias=0.42+rnd()*0.5;
+      for(let t=0;t<H;t++){
+        const dir=[goal[0]-p[0],goal[1]-p[1]]; const dl=Math.hypot(...dir);
+        const stepLen=(Math.min(w,h))*0.052;
+        const nx=[dir[0]/dl*bias+(rnd()-.5)*1.7, dir[1]/dl*bias+(rnd()-.5)*1.7];
+        const nl=Math.hypot(...nx);
+        p=[p[0]+nx[0]/nl*stepLen, p[1]+nx[1]/nl*stepLen];
+        path.push(p.slice());
+        mind=Math.min(mind, Math.hypot(goal[0]-p[0],goal[1]-p[1]));
+      }
+      rolls.push({path,cost:mind});
+    }
+    rolls.sort((a,b)=>a.cost-b.cost);
+    const nElite=12;
+    const drawRoll=(r,idx,frac)=>{
+      const elite=idx<nElite;
+      ctx.strokeStyle = elite?teal:faint;
+      ctx.globalAlpha = elite?0.85:0.16;
+      ctx.lineWidth = elite?2:1.1;
+      if(elite){ctx.shadowColor=teal;ctx.shadowBlur=5;}
+      ctx.beginPath();
+      const M=Math.max(2,Math.floor(r.path.length*frac));
+      for(let i=0;i<M;i++){const [x,y]=r.path[i]; i?ctx.lineTo(x,y):ctx.moveTo(x,y);}
+      ctx.stroke(); ctx.shadowBlur=0; ctx.globalAlpha=1;
+    };
+    // refined mean plan = mean of elites
+    const mean=[]; for(let t=0;t<=H;t++){let sx=0,sy=0;for(let e=0;e<nElite;e++){sx+=rolls[e].path[t][0];sy+=rolls[e].path[t][1];}mean.push([sx/nElite,sy/nElite]);}
+    const drawMean=(frac)=>{ctx.strokeStyle=amber;ctx.lineWidth=3;ctx.globalAlpha=1;ctx.shadowColor=amber;ctx.shadowBlur=8;ctx.beginPath();const M=Math.max(2,Math.floor(mean.length*frac));for(let i=0;i<M;i++){const[x,y]=mean[i];i?ctx.lineTo(x,y):ctx.moveTo(x,y);}ctx.stroke();ctx.shadowBlur=0;};
+    const markers=()=>{
+      ctx.fillStyle=teal;ctx.beginPath();ctx.arc(start[0],start[1],6,0,7);ctx.fill();
+      ctx.fillStyle=amber;ctx.globalAlpha=.25;ctx.beginPath();ctx.arc(goal[0],goal[1],22,0,7);ctx.fill();ctx.globalAlpha=1;
+      ctx.fillStyle=amber;star(ctx,goal[0],goal[1],8);
+    };
+    const render=(frac)=>{
+      ctx.clearRect(0,0,w,h);
+      // draw non-elites first, then elites, then mean
+      for(let i=rolls.length-1;i>=nElite;i--)drawRoll(rolls[i],i,frac);
+      for(let i=nElite-1;i>=0;i--)drawRoll(rolls[i],i,frac);
+      if(frac>0.6)drawMean(Math.min(1,(frac-0.6)/0.4));
+      markers();
+    };
+    if(RM){render(1);}
+    else{let f=0;(function anim(){f+=0.03;render(Math.min(f,1));if(f<1)requestAnimationFrame(anim);})();}
+  }
+
+  /* ---------- boundary gate strip ---------- */
+  const boundCv=document.getElementById('cvBound');
+  function drawBound(){
+    const {ctx,w,h}=fit(boundCv,150); ctx.clearRect(0,0,w,h);
+    const pad=14, base=h-34, ax0=pad, ax1=w-pad, T=42;
+    // baseline
+    ctx.strokeStyle=line;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(ax0,base);ctx.lineTo(ax1,base);ctx.stroke();
+    // junction positions (true) + gate spikes mostly aligned
+    const junc=[6,13,22,30,37];
+    const gate=new Array(T).fill(0).map((_,i)=>{
+      let g=0.06+((i*13)%7)/60;
+      if(junc.includes(i))g=0.86+((i%3)*0.04);
+      if([9,26].includes(i))g=0.34; // a couple of near-misses
+      return g;
+    });
+    const sx=i=>ax0+(i/(T-1))*(ax1-ax0);
+    // junction shading
+    junc.forEach(j=>{ctx.fillStyle='rgba(110,231,168,.10)';ctx.fillRect(sx(j)-6,pad,12,base-pad);});
+    // gate bars
+    gate.forEach((g,i)=>{
+      const x=sx(i), bh=(base-pad-6)*g;
+      const strong=g>0.6;
+      ctx.fillStyle = strong?green:'rgba(138,155,176,.55)';
+      if(strong){ctx.shadowColor=green;ctx.shadowBlur=7;}
+      ctx.fillRect(x-2.4, base-bh, 4.8, bh);
+      ctx.shadowBlur=0;
+    });
+    // labels
+    ctx.fillStyle=muted;ctx.font='11px ui-monospace,monospace';
+    ctx.fillText('g_t',ax0,pad+2); ctx.fillText('t →',ax1-22,base+16);
+    ctx.fillStyle=green;ctx.fillText('▮ boundary fires at junction',ax0,base+16);
+  }
+
+  /* ---------- H band chart ---------- */
+  const bandCv=document.getElementById('cvBand');
+  function drawBand(){
+    const {ctx,w,h}=fit(bandCv,300); ctx.clearRect(0,0,w,h);
+    const Hs=[8,10,11,12,16];
+    const gt=[0.28,0.85,0.94,0.94,0.98];   // avg GT over L (approx from sweep)
+    const adv=[0.03,0.50,0.81,0.92,1.00];  // avg ADV over L
+    const pad=38, x0=pad+8, x1=w-16, y0=16, y1=h-34;
+    const X=i=>x0+(i/(Hs.length-1))*(x1-x0);
+    const Y=v=>y1-(v)*(y1-y0);
+    // grid
+    ctx.strokeStyle=line;ctx.lineWidth=1;ctx.fillStyle=faint;ctx.font='10.5px ui-monospace,monospace';
+    [0,0.5,1].forEach(v=>{ctx.globalAlpha=.6;ctx.beginPath();ctx.moveTo(x0,Y(v));ctx.lineTo(x1,Y(v));ctx.stroke();ctx.globalAlpha=1;ctx.fillText(v.toFixed(1),8,Y(v)+3);});
+    Hs.forEach((H,i)=>{ctx.fillStyle=faint;ctx.fillText('H='+H,X(i)-11,y1+16);});
+    // gap fill between gt and adv
+    ctx.beginPath();
+    Hs.forEach((H,i)=>{const x=X(i),y=Y(gt[i]);i?ctx.lineTo(x,y):ctx.moveTo(x,y);});
+    for(let i=Hs.length-1;i>=0;i--){ctx.lineTo(X(i),Y(adv[i]));}
+    ctx.closePath(); ctx.fillStyle='rgba(110,231,168,.12)'; ctx.fill();
+    const line2=(arr,col,dot)=>{
+      ctx.strokeStyle=col;ctx.lineWidth=2.4;ctx.beginPath();
+      Hs.forEach((H,i)=>{const x=X(i),y=Y(arr[i]);i?ctx.lineTo(x,y):ctx.moveTo(x,y);});ctx.stroke();
+      ctx.fillStyle=col;Hs.forEach((H,i)=>{ctx.beginPath();ctx.arc(X(i),Y(arr[i]),3.2,0,7);ctx.fill();});
+    };
+    line2(gt,teal); line2(adv,amber);
+    // highlight certified H=10
+    const ci=1;
+    ctx.strokeStyle=green;ctx.setLineDash([3,3]);ctx.globalAlpha=.7;
+    ctx.beginPath();ctx.moveTo(X(ci),y0);ctx.lineTo(X(ci),y1);ctx.stroke();ctx.setLineDash([]);ctx.globalAlpha=1;
+    ctx.fillStyle=green;ctx.font='10.5px ui-monospace,monospace';ctx.fillText('certified',X(ci)-4,y0+10);
+  }
+
+  /* ---------- rung 1 bars ---------- */
+  function rung1(){
+    const box=document.getElementById('rung1bars');
+    const data=[[2,100],[3,85],[4,80],[5,65],[6,70],[8,50],[10,10],[12,5]];
+    box.innerHTML=data.map(([L,v])=>`
+      <div class="bar ${v<50?'lo':''}">
+        <span class="val">${v}</span>
+        <div class="fill" style="height:${v}%"></div>
+        <span class="lab">${L}</span>
+      </div>`).join('');
+  }
+
+  function drawAll(){ drawMaze(); drawRooms(); drawPlan(); drawBound(); drawBand(); }
+  rung1();
+  drawAll();
+  let rt; window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(drawAll,180);});
+})();
+</script>
