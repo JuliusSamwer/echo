@@ -2,6 +2,10 @@
 
 *Research codebase (formerly "Zeus"). Status as of **2026-11-02**.*
 
+> **📌 This is the new, canonical repository for the project.** An earlier copy lived on a different
+> GitHub account and has been taken down; links to it are dead. All current code, results, and
+> updates live here.
+
 **The question.** Hierarchical latent world models such as **HWM** (Hierarchical World Models, on top of PLDM)
 and **H-JEPA** plan *top-down only*: the high level proposes a subgoal, the low level chases it, and the
 high level never learns how badly execution fell short. The low level already computes that shortfall: its
