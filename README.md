@@ -15,7 +15,6 @@ of committing to its plan open-loop.
 
 ![ECHO architecture](figures/echo/schematic_architecture.png)
 
-![timeline](figures/echo/timeline.png)
 
 
 ## TL;DR: where we are
