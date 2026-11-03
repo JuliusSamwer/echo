@@ -242,36 +242,22 @@ def arrow(ax, p, q, c=INK2, lw=1.6, style="-|>", ls="-", rad=0.0):
 
 
 def fig_architecture():
-    fig, ax = plt.subplots(figsize=(10, 5.2))
-    ax.set_xlim(0, 10); ax.set_ylim(0, 5.4); ax.axis("off"); ax.grid(False)
-    ax.text(0, 5.25, "ECHO · bidirectional closed-loop hierarchy (vs. HWM's top-down-only interface)",
-            fontsize=12, fontweight="bold")
-    # high level
-    box(ax, (0.2, 3.3), 2.2, 1.0, "goal obs\n→ E → z_goal", "#f1f0ec")
-    box(ax, (3.2, 3.3), 3.0, 1.0, "HIGH LEVEL  (frozen)\nF_high + MPPI over macro-actions\nproposes subgoal chain g₁…g_M",
-        "#e3eefb", ec=BLUE, bold=False)
-    box(ax, (6.9, 3.3), 3.05, 1.0, "REPAIR OPERATOR (ours)\nE(g) = α·d(ẑ_T, g) + β·d(F_high(g), z_goal)\ng ← g − η ∇_g E", "#e2f5ee", ec=AQUA, fs=8.6)
-    # low level
-    box(ax, (0.2, 0.6), 2.2, 1.0, "current obs\n→ E → z", "#f1f0ec")
-    box(ax, (3.2, 0.6), 3.0, 1.0, "LOW LEVEL  (frozen)\nF_low + MPPI over primitive actions\nchases subgoal g → predicted ẑ_T",
-        "#e3eefb", ec=BLUE)
-    box(ax, (7.0, 0.6), 2.8, 1.0, "ENVIRONMENT\nexecute a*, observe\nlanded state", "#f1f0ec")
-    arrow(ax, (2.4, 3.8), (3.2, 3.8)); arrow(ax, (2.4, 1.1), (3.2, 1.1))
-    arrow(ax, (6.2, 1.1), (7.0, 1.1))
-    # top-down
-    arrow(ax, (4.2, 3.3), (4.2, 1.6), c=INK2, lw=2)
-    ax.text(3.6, 2.45, "TOP-DOWN\nsubgoal g = pred_obs[1]\n(HWM: the only\ndirection)", fontsize=8.5, ha="right", va="center",
-            color=INK2)
-    # bottom-up
-    arrow(ax, (5.6, 1.6), (7.6, 3.3), c=ORANGE, lw=2.4, rad=-0.15)
-    ax.text(6.55, 2.05, "BOTTOM-UP  residual  ← the ECHO\nr_plan = d(ẑ_T, g),  r_exec = d(z_landed, g)\n"
-            "trigger: fire only when r > τ", fontsize=8.5, color=ORANGE, ha="left", va="center", fontweight="bold")
-    arrow(ax, (6.9, 3.8), (6.2, 3.8), c=AQUA, lw=2)
-    ax.text(6.55, 4.45, "repaired g", fontsize=8, color=INK2, ha="center")
-    arrow(ax, (8.4, 1.6), (8.9, 3.3), c=GRAY, lw=1.2, ls=(0, (3, 2)))
-    ax.text(9.0, 2.45, "landed\nstate", fontsize=8, color=MUTED)
-    ax.text(0.2, 0.15, "Signal in use today: raw latent distance (MPPI running cost).  v3 plan: replace every message "
-            "with a learned temporal-distance head R(z,g).", fontsize=8.5, color=INK2)
+    fig, ax = plt.subplots(figsize=(9, 4.4))
+    ax.set_xlim(0, 9); ax.set_ylim(0, 4.6); ax.axis("off"); ax.grid(False)
+    ax.text(0.2, 4.4, "ECHO: closed-loop hierarchy", fontsize=13, fontweight="bold")
+    box(ax, (0.2, 2.8), 2.0, 0.9, "goal", "#f1f0ec", fs=11)
+    box(ax, (3.2, 2.8), 2.4, 0.9, "High level\nproposes subgoal", "#e3eefb", ec=BLUE, fs=11)
+    box(ax, (6.6, 2.8), 2.2, 0.9, "Repair\nadjusts subgoal", "#e2f5ee", ec=AQUA, fs=11)
+    box(ax, (0.2, 0.5), 2.0, 0.9, "current state", "#f1f0ec", fs=11)
+    box(ax, (3.2, 0.5), 2.4, 0.9, "Low level\nreaches subgoal", "#e3eefb", ec=BLUE, fs=11)
+    box(ax, (6.6, 0.5), 2.2, 0.9, "Environment", "#f1f0ec", fs=11)
+    arrow(ax, (2.2, 3.25), (3.2, 3.25)); arrow(ax, (2.2, 0.95), (3.2, 0.95))
+    arrow(ax, (5.6, 0.95), (6.6, 0.95))
+    arrow(ax, (3.9, 2.8), (3.9, 1.4), lw=2)
+    ax.text(3.75, 2.1, "subgoal", fontsize=10, ha="right", va="center", color=INK2)
+    arrow(ax, (5.0, 1.4), (7.0, 2.8), c=ORANGE, lw=2.6, rad=-0.15)
+    ax.text(6.25, 1.9, "residual\n(the echo)", fontsize=10.5, color=ORANGE, ha="left", va="center", fontweight="bold")
+    arrow(ax, (6.6, 3.25), (5.6, 3.25), c=AQUA, lw=2)
     save(fig, "schematic_architecture.png")
 
 
