@@ -9,13 +9,13 @@ import numpy as np
 import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from zeus.config import Rung0Config
-from zeus.device import resolve_device
-from zeus.envs.point_maze import PointMaze
-from zeus.planning.mpc import PlannerParams, RecedingHorizonController
+from echo.config import Rung0Config
+from echo.device import resolve_device
+from echo.envs.point_maze import PointMaze
+from echo.planning.mpc import PlannerParams, RecedingHorizonController
 
 dev = resolve_device("cpu")
-MD = Path("/Users/juliius/Nobel30/Zeus/models/"
+MD = Path(str(Path(__file__).resolve().parents[1]) + "/models/"
           "learned_models_v2")
 cfg = Rung0Config.full(); cfg.grid = (9, 9); cfg.cost_mode = "min"; cfg.device = dev
 params = PlannerParams.from_cfg(cfg)

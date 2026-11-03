@@ -19,18 +19,18 @@ import numpy as np
 import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from zeus.config import Rung0Config
-from zeus.envs.point_maze import PointMaze
-from zeus.data.collect import collect_dataset, dataset_bounds, coverage_report
-from zeus.models.encoder import IdentityEncoder
-from zeus.models.world_model import build_world_model
-from zeus.train import train_world_model
-from zeus.planning.mpc import PlannerParams, RecedingHorizonController
-from zeus.planning.hierarchical import HierarchicalController
-from zeus.eval.harness import evaluate, probe_model
+from echo.config import Rung0Config
+from echo.envs.point_maze import PointMaze
+from echo.data.collect import collect_dataset, dataset_bounds, coverage_report
+from echo.models.encoder import IdentityEncoder
+from echo.models.world_model import build_world_model
+from echo.train import train_world_model
+from echo.planning.mpc import PlannerParams, RecedingHorizonController
+from echo.planning.hierarchical import HierarchicalController
+from echo.eval.harness import evaluate, probe_model
 
 SMOKE = "--smoke" in sys.argv
-CACHE = Path("/Users/juliius/Nobel30/Zeus/models/"
+CACHE = Path(str(Path(__file__).resolve().parents[1]) + "/models/"
              "rung1_model.pt")
 OUT = Path(__file__).resolve().parents[1] / "figures"
 OUT.mkdir(exist_ok=True)

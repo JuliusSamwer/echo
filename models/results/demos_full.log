@@ -6,7 +6,7 @@
 [demos] DATA-EFFICIENCY SWEEP (BC), eval n=20/L  | refs: flat~0.15 HWM~0.25 REINFORCE~0.00 oracle~0.85
   demos/L | L=2 | L=3 | L=4 | #BC pairs
   -------------------------------------
-/Users/juliius/Nobel30/Zeus/zeus_maze/rung3_reinforce.py:52: RuntimeWarning: divide by zero encountered in log
+/Users/juliius/Nobel30/ECHO/echo_maze/rung3_reinforce.py:52: RuntimeWarning: divide by zero encountered in log
   logp = (-0.5 * ((d - mean) / std) ** 2 - np.log(std) - 0.5 * np.log(2 * np.pi)).sum(-1)
         2 | 0.05 | 0.00 | 0.00 | 24
         5 | 0.00 | 0.10 | 0.05 | 63
@@ -19,4 +19,4 @@
    L=2: success=0.07
    L=3: success=0.03
    L=4: success=0.00
-[demos] saved BC policy -> /Users/juliius/Nobel30/Zeus/models/rung3_bc_policy.pt
+[demos] saved BC policy -> /Users/juliius/Nobel30/ECHO/models/rung3_bc_policy.pt

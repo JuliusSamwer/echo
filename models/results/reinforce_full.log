@@ -1,6 +1,6 @@
 [reinforce] precomputing fine-geodesic adjacency + training pool ...
 [reinforce] pool=120 pairs. training B (dense planning + success REINFORCE) ...
-/Users/juliius/Nobel30/Zeus/zeus_maze/rung3_reinforce.py:198: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+/Users/juliius/Nobel30/ECHO/echo_maze/rung3_reinforce.py:198: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
 Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:837.)
   f"| std={std:.2f} | loss={float(loss):.2f}", flush=True)
   [reinforce] up   0 | train_success=0.00 | std=0.50 | loss=0.30

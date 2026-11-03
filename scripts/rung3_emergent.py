@@ -1,4 +1,4 @@
-"""Zeus v0: does an emergent (learned-boundary) coarse level match the imposed fixed-k one?
+"""ECHO v0: does an emergent (learned-boundary) coarse level match the imposed fixed-k one?
 
 Apples-to-apples with rung3_oneshot: SAME maze, SAME frozen flat substrate, SAME planner
 (HWMController) and eval pairs. The ONLY change is the coarse model:
@@ -18,16 +18,16 @@ import numpy as np
 import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from zeus.config import Rung0Config
-from zeus.device import resolve_device
-from zeus.envs.point_maze import PointMaze
-from zeus.data.collect import collect_dataset
-from zeus.models.coarse_model import build_coarse_model
-from zeus.models.emergent_coarse import build_emergent_coarse
-from zeus.train_coarse import train_coarse_model
-from zeus.train_emergent import train_emergent
-from zeus.planning.mpc import PlannerParams, RecedingHorizonController
-from zeus.planning.hwm_hierarchical import HWMController
+from echo.config import Rung0Config
+from echo.device import resolve_device
+from echo.envs.point_maze import PointMaze
+from echo.data.collect import collect_dataset
+from echo.models.coarse_model import build_coarse_model
+from echo.models.emergent_coarse import build_emergent_coarse
+from echo.train_coarse import train_coarse_model
+from echo.train_emergent import train_emergent
+from echo.planning.mpc import PlannerParams, RecedingHorizonController
+from echo.planning.hwm_hierarchical import HWMController
 
 SMOKE = "--smoke" in sys.argv
 def _arg(flag, default, cast):
@@ -35,7 +35,7 @@ def _arg(flag, default, cast):
 W_RATE = _arg("--w-rate", 0.02, float)     # boundary-rate penalty; SWEEP this to find the band
 W_CLO = _arg("--w-clo", 1.0, float)        # closure (Chapman-Kolmogorov) weight
 dev = resolve_device("cpu")
-MD = Path("/Users/juliius/Nobel30/Zeus/models/"
+MD = Path(str(Path(__file__).resolve().parents[1]) + "/models/"
           "learned_models_v2")
 MAZE, K = 0, 6
 L_VALUES = [6, 12] if SMOKE else [5, 6, 8, 10, 12]

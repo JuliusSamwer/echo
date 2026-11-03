@@ -1,4 +1,4 @@
 H_lo= 8 | sep AUC=0.83 (R_clear=0.10 R_wall=0.34) | junction lift=0.95 (P(door|bnd)=0.39 base=0.41)
 H_lo=10 | sep AUC=0.83 (R_clear=0.07 R_wall=0.26) | junction lift=0.80 (P(door|bnd)=0.32 base=0.41)
 H_lo=12 | sep AUC=0.81 (R_clear=0.06 R_wall=0.22) | junction lift=0.78 (P(door|bnd)=0.32 base=0.41)
-figure: /Users/juliius/Nobel30/Zeus/figures/rung3_flavorA_residual.png
+figure: /Users/juliius/Nobel30/ECHO/figures/rung3_flavorA_residual.png

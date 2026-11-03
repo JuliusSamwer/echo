@@ -13,17 +13,17 @@ import numpy as np
 import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from zeus.config import Rung0Config
-from zeus.envs.point_maze import PointMaze
-from zeus.data.collect import collect_dataset
-from zeus.models.emergent_coarse import build_emergent_coarse
-from zeus.train_emergent import train_planning_pressure
-from zeus.planning.mpc import PlannerParams, RecedingHorizonController
-from zeus.planning.hwm_hierarchical import HWMController
+from echo.config import Rung0Config
+from echo.envs.point_maze import PointMaze
+from echo.data.collect import collect_dataset
+from echo.models.emergent_coarse import build_emergent_coarse
+from echo.train_emergent import train_planning_pressure
+from echo.planning.mpc import PlannerParams, RecedingHorizonController
+from echo.planning.hwm_hierarchical import HWMController
 
 SMOKE = "--smoke" in sys.argv
 dev = "cpu"
-MD = Path("/Users/juliius/Nobel30/Zeus/models/"
+MD = Path(str(Path(__file__).resolve().parents[1]) + "/models/"
           "learned_models_v2")
 cfg = Rung0Config.full(); cfg.grid = (9, 9); cfg.cost_mode = "min"; cfg.device = dev
 params = PlannerParams.from_cfg(cfg)

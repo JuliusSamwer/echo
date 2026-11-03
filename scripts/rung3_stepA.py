@@ -21,13 +21,13 @@ import numpy as np
 import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from zeus.config import Rung0Config
-from zeus.envs.point_maze import PointMaze
-from zeus.models.boundary import BoundaryNet
-from zeus.planning.mpc import PlannerParams, plan, RecedingHorizonController
+from echo.config import Rung0Config
+from echo.envs.point_maze import PointMaze
+from echo.models.boundary import BoundaryNet
+from echo.planning.mpc import PlannerParams, plan, RecedingHorizonController
 
 dev = "cpu"; H_LO = 14   # band: straight corridor-hop (~5 cells) reachable; cornering hop (~7 travel) fails
-MD = Path("/Users/juliius/Nobel30/Zeus/models/"
+MD = Path(str(Path(__file__).resolve().parents[1]) + "/models/"
           "learned_models_v2")
 cfg = Rung0Config.full(); cfg.grid = (9, 9); cfg.cost_mode = "min"; cfg.device = dev
 params = PlannerParams.from_cfg(cfg)
@@ -41,7 +41,7 @@ SUB_EPS = 0.3 * sc
 
 
 def bfs_path(sc_cell, gc_cell):
-    from zeus.envs.point_maze import _neighbors
+    from echo.envs.point_maze import _neighbors
     prev = {sc_cell: None}; q = deque([sc_cell])
     while q:
         c = q.popleft()

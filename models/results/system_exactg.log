@@ -9,9 +9,9 @@
 Traceback (most recent call last):
   File "<frozen runpy>", line 198, in _run_module_as_main
   File "<frozen runpy>", line 88, in _run_code
-  File "/Users/juliius/Nobel30/Zeus/zeus_maze/rung3_system.py", line 313, in <module>
+  File "/Users/juliius/Nobel30/ECHO/echo_maze/rung3_system.py", line 313, in <module>
     train_F(F, G, pairs, arena, epochs=100 if smoke else 250, eps=eps, temp=temp, beta=beta, delta=delta)
-  File "/Users/juliius/Nobel30/Zeus/zeus_maze/rung3_system.py", line 205, in train_F
+  File "/Users/juliius/Nobel30/ECHO/echo_maze/rung3_system.py", line 205, in train_F
     for p in G.parameters():
              ^^^^^^^^^^^^
 AttributeError: 'CollisionHop' object has no attribute 'parameters'

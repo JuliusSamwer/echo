@@ -29,4 +29,4 @@
 [base] it=56000 mse=3.26e-04
 [base] it=58000 mse=3.75e-04
 [validate] open_rmse=4.86e-03  door_rmse=1.51e-02  wall_crossing_rate=0.0535  (overshoot=0.021)  FAIL
-[base] saved frozen base -> /Users/juliius/Nobel30/Zeus/models/base_frozen.pt  (validated ok=False)
+[base] saved frozen base -> /Users/juliius/Nobel30/ECHO/models/base_frozen.pt  (validated ok=False)

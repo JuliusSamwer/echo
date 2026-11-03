@@ -1,7 +1,7 @@
 === sweep done, running snapped comparison ===
-[eval_snapped] loaded /Users/juliius/Nobel30/Zeus/models/rung3_bc_policy.pt (max_hop=1.6)
+[eval_snapped] loaded /Users/juliius/Nobel30/ECHO/models/rung3_bc_policy.pt (max_hop=1.6)
 [eval_snapped] PLAIN eval (n=40/L) ...
-/Users/juliius/Nobel30/Zeus/zeus_maze/rung3_reinforce.py:52: RuntimeWarning: divide by zero encountered in log
+/Users/juliius/Nobel30/ECHO/echo_maze/rung3_reinforce.py:52: RuntimeWarning: divide by zero encountered in log
   logp = (-0.5 * ((d - mean) / std) ** 2 - np.log(std) - 0.5 * np.log(2 * np.pi)).sum(-1)
 [eval_snapped] SNAPPED eval (n=40/L) ...
 

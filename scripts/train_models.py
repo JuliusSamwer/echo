@@ -6,10 +6,10 @@ Models are cached to <model-dir>/maze_{m}.pt and skipped if present, so this is
 safe to stop/resume. Same maze gen seeds (1000+m) + training recipe as the rigorous
 baseline, so these models ARE the rung-3 substrate.
 
-  ZEUS_DEVICE=mps python scripts/train_models.py --mazes 100 --model-dir DIR
+  ECHO_DEVICE=mps python scripts/train_models.py --mazes 100 --model-dir DIR
   # CUDA box, shard across GPUs:
-  ZEUS_DEVICE=cuda:0 python scripts/train_models.py --start 0  --end 50  --model-dir DIR &
-  ZEUS_DEVICE=cuda:1 python scripts/train_models.py --start 50 --end 100 --model-dir DIR &
+  ECHO_DEVICE=cuda:0 python scripts/train_models.py --start 0  --end 50  --model-dir DIR &
+  ECHO_DEVICE=cuda:1 python scripts/train_models.py --start 50 --end 100 --model-dir DIR &
 """
 import sys, argparse, time
 from pathlib import Path
@@ -17,20 +17,20 @@ import numpy as np
 import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from zeus.config import Rung0Config
-from zeus.device import resolve_device, device_report
-from zeus.envs.point_maze import PointMaze
-from zeus.data.collect import collect_dataset, dataset_bounds, coverage_report
-from zeus.models.encoder import IdentityEncoder
-from zeus.models.world_model import build_world_model
-from zeus.train import train_world_model
+from echo.config import Rung0Config
+from echo.device import resolve_device, device_report
+from echo.envs.point_maze import PointMaze
+from echo.data.collect import collect_dataset, dataset_bounds, coverage_report
+from echo.models.encoder import IdentityEncoder
+from echo.models.world_model import build_world_model
+from echo.train import train_world_model
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--mazes", type=int, default=100)
 ap.add_argument("--start", type=int, default=0)
 ap.add_argument("--end", type=int, default=None)
 ap.add_argument("--model-dir", type=str, required=True)
-ap.add_argument("--device", type=str, default="auto")   # or ZEUS_DEVICE env
+ap.add_argument("--device", type=str, default="auto")   # or ECHO_DEVICE env
 ap.add_argument("--threads", type=int, default=2)        # torch threads (CPU)
 ap.add_argument("--episodes", type=int, default=400)
 ap.add_argument("--epochs", type=int, default=35)

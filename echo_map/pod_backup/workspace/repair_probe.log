@@ -1,0 +1,478 @@
++ cd /workspace/HWM_PLDM
++ source /workspace/HWM_PLDM/activate_env.sh
+++ ZP1=/workspace
+++ source /workspace/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/workspace/miniconda3/bin/conda
++++ CONDA_EXE=/workspace/miniconda3/bin/conda
++++ export _CONDA_EXE=/workspace/miniconda3/bin/conda
++++ _CONDA_EXE=/workspace/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/workspace/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/workspace/miniconda3/bin/python
++++ export _CONDA_ROOT=/workspace/miniconda3
++++ _CONDA_ROOT=/workspace/miniconda3
++++ '[' -z '' ']'
++++ export CONDA_SHLVL=0
++++ CONDA_SHLVL=0
++++ '[' -n '' ']'
++++++ dirname /workspace/miniconda3/bin/conda
+++++ dirname /workspace/miniconda3/bin
++++ PATH=/workspace/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
++++ export PATH
++++ '[' -z '' ']'
++++ PS1=
+++ conda activate pldm
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate pldm
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1=
++++ __conda_exe shell.posix activate pldm
++++ '[' -n '' ']'
++++ /workspace/miniconda3/bin/conda shell.posix activate pldm
+++ ask_conda='export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(pldm) '\''
+export PATH='\''/workspace/miniconda3/envs/pldm/bin:/workspace/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'\''
+export CONDA_PREFIX='\''/workspace/miniconda3/envs/pldm'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''pldm'\''
+export CONDA_PROMPT_MODIFIER='\''(pldm) '\''
+export CONDA_EXE='\''/workspace/miniconda3/bin/conda'\''
+export _CONDA_EXE='\''/workspace/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/workspace/miniconda3/bin/python'\''
+export _CONDA_ROOT='\''/workspace/miniconda3'\'''
+++ eval 'export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(pldm) '\''
+export PATH='\''/workspace/miniconda3/envs/pldm/bin:/workspace/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'\''
+export CONDA_PREFIX='\''/workspace/miniconda3/envs/pldm'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''pldm'\''
+export CONDA_PROMPT_MODIFIER='\''(pldm) '\''
+export CONDA_EXE='\''/workspace/miniconda3/bin/conda'\''
+export _CONDA_EXE='\''/workspace/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/workspace/miniconda3/bin/python'\''
+export _CONDA_ROOT='\''/workspace/miniconda3'\'''
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ PS1='(pldm) '
++++ export PATH=/workspace/miniconda3/envs/pldm/bin:/workspace/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
++++ PATH=/workspace/miniconda3/envs/pldm/bin:/workspace/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
++++ export CONDA_PREFIX=/workspace/miniconda3/envs/pldm
++++ CONDA_PREFIX=/workspace/miniconda3/envs/pldm
++++ export CONDA_SHLVL=1
++++ CONDA_SHLVL=1
++++ export CONDA_DEFAULT_ENV=pldm
++++ CONDA_DEFAULT_ENV=pldm
++++ export 'CONDA_PROMPT_MODIFIER=(pldm) '
++++ CONDA_PROMPT_MODIFIER='(pldm) '
++++ export CONDA_EXE=/workspace/miniconda3/bin/conda
++++ CONDA_EXE=/workspace/miniconda3/bin/conda
++++ export _CONDA_EXE=/workspace/miniconda3/bin/conda
++++ _CONDA_EXE=/workspace/miniconda3/bin/conda
++++ export CONDA_PYTHON_EXE=/workspace/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/workspace/miniconda3/bin/python
++++ export _CONDA_ROOT=/workspace/miniconda3
++++ _CONDA_ROOT=/workspace/miniconda3
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
+++ export MUJOCO_PY_MUJOCO_PATH=/workspace/.mujoco/mujoco210
+++ MUJOCO_PY_MUJOCO_PATH=/workspace/.mujoco/mujoco210
+++ export LD_LIBRARY_PATH=:/workspace/.mujoco/mujoco210/bin:/usr/lib/nvidia
+++ LD_LIBRARY_PATH=:/workspace/.mujoco/mujoco210/bin:/usr/lib/nvidia
+++ export MUJOCO_GL=egl
+++ MUJOCO_GL=egl
+++ export D4RL_SUPPRESS_IMPORT_ERROR=1
+++ D4RL_SUPPRESS_IMPORT_ERROR=1
+++ export WANDB_MODE=offline
+++ WANDB_MODE=offline
++++ python -c 'import torch;print(torch.cuda.is_available())'
+++ echo '[env] pldm active | MUJOCO_GL=egl | cuda=True'
+[env] pldm active | MUJOCO_GL=egl | cuda=True
++ bash eval.sh hwm
+[eval] HWM (2-level hierarchical) ...
+/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/wandb/apis/public.py:3111: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import parse_version
+/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/wandb/apis/public.py:3111: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import parse_version
+wandb: Tracking run with wandb version 0.13.10
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:62: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.splits = torch.load(self.config.path)
+loading saved dataset from /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/data.p
+states will contain images
+loading /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/images.npy
+shape of images is: (101000, 98, 98, 3)
+40000 samples in  dataset
+estimating mean stds:   0%|          | 0/78 [00:00<?, ?it/s]/workspace/HWM_PLDM/pldm_envs/diverse_maze/d4rl.py:92: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  torch.from_numpy(self.images_tensor[index : index + length : skip_frame])
+estimating mean stds:   1%|▏         | 1/78 [00:02<03:13,  2.52s/it]estimating mean stds:   3%|▎         | 2/78 [00:04<02:49,  2.23s/it]estimating mean stds:   4%|▍         | 3/78 [00:06<02:31,  2.02s/it]estimating mean stds:   5%|▌         | 4/78 [00:07<02:19,  1.89s/it]estimating mean stds:   6%|▋         | 5/78 [00:09<02:12,  1.82s/it]estimating mean stds:   8%|▊         | 6/78 [00:11<02:05,  1.74s/it]estimating mean stds:   9%|▉         | 7/78 [00:12<01:58,  1.67s/it]estimating mean stds:  10%|█         | 8/78 [00:14<01:50,  1.58s/it]estimating mean stds:  12%|█▏        | 9/78 [00:15<01:45,  1.53s/it]estimating mean stds:  13%|█▎        | 10/78 [00:16<01:39,  1.47s/it]estimating mean stds:  14%|█▍        | 11/78 [00:18<01:31,  1.37s/it]estimating mean stds:  15%|█▌        | 12/78 [00:19<01:25,  1.30s/it]estimating mean stds:  17%|█▋        | 13/78 [00:20<01:24,  1.30s/it]estimating mean stds:  18%|█▊        | 14/78 [00:21<01:21,  1.27s/it]estimating mean stds:  19%|█▉        | 15/78 [00:22<01:16,  1.22s/it]estimating mean stds:  21%|██        | 16/78 [00:23<01:13,  1.19s/it]estimating mean stds:  22%|██▏       | 17/78 [00:25<01:09,  1.14s/it]estimating mean stds:  23%|██▎       | 18/78 [00:26<01:10,  1.17s/it]estimating mean stds:  24%|██▍       | 19/78 [00:27<01:07,  1.15s/it]estimating mean stds:  26%|██▌       | 20/78 [00:28<01:01,  1.07s/it]estimating mean stds:  27%|██▋       | 21/78 [00:28<00:56,  1.02it/s]estimating mean stds:  28%|██▊       | 22/78 [00:29<00:54,  1.02it/s]estimating mean stds:  29%|██▉       | 23/78 [00:30<00:51,  1.06it/s]estimating mean stds:  31%|███       | 24/78 [00:31<00:48,  1.10it/s]estimating mean stds:  32%|███▏      | 25/78 [00:32<00:45,  1.16it/s]estimating mean stds:  33%|███▎      | 26/78 [00:33<00:44,  1.18it/s]estimating mean stds:  35%|███▍      | 27/78 [00:33<00:39,  1.28it/s]estimating mean stds:  36%|███▌      | 28/78 [00:34<00:38,  1.30it/s]estimating mean stds:  37%|███▋      | 29/78 [00:35<00:37,  1.30it/s]estimating mean stds:  38%|███▊      | 30/78 [00:36<00:35,  1.35it/s]estimating mean stds:  40%|███▉      | 31/78 [00:36<00:33,  1.41it/s]estimating mean stds:  41%|████      | 32/78 [00:37<00:33,  1.38it/s]estimating mean stds:  42%|████▏     | 33/78 [00:38<00:32,  1.40it/s]estimating mean stds:  44%|████▎     | 34/78 [00:38<00:31,  1.38it/s]estimating mean stds:  45%|████▍     | 35/78 [00:39<00:30,  1.39it/s]estimating mean stds:  46%|████▌     | 36/78 [00:40<00:29,  1.43it/s]estimating mean stds:  47%|████▋     | 37/78 [00:40<00:27,  1.47it/s]estimating mean stds:  49%|████▊     | 38/78 [00:41<00:28,  1.42it/s]estimating mean stds:  50%|█████     | 39/78 [00:42<00:25,  1.50it/s]estimating mean stds:  51%|█████▏    | 40/78 [00:42<00:25,  1.51it/s]estimating mean stds:  53%|█████▎    | 41/78 [00:43<00:24,  1.52it/s]estimating mean stds:  54%|█████▍    | 42/78 [00:44<00:23,  1.56it/s]estimating mean stds:  55%|█████▌    | 43/78 [00:44<00:21,  1.66it/s]estimating mean stds:  56%|█████▋    | 44/78 [00:45<00:20,  1.70it/s]estimating mean stds:  58%|█████▊    | 45/78 [00:45<00:18,  1.76it/s]estimating mean stds:  59%|█████▉    | 46/78 [00:46<00:18,  1.71it/s]estimating mean stds:  60%|██████    | 47/78 [00:46<00:16,  1.83it/s]estimating mean stds:  62%|██████▏   | 48/78 [00:47<00:16,  1.86it/s]estimating mean stds:  63%|██████▎   | 49/78 [00:47<00:15,  1.93it/s]estimating mean stds:  64%|██████▍   | 50/78 [00:48<00:14,  1.96it/s]estimating mean stds:  65%|██████▌   | 51/78 [00:48<00:13,  2.00it/s]estimating mean stds:  67%|██████▋   | 52/78 [00:49<00:13,  2.00it/s]estimating mean stds:  68%|██████▊   | 53/78 [00:49<00:12,  2.07it/s]estimating mean stds:  69%|██████▉   | 54/78 [00:50<00:11,  2.07it/s]estimating mean stds:  71%|███████   | 55/78 [00:50<00:10,  2.14it/s]estimating mean stds:  72%|███████▏  | 56/78 [00:51<00:10,  2.17it/s]estimating mean stds:  73%|███████▎  | 57/78 [00:51<00:09,  2.20it/s]estimating mean stds:  74%|███████▍  | 58/78 [00:51<00:08,  2.24it/s]estimating mean stds:  76%|███████▌  | 59/78 [00:52<00:08,  2.26it/s]estimating mean stds:  77%|███████▋  | 60/78 [00:52<00:07,  2.27it/s]estimating mean stds:  78%|███████▊  | 61/78 [00:53<00:07,  2.33it/s]estimating mean stds:  79%|███████▉  | 62/78 [00:53<00:07,  2.28it/s]estimating mean stds:  81%|████████  | 63/78 [00:53<00:06,  2.39it/s]estimating mean stds:  82%|████████▏ | 64/78 [00:54<00:06,  2.27it/s]estimating mean stds:  83%|████████▎ | 65/78 [00:54<00:05,  2.43it/s]estimating mean stds:  85%|████████▍ | 66/78 [00:55<00:04,  2.42it/s]estimating mean stds:  86%|████████▌ | 67/78 [00:55<00:04,  2.45it/s]estimating mean stds:  87%|████████▋ | 68/78 [00:56<00:04,  2.37it/s]estimating mean stds:  88%|████████▊ | 69/78 [00:56<00:03,  2.50it/s]estimating mean stds:  90%|████████▉ | 70/78 [00:56<00:03,  2.52it/s]estimating mean stds:  91%|█████████ | 71/78 [00:57<00:02,  2.59it/s]estimating mean stds:  92%|█████████▏| 72/78 [00:57<00:02,  2.73it/s]estimating mean stds:  94%|█████████▎| 73/78 [00:57<00:01,  2.85it/s]estimating mean stds:  95%|█████████▍| 74/78 [00:58<00:01,  2.79it/s]estimating mean stds:  96%|█████████▌| 75/78 [00:58<00:00,  3.00it/s]estimating mean stds:  97%|█████████▋| 76/78 [00:58<00:00,  2.96it/s]estimating mean stds:  99%|█████████▊| 77/78 [00:59<00:00,  3.02it/s]estimating mean stds: 100%|██████████| 78/78 [00:59<00:00,  2.77it/s]estimating mean stds: 100%|██████████| 78/78 [00:59<00:00,  1.31it/s]
+/workspace/HWM_PLDM/pldm/train.py:389: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(load_checkpoint_path)
+loading saved dataset from /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/data.p
+states will contain images
+loading /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/images.npy
+shape of images is: (101000, 98, 98, 3)
+40000 samples in probe_train dataset
+loading saved dataset from /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/data.p
+states will contain images
+loading /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/images.npy
+shape of images is: (101000, 98, 98, 3)
+40000 samples in probe_val dataset
+loading saved dataset from /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/data.p
+states will contain images
+loading /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/images.npy
+shape of images is: (101000, 98, 98, 3)
+10000 samples in l2_probe_train dataset
+loading saved dataset from /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/data.p
+states will contain images
+loading /workspace/HWM_PLDM/pldm_envs/diverse_maze/datasets/maze2d_large_diverse_probe/images.npy
+shape of images is: (101000, 98, 98, 3)
+10000 samples in l2_probe_val dataset
+Inferred input_dim: torch.Size([3, 98, 98])
+loaded model from /workspace/HWM_PLDM/pldm/pretrained/load_from_l1248-seed248_epoch=5_sample_step=10789632.ckpt
+freezing first level weights
+number of params in level 1: 0
+number of params in level 2: 182334
+compiling model
+compilation finished after 1.921s
+Computing L2 latent bounds:   0%|          | 0/100 [00:00<?, ?it/s]Computing L2 latent bounds:   1%|          | 1/100 [00:00<01:34,  1.05it/s]Computing L2 latent bounds:   2%|▏         | 2/100 [00:01<01:07,  1.44it/s]Computing L2 latent bounds:   3%|▎         | 3/100 [00:01<00:53,  1.80it/s]Computing L2 latent bounds:   4%|▍         | 4/100 [00:02<00:47,  2.03it/s]Computing L2 latent bounds:   5%|▌         | 5/100 [00:02<00:43,  2.16it/s]Computing L2 latent bounds:   6%|▌         | 6/100 [00:03<00:42,  2.23it/s]Computing L2 latent bounds:   7%|▋         | 7/100 [00:03<00:40,  2.30it/s]Computing L2 latent bounds:   8%|▊         | 8/100 [00:03<00:39,  2.36it/s]Computing L2 latent bounds:   9%|▉         | 9/100 [00:04<00:37,  2.40it/s]Computing L2 latent bounds:  10%|█         | 10/100 [00:04<00:36,  2.44it/s]Computing L2 latent bounds:  11%|█         | 11/100 [00:05<00:36,  2.44it/s]Computing L2 latent bounds:  12%|█▏        | 12/100 [00:05<00:35,  2.51it/s]Computing L2 latent bounds:  13%|█▎        | 13/100 [00:05<00:33,  2.58it/s]Computing L2 latent bounds:  14%|█▍        | 14/100 [00:06<00:32,  2.62it/s]Computing L2 latent bounds:  15%|█▌        | 15/100 [00:06<00:32,  2.59it/s]Computing L2 latent bounds:  16%|█▌        | 16/100 [00:06<00:31,  2.64it/s]Computing L2 latent bounds:  17%|█▋        | 17/100 [00:07<00:31,  2.63it/s]Computing L2 latent bounds:  18%|█▊        | 18/100 [00:07<00:31,  2.64it/s]Computing L2 latent bounds:  19%|█▉        | 19/100 [00:08<00:30,  2.62it/s]Computing L2 latent bounds:  20%|██        | 20/100 [00:08<00:30,  2.66it/s]Computing L2 latent bounds:  21%|██        | 21/100 [00:08<00:29,  2.68it/s]Computing L2 latent bounds:  22%|██▏       | 22/100 [00:09<00:28,  2.69it/s]Computing L2 latent bounds:  23%|██▎       | 23/100 [00:09<00:28,  2.67it/s]Computing L2 latent bounds:  24%|██▍       | 24/100 [00:09<00:28,  2.66it/s]Computing L2 latent bounds:  25%|██▌       | 25/100 [00:10<00:28,  2.66it/s]Computing L2 latent bounds:  26%|██▌       | 26/100 [00:10<00:27,  2.68it/s]Computing L2 latent bounds:  27%|██▋       | 27/100 [00:11<00:27,  2.66it/s]Computing L2 latent bounds:  28%|██▊       | 28/100 [00:11<00:27,  2.62it/s]Computing L2 latent bounds:  29%|██▉       | 29/100 [00:11<00:26,  2.64it/s]Computing L2 latent bounds:  30%|███       | 30/100 [00:12<00:26,  2.64it/s]Computing L2 latent bounds:  31%|███       | 31/100 [00:12<00:26,  2.65it/s]Computing L2 latent bounds:  32%|███▏      | 32/100 [00:12<00:25,  2.65it/s]Computing L2 latent bounds:  33%|███▎      | 33/100 [00:13<00:25,  2.66it/s]Computing L2 latent bounds:  34%|███▍      | 34/100 [00:13<00:24,  2.66it/s]Computing L2 latent bounds:  35%|███▌      | 35/100 [00:14<00:24,  2.63it/s]Computing L2 latent bounds:  36%|███▌      | 36/100 [00:14<00:24,  2.63it/s]Computing L2 latent bounds:  37%|███▋      | 37/100 [00:14<00:23,  2.65it/s]Computing L2 latent bounds:  38%|███▊      | 38/100 [00:15<00:23,  2.69it/s]Computing L2 latent bounds:  39%|███▉      | 39/100 [00:15<00:22,  2.70it/s]Computing L2 latent bounds:  40%|████      | 40/100 [00:15<00:22,  2.72it/s]Computing L2 latent bounds:  41%|████      | 41/100 [00:16<00:21,  2.72it/s]Computing L2 latent bounds:  42%|████▏     | 42/100 [00:16<00:21,  2.71it/s]Computing L2 latent bounds:  43%|████▎     | 43/100 [00:17<00:20,  2.72it/s]Computing L2 latent bounds:  44%|████▍     | 44/100 [00:17<00:20,  2.76it/s]Computing L2 latent bounds:  45%|████▌     | 45/100 [00:17<00:19,  2.75it/s]Computing L2 latent bounds:  46%|████▌     | 46/100 [00:18<00:19,  2.76it/s]Computing L2 latent bounds:  47%|████▋     | 47/100 [00:18<00:19,  2.78it/s]Computing L2 latent bounds:  48%|████▊     | 48/100 [00:18<00:18,  2.79it/s]Computing L2 latent bounds:  49%|████▉     | 49/100 [00:19<00:18,  2.79it/s]Computing L2 latent bounds:  50%|█████     | 50/100 [00:19<00:18,  2.78it/s]Computing L2 latent bounds:  51%|█████     | 51/100 [00:19<00:17,  2.77it/s]Computing L2 latent bounds:  52%|█████▏    | 52/100 [00:20<00:17,  2.74it/s]Computing L2 latent bounds:  53%|█████▎    | 53/100 [00:20<00:17,  2.70it/s]Computing L2 latent bounds:  54%|█████▍    | 54/100 [00:21<00:16,  2.73it/s]Computing L2 latent bounds:  55%|█████▌    | 55/100 [00:21<00:16,  2.75it/s]Computing L2 latent bounds:  56%|█████▌    | 56/100 [00:21<00:15,  2.76it/s]Computing L2 latent bounds:  57%|█████▋    | 57/100 [00:22<00:15,  2.79it/s]Computing L2 latent bounds:  58%|█████▊    | 58/100 [00:22<00:14,  2.82it/s]Computing L2 latent bounds:  59%|█████▉    | 59/100 [00:22<00:14,  2.81it/s]Computing L2 latent bounds:  60%|██████    | 60/100 [00:23<00:14,  2.82it/s]Computing L2 latent bounds:  61%|██████    | 61/100 [00:23<00:13,  2.82it/s]Computing L2 latent bounds:  62%|██████▏   | 62/100 [00:23<00:13,  2.85it/s]Computing L2 latent bounds:  63%|██████▎   | 63/100 [00:24<00:12,  2.86it/s]Computing L2 latent bounds:  64%|██████▍   | 64/100 [00:24<00:12,  2.89it/s]Computing L2 latent bounds:  65%|██████▌   | 65/100 [00:24<00:12,  2.91it/s]Computing L2 latent bounds:  66%|██████▌   | 66/100 [00:25<00:11,  2.87it/s]Computing L2 latent bounds:  67%|██████▋   | 67/100 [00:25<00:11,  2.85it/s]Computing L2 latent bounds:  68%|██████▊   | 68/100 [00:25<00:11,  2.86it/s]Computing L2 latent bounds:  69%|██████▉   | 69/100 [00:26<00:10,  2.86it/s]Computing L2 latent bounds:  70%|███████   | 70/100 [00:26<00:10,  2.84it/s]Computing L2 latent bounds:  71%|███████   | 71/100 [00:27<00:10,  2.84it/s]Computing L2 latent bounds:  72%|███████▏  | 72/100 [00:27<00:09,  2.83it/s]Computing L2 latent bounds:  73%|███████▎  | 73/100 [00:27<00:09,  2.81it/s]Computing L2 latent bounds:  74%|███████▍  | 74/100 [00:28<00:09,  2.84it/s]Computing L2 latent bounds:  75%|███████▌  | 75/100 [00:28<00:08,  2.80it/s]Computing L2 latent bounds:  76%|███████▌  | 76/100 [00:28<00:08,  2.73it/s]Computing L2 latent bounds:  77%|███████▋  | 77/100 [00:29<00:08,  2.65it/s]Computing L2 latent bounds:  78%|███████▊  | 78/100 [00:29<00:08,  2.66it/s]Computing L2 latent bounds:  79%|███████▉  | 79/100 [00:29<00:07,  2.67it/s]Computing L2 latent bounds:  80%|████████  | 80/100 [00:30<00:07,  2.65it/s]Computing L2 latent bounds:  81%|████████  | 81/100 [00:30<00:07,  2.70it/s]Computing L2 latent bounds:  82%|████████▏ | 82/100 [00:31<00:06,  2.73it/s]Computing L2 latent bounds:  83%|████████▎ | 83/100 [00:31<00:06,  2.76it/s]Computing L2 latent bounds:  84%|████████▍ | 84/100 [00:31<00:05,  2.76it/s]Computing L2 latent bounds:  85%|████████▌ | 85/100 [00:32<00:05,  2.76it/s]Computing L2 latent bounds:  86%|████████▌ | 86/100 [00:32<00:05,  2.78it/s]Computing L2 latent bounds:  87%|████████▋ | 87/100 [00:32<00:04,  2.77it/s]Computing L2 latent bounds:  88%|████████▊ | 88/100 [00:33<00:04,  2.77it/s]Computing L2 latent bounds:  89%|████████▉ | 89/100 [00:33<00:03,  2.78it/s]Computing L2 latent bounds:  90%|█████████ | 90/100 [00:33<00:03,  2.80it/s]Computing L2 latent bounds:  91%|█████████ | 91/100 [00:34<00:03,  2.80it/s]Computing L2 latent bounds:  92%|█████████▏| 92/100 [00:34<00:02,  2.77it/s]Computing L2 latent bounds:  93%|█████████▎| 93/100 [00:35<00:02,  2.72it/s]Computing L2 latent bounds:  94%|█████████▍| 94/100 [00:35<00:02,  2.73it/s]Computing L2 latent bounds:  95%|█████████▌| 95/100 [00:35<00:01,  2.75it/s]Computing L2 latent bounds:  96%|█████████▌| 96/100 [00:36<00:01,  2.73it/s]Computing L2 latent bounds:  97%|█████████▋| 97/100 [00:36<00:01,  2.68it/s]Computing L2 latent bounds:  98%|█████████▊| 98/100 [00:36<00:00,  2.69it/s]Computing L2 latent bounds:  99%|█████████▉| 99/100 [00:37<00:00,  2.70it/s]Computing L2 latent bounds: 100%|██████████| 100/100 [00:37<00:00,  2.70it/s]Computing L2 latent bounds: 100%|██████████| 100/100 [00:37<00:00,  2.66it/s]
+Probe l2 prediction epochs:   0%|          | 0/3 [00:00<?, ?it/s]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:02<03:35,  2.80s/it][A
+Probe prediction step:   3%|▎         | 2/78 [00:03<01:57,  1.54s/it][A
+Probe prediction step:   4%|▍         | 3/78 [00:03<01:17,  1.04s/it][A
+Probe prediction step:   5%|▌         | 4/78 [00:04<00:59,  1.24it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:04<00:49,  1.48it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:05<00:43,  1.67it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:05<00:39,  1.82it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:06<00:36,  1.93it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:06<00:34,  2.00it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:07<00:33,  2.06it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:07<00:31,  2.10it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:07<00:31,  2.12it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:08<00:30,  2.14it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:08<00:29,  2.16it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:09<00:28,  2.18it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:09<00:28,  2.19it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:10<00:27,  2.18it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:10<00:27,  2.19it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:11<00:26,  2.19it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:11<00:26,  2.19it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:12<00:25,  2.20it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:12<00:25,  2.18it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:12<00:25,  2.17it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:13<00:24,  2.17it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:13<00:24,  2.18it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:14<00:23,  2.19it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:14<00:23,  2.18it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:15<00:22,  2.20it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:15<00:21,  2.23it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:16<00:21,  2.25it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:16<00:20,  2.27it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:16<00:20,  2.29it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:17<00:19,  2.29it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:17<00:19,  2.30it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:18<00:18,  2.31it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:18<00:18,  2.31it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:19<00:17,  2.31it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:19<00:17,  2.31it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:20<00:16,  2.30it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:20<00:16,  2.30it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:20<00:16,  2.30it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:21<00:15,  2.29it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:21<00:15,  2.29it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:22<00:14,  2.30it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:22<00:14,  2.30it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:23<00:13,  2.30it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:23<00:14,  2.21it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:24<00:14,  2.08it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:24<00:14,  2.07it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:25<00:13,  2.13it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:25<00:12,  2.17it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:25<00:11,  2.20it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:26<00:11,  2.22it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:26<00:10,  2.24it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:27<00:10,  2.25it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:27<00:09,  2.25it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:28<00:09,  2.26it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:28<00:08,  2.26it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:29<00:08,  2.26it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:29<00:07,  2.26it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:29<00:07,  2.26it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:30<00:07,  2.26it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:30<00:06,  2.26it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:31<00:06,  2.26it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:31<00:05,  2.26it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:32<00:05,  2.26it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:32<00:04,  2.25it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:33<00:04,  2.25it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:33<00:04,  2.24it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:33<00:03,  2.23it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:34<00:03,  2.24it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:34<00:02,  2.24it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:35<00:02,  2.23it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:35<00:01,  2.23it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:36<00:01,  2.23it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:36<00:00,  2.23it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:37<00:00,  2.23it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:37<00:00,  2.22it/s][AProbe prediction step: 100%|██████████| 78/78 [00:37<00:00,  2.08it/s]
+Probe l2 prediction epochs:  33%|███▎      | 1/3 [00:37<01:15, 37.50s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:34,  2.24it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:33,  2.24it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:33,  2.24it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:33,  2.24it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:32,  2.24it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:32,  2.24it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:03<00:31,  2.23it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:31,  2.24it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:04<00:30,  2.24it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:04<00:30,  2.23it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:30,  2.23it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:05<00:29,  2.23it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:29,  2.23it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:06<00:28,  2.23it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:28,  2.24it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:07<00:27,  2.23it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:07<00:27,  2.23it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:08<00:26,  2.23it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:08<00:26,  2.23it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:26,  2.21it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:09<00:25,  2.22it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:09<00:25,  2.22it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:10<00:24,  2.21it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:10<00:24,  2.21it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:11<00:23,  2.21it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:11<00:23,  2.21it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:12<00:23,  2.21it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:12<00:22,  2.21it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:13<00:22,  2.21it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:13<00:21,  2.21it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:13<00:21,  2.21it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:14<00:20,  2.22it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:14<00:20,  2.22it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:15<00:19,  2.23it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:15<00:19,  2.23it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:16<00:18,  2.22it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:16<00:18,  2.22it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:17<00:18,  2.22it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:17<00:17,  2.22it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:17<00:17,  2.22it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:18<00:16,  2.22it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:18<00:16,  2.22it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:19<00:15,  2.22it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:19<00:15,  2.14it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:20<00:16,  2.02it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:20<00:15,  2.04it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:21<00:14,  2.10it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:21<00:13,  2.15it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:22<00:13,  2.20it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:22<00:12,  2.23it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:23<00:11,  2.25it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:23<00:11,  2.26it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:23<00:11,  2.27it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:24<00:10,  2.27it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:24<00:10,  2.28it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:25<00:09,  2.28it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:25<00:09,  2.28it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:26<00:08,  2.28it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:26<00:08,  2.28it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:27<00:07,  2.28it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:27<00:07,  2.27it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:27<00:07,  2.27it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:28<00:06,  2.27it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:28<00:06,  2.27it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:29<00:05,  2.26it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:29<00:05,  2.26it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:30<00:04,  2.26it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:30<00:04,  2.25it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:30<00:04,  2.25it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:31<00:03,  2.25it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:31<00:03,  2.25it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:32<00:02,  2.24it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:32<00:02,  2.24it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:33<00:01,  2.25it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:33<00:01,  2.27it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:34<00:00,  2.30it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:34<00:00,  2.31it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:34<00:00,  2.31it/s][AProbe prediction step: 100%|██████████| 78/78 [00:34<00:00,  2.23it/s]
+Probe l2 prediction epochs:  67%|██████▋   | 2/3 [01:12<00:35, 36.00s/it]
+Probe prediction step:   0%|          | 0/78 [00:00<?, ?it/s][A
+Probe prediction step:   1%|▏         | 1/78 [00:00<00:33,  2.33it/s][A
+Probe prediction step:   3%|▎         | 2/78 [00:00<00:32,  2.30it/s][A
+Probe prediction step:   4%|▍         | 3/78 [00:01<00:32,  2.31it/s][A
+Probe prediction step:   5%|▌         | 4/78 [00:01<00:31,  2.31it/s][A
+Probe prediction step:   6%|▋         | 5/78 [00:02<00:31,  2.31it/s][A
+Probe prediction step:   8%|▊         | 6/78 [00:02<00:31,  2.31it/s][A
+Probe prediction step:   9%|▉         | 7/78 [00:03<00:30,  2.32it/s][A
+Probe prediction step:  10%|█         | 8/78 [00:03<00:30,  2.29it/s][A
+Probe prediction step:  12%|█▏        | 9/78 [00:03<00:30,  2.29it/s][A
+Probe prediction step:  13%|█▎        | 10/78 [00:04<00:29,  2.29it/s][A
+Probe prediction step:  14%|█▍        | 11/78 [00:04<00:29,  2.29it/s][A
+Probe prediction step:  15%|█▌        | 12/78 [00:05<00:28,  2.29it/s][A
+Probe prediction step:  17%|█▋        | 13/78 [00:05<00:28,  2.28it/s][A
+Probe prediction step:  18%|█▊        | 14/78 [00:06<00:28,  2.28it/s][A
+Probe prediction step:  19%|█▉        | 15/78 [00:06<00:27,  2.28it/s][A
+Probe prediction step:  21%|██        | 16/78 [00:06<00:27,  2.28it/s][A
+Probe prediction step:  22%|██▏       | 17/78 [00:07<00:26,  2.28it/s][A
+Probe prediction step:  23%|██▎       | 18/78 [00:07<00:26,  2.28it/s][A
+Probe prediction step:  24%|██▍       | 19/78 [00:08<00:25,  2.28it/s][A
+Probe prediction step:  26%|██▌       | 20/78 [00:08<00:25,  2.28it/s][A
+Probe prediction step:  27%|██▋       | 21/78 [00:09<00:24,  2.28it/s][A
+Probe prediction step:  28%|██▊       | 22/78 [00:09<00:24,  2.28it/s][A
+Probe prediction step:  29%|██▉       | 23/78 [00:10<00:24,  2.28it/s][A
+Probe prediction step:  31%|███       | 24/78 [00:10<00:23,  2.28it/s][A
+Probe prediction step:  32%|███▏      | 25/78 [00:10<00:23,  2.27it/s][A
+Probe prediction step:  33%|███▎      | 26/78 [00:11<00:22,  2.27it/s][A
+Probe prediction step:  35%|███▍      | 27/78 [00:11<00:22,  2.27it/s][A
+Probe prediction step:  36%|███▌      | 28/78 [00:12<00:21,  2.27it/s][A
+Probe prediction step:  37%|███▋      | 29/78 [00:12<00:21,  2.27it/s][A
+Probe prediction step:  38%|███▊      | 30/78 [00:13<00:21,  2.26it/s][A
+Probe prediction step:  40%|███▉      | 31/78 [00:13<00:20,  2.27it/s][A
+Probe prediction step:  41%|████      | 32/78 [00:14<00:20,  2.26it/s][A
+Probe prediction step:  42%|████▏     | 33/78 [00:14<00:19,  2.26it/s][A
+Probe prediction step:  44%|████▎     | 34/78 [00:14<00:19,  2.26it/s][A
+Probe prediction step:  45%|████▍     | 35/78 [00:15<00:19,  2.26it/s][A
+Probe prediction step:  46%|████▌     | 36/78 [00:15<00:18,  2.22it/s][A
+Probe prediction step:  47%|████▋     | 37/78 [00:16<00:18,  2.23it/s][A
+Probe prediction step:  49%|████▊     | 38/78 [00:16<00:17,  2.24it/s][A
+Probe prediction step:  50%|█████     | 39/78 [00:17<00:17,  2.24it/s][A
+Probe prediction step:  51%|█████▏    | 40/78 [00:17<00:16,  2.24it/s][A
+Probe prediction step:  53%|█████▎    | 41/78 [00:18<00:17,  2.14it/s][A
+Probe prediction step:  54%|█████▍    | 42/78 [00:18<00:17,  2.00it/s][A
+Probe prediction step:  55%|█████▌    | 43/78 [00:19<00:17,  2.03it/s][A
+Probe prediction step:  56%|█████▋    | 44/78 [00:19<00:16,  2.09it/s][A
+Probe prediction step:  58%|█████▊    | 45/78 [00:20<00:15,  2.13it/s][A
+Probe prediction step:  59%|█████▉    | 46/78 [00:20<00:14,  2.16it/s][A
+Probe prediction step:  60%|██████    | 47/78 [00:20<00:14,  2.18it/s][A
+Probe prediction step:  62%|██████▏   | 48/78 [00:21<00:13,  2.20it/s][A
+Probe prediction step:  63%|██████▎   | 49/78 [00:21<00:13,  2.21it/s][A
+Probe prediction step:  64%|██████▍   | 50/78 [00:22<00:12,  2.21it/s][A
+Probe prediction step:  65%|██████▌   | 51/78 [00:22<00:12,  2.21it/s][A
+Probe prediction step:  67%|██████▋   | 52/78 [00:23<00:11,  2.21it/s][A
+Probe prediction step:  68%|██████▊   | 53/78 [00:23<00:11,  2.21it/s][A
+Probe prediction step:  69%|██████▉   | 54/78 [00:24<00:10,  2.21it/s][A
+Probe prediction step:  71%|███████   | 55/78 [00:24<00:10,  2.22it/s][A
+Probe prediction step:  72%|███████▏  | 56/78 [00:25<00:09,  2.22it/s][A
+Probe prediction step:  73%|███████▎  | 57/78 [00:25<00:09,  2.22it/s][A
+Probe prediction step:  74%|███████▍  | 58/78 [00:25<00:09,  2.22it/s][A
+Probe prediction step:  76%|███████▌  | 59/78 [00:26<00:08,  2.22it/s][A
+Probe prediction step:  77%|███████▋  | 60/78 [00:26<00:08,  2.22it/s][A
+Probe prediction step:  78%|███████▊  | 61/78 [00:27<00:07,  2.22it/s][A
+Probe prediction step:  79%|███████▉  | 62/78 [00:27<00:07,  2.22it/s][A
+Probe prediction step:  81%|████████  | 63/78 [00:28<00:06,  2.22it/s][A
+Probe prediction step:  82%|████████▏ | 64/78 [00:28<00:06,  2.22it/s][A
+Probe prediction step:  83%|████████▎ | 65/78 [00:29<00:05,  2.22it/s][A
+Probe prediction step:  85%|████████▍ | 66/78 [00:29<00:05,  2.22it/s][A
+Probe prediction step:  86%|████████▌ | 67/78 [00:29<00:04,  2.22it/s][A
+Probe prediction step:  87%|████████▋ | 68/78 [00:30<00:04,  2.22it/s][A
+Probe prediction step:  88%|████████▊ | 69/78 [00:30<00:04,  2.21it/s][A
+Probe prediction step:  90%|████████▉ | 70/78 [00:31<00:03,  2.21it/s][A
+Probe prediction step:  91%|█████████ | 71/78 [00:31<00:03,  2.22it/s][A
+Probe prediction step:  92%|█████████▏| 72/78 [00:32<00:02,  2.20it/s][A
+Probe prediction step:  94%|█████████▎| 73/78 [00:32<00:02,  2.21it/s][A
+Probe prediction step:  95%|█████████▍| 74/78 [00:33<00:01,  2.21it/s][A
+Probe prediction step:  96%|█████████▌| 75/78 [00:33<00:01,  2.21it/s][A
+Probe prediction step:  97%|█████████▋| 76/78 [00:34<00:00,  2.21it/s][A
+Probe prediction step:  99%|█████████▊| 77/78 [00:34<00:00,  2.21it/s][A
+Probe prediction step: 100%|██████████| 78/78 [00:34<00:00,  2.21it/s][AProbe prediction step: 100%|██████████| 78/78 [00:34<00:00,  2.23it/s]
+Probe l2 prediction epochs: 100%|██████████| 3/3 [01:47<00:00, 35.51s/it]Probe l2 prediction epochs: 100%|██████████| 3/3 [01:47<00:00, 35.80s/it]
+Eval probe pred:   0%|          | 0/156 [00:00<?, ?it/s]Eval probe pred:   1%|          | 1/156 [00:00<01:05,  2.37it/s]Eval probe pred:   1%|▏         | 2/156 [00:00<00:54,  2.82it/s]Eval probe pred:   2%|▏         | 3/156 [00:00<00:45,  3.38it/s]Eval probe pred:   3%|▎         | 4/156 [00:01<00:40,  3.72it/s]Eval probe pred:   3%|▎         | 5/156 [00:01<00:38,  3.94it/s]Eval probe pred:   4%|▍         | 6/156 [00:01<00:36,  4.09it/s]Eval probe pred:   4%|▍         | 7/156 [00:01<00:35,  4.18it/s]Eval probe pred:   5%|▌         | 8/156 [00:02<00:34,  4.25it/s]Eval probe pred:   6%|▌         | 9/156 [00:02<00:34,  4.30it/s]Eval probe pred:   6%|▋         | 10/156 [00:02<00:33,  4.34it/s]Eval probe pred:   7%|▋         | 11/156 [00:02<00:33,  4.36it/s]Eval probe pred:   8%|▊         | 12/156 [00:02<00:32,  4.37it/s]Eval probe pred:   8%|▊         | 13/156 [00:03<00:32,  4.39it/s]Eval probe pred:   9%|▉         | 14/156 [00:03<00:32,  4.39it/s]Eval probe pred:  10%|▉         | 15/156 [00:03<00:32,  4.39it/s]Eval probe pred:  10%|█         | 16/156 [00:03<00:31,  4.38it/s]Eval probe pred:  11%|█         | 17/156 [00:04<00:31,  4.40it/s]Eval probe pred:  12%|█▏        | 18/156 [00:04<00:31,  4.39it/s]Eval probe pred:  12%|█▏        | 19/156 [00:04<00:31,  4.39it/s]Eval probe pred:  13%|█▎        | 20/156 [00:04<00:30,  4.40it/s]Eval probe pred:  13%|█▎        | 21/156 [00:05<00:30,  4.40it/s]Eval probe pred:  14%|█▍        | 22/156 [00:05<00:30,  4.40it/s]Eval probe pred:  15%|█▍        | 23/156 [00:05<00:30,  4.40it/s]Eval probe pred:  15%|█▌        | 24/156 [00:05<00:29,  4.40it/s]Eval probe pred:  16%|█▌        | 25/156 [00:05<00:29,  4.41it/s]Eval probe pred:  17%|█▋        | 26/156 [00:06<00:29,  4.41it/s]Eval probe pred:  17%|█▋        | 27/156 [00:06<00:29,  4.41it/s]Eval probe pred:  18%|█▊        | 28/156 [00:06<00:28,  4.42it/s]Eval probe pred:  19%|█▊        | 29/156 [00:06<00:28,  4.42it/s]Eval probe pred:  19%|█▉        | 30/156 [00:07<00:28,  4.41it/s]Eval probe pred:  20%|█▉        | 31/156 [00:07<00:28,  4.41it/s]Eval probe pred:  21%|██        | 32/156 [00:07<00:28,  4.41it/s]Eval probe pred:  21%|██        | 33/156 [00:07<00:27,  4.41it/s]Eval probe pred:  22%|██▏       | 34/156 [00:07<00:27,  4.41it/s]Eval probe pred:  22%|██▏       | 35/156 [00:08<00:27,  4.42it/s]Eval probe pred:  23%|██▎       | 36/156 [00:08<00:27,  4.41it/s]Eval probe pred:  24%|██▎       | 37/156 [00:08<00:26,  4.41it/s]Eval probe pred:  24%|██▍       | 38/156 [00:08<00:26,  4.41it/s]Eval probe pred:  25%|██▌       | 39/156 [00:09<00:26,  4.43it/s]Eval probe pred:  26%|██▌       | 40/156 [00:09<00:26,  4.42it/s]Eval probe pred:  26%|██▋       | 41/156 [00:09<00:26,  4.42it/s]Eval probe pred:  27%|██▋       | 42/156 [00:09<00:25,  4.41it/s]Eval probe pred:  28%|██▊       | 43/156 [00:10<00:25,  4.41it/s]Eval probe pred:  28%|██▊       | 44/156 [00:10<00:25,  4.41it/s]Eval probe pred:  29%|██▉       | 45/156 [00:10<00:25,  4.41it/s]Eval probe pred:  29%|██▉       | 46/156 [00:10<00:24,  4.40it/s]Eval probe pred:  30%|███       | 47/156 [00:10<00:24,  4.41it/s]Eval probe pred:  31%|███       | 48/156 [00:11<00:24,  4.40it/s]Eval probe pred:  31%|███▏      | 49/156 [00:11<00:24,  4.40it/s]Eval probe pred:  32%|███▏      | 50/156 [00:11<00:24,  4.40it/s]Eval probe pred:  33%|███▎      | 51/156 [00:11<00:23,  4.41it/s]Eval probe pred:  33%|███▎      | 52/156 [00:12<00:23,  4.41it/s]Eval probe pred:  34%|███▍      | 53/156 [00:12<00:23,  4.41it/s]Eval probe pred:  35%|███▍      | 54/156 [00:12<00:23,  4.41it/s]Eval probe pred:  35%|███▌      | 55/156 [00:12<00:22,  4.41it/s]Eval probe pred:  36%|███▌      | 56/156 [00:12<00:22,  4.41it/s]Eval probe pred:  37%|███▋      | 57/156 [00:13<00:22,  4.42it/s]Eval probe pred:  37%|███▋      | 58/156 [00:13<00:22,  4.41it/s]Eval probe pred:  38%|███▊      | 59/156 [00:13<00:21,  4.42it/s]Eval probe pred:  38%|███▊      | 60/156 [00:13<00:21,  4.41it/s]Eval probe pred:  39%|███▉      | 61/156 [00:14<00:21,  4.41it/s]Eval probe pred:  40%|███▉      | 62/156 [00:14<00:21,  4.41it/s]Eval probe pred:  40%|████      | 63/156 [00:14<00:21,  4.41it/s]Eval probe pred:  41%|████      | 64/156 [00:14<00:20,  4.40it/s]Eval probe pred:  42%|████▏     | 65/156 [00:15<00:20,  4.41it/s]Eval probe pred:  42%|████▏     | 66/156 [00:15<00:20,  4.40it/s]Eval probe pred:  43%|████▎     | 67/156 [00:15<00:25,  3.48it/s]Eval probe pred:  44%|████▎     | 68/156 [00:15<00:23,  3.71it/s]Eval probe pred:  44%|████▍     | 69/156 [00:16<00:22,  3.88it/s]Eval probe pred:  45%|████▍     | 70/156 [00:16<00:22,  3.80it/s]Eval probe pred:  46%|████▌     | 71/156 [00:16<00:22,  3.78it/s]Eval probe pred:  46%|████▌     | 72/156 [00:16<00:22,  3.68it/s]Eval probe pred:  47%|████▋     | 73/156 [00:17<00:22,  3.64it/s]Eval probe pred:  47%|████▋     | 74/156 [00:17<00:22,  3.72it/s]Eval probe pred:  48%|████▊     | 75/156 [00:17<00:20,  3.88it/s]Eval probe pred:  49%|████▊     | 76/156 [00:17<00:19,  4.03it/s]Eval probe pred:  49%|████▉     | 77/156 [00:18<00:19,  4.14it/s]Eval probe pred:  50%|█████     | 78/156 [00:18<00:18,  4.22it/s]Eval probe pred:  51%|█████     | 79/156 [00:18<00:17,  4.28it/s]Eval probe pred:  51%|█████▏    | 80/156 [00:18<00:17,  4.32it/s]Eval probe pred:  52%|█████▏    | 81/156 [00:19<00:17,  4.36it/s]Eval probe pred:  53%|█████▎    | 82/156 [00:19<00:16,  4.38it/s]Eval probe pred:  53%|█████▎    | 83/156 [00:19<00:16,  4.39it/s]Eval probe pred:  54%|█████▍    | 84/156 [00:19<00:16,  4.37it/s]Eval probe pred:  54%|█████▍    | 85/156 [00:19<00:16,  4.39it/s]Eval probe pred:  55%|█████▌    | 86/156 [00:20<00:15,  4.39it/s]Eval probe pred:  56%|█████▌    | 87/156 [00:20<00:15,  4.40it/s]Eval probe pred:  56%|█████▋    | 88/156 [00:20<00:15,  4.40it/s]Eval probe pred:  57%|█████▋    | 89/156 [00:20<00:15,  4.41it/s]Eval probe pred:  58%|█████▊    | 90/156 [00:21<00:14,  4.41it/s]Eval probe pred:  58%|█████▊    | 91/156 [00:21<00:14,  4.42it/s]Eval probe pred:  59%|█████▉    | 92/156 [00:21<00:14,  4.42it/s]Eval probe pred:  60%|█████▉    | 93/156 [00:21<00:14,  4.42it/s]Eval probe pred:  60%|██████    | 94/156 [00:22<00:14,  4.42it/s]Eval probe pred:  61%|██████    | 95/156 [00:22<00:13,  4.43it/s]Eval probe pred:  62%|██████▏   | 96/156 [00:22<00:13,  4.43it/s]Eval probe pred:  62%|██████▏   | 97/156 [00:22<00:13,  4.42it/s]Eval probe pred:  63%|██████▎   | 98/156 [00:22<00:13,  4.42it/s]Eval probe pred:  63%|██████▎   | 99/156 [00:23<00:12,  4.42it/s]Eval probe pred:  64%|██████▍   | 100/156 [00:23<00:12,  4.43it/s]Eval probe pred:  65%|██████▍   | 101/156 [00:23<00:12,  4.42it/s]Eval probe pred:  65%|██████▌   | 102/156 [00:23<00:12,  4.42it/s]Eval probe pred:  66%|██████▌   | 103/156 [00:24<00:11,  4.42it/s]Eval probe pred:  67%|██████▋   | 104/156 [00:24<00:11,  4.42it/s]Eval probe pred:  67%|██████▋   | 105/156 [00:24<00:11,  4.41it/s]Eval probe pred:  68%|██████▊   | 106/156 [00:24<00:11,  4.41it/s]Eval probe pred:  69%|██████▊   | 107/156 [00:24<00:11,  4.41it/s]Eval probe pred:  69%|██████▉   | 108/156 [00:25<00:10,  4.41it/s]Eval probe pred:  70%|██████▉   | 109/156 [00:25<00:10,  4.41it/s]Eval probe pred:  71%|███████   | 110/156 [00:25<00:10,  4.41it/s]Eval probe pred:  71%|███████   | 111/156 [00:25<00:10,  4.41it/s]Eval probe pred:  72%|███████▏  | 112/156 [00:26<00:09,  4.41it/s]Eval probe pred:  72%|███████▏  | 113/156 [00:26<00:09,  4.42it/s]Eval probe pred:  73%|███████▎  | 114/156 [00:26<00:09,  4.42it/s]Eval probe pred:  74%|███████▎  | 115/156 [00:26<00:09,  4.42it/s]Eval probe pred:  74%|███████▍  | 116/156 [00:27<00:09,  4.41it/s]Eval probe pred:  75%|███████▌  | 117/156 [00:27<00:08,  4.41it/s]Eval probe pred:  76%|███████▌  | 118/156 [00:27<00:08,  4.41it/s]Eval probe pred:  76%|███████▋  | 119/156 [00:27<00:08,  4.41it/s]Eval probe pred:  77%|███████▋  | 120/156 [00:27<00:08,  4.41it/s]Eval probe pred:  78%|███████▊  | 121/156 [00:28<00:07,  4.42it/s]Eval probe pred:  78%|███████▊  | 122/156 [00:28<00:07,  4.42it/s]Eval probe pred:  79%|███████▉  | 123/156 [00:28<00:07,  4.43it/s]Eval probe pred:  79%|███████▉  | 124/156 [00:28<00:07,  4.41it/s]Eval probe pred:  80%|████████  | 125/156 [00:29<00:07,  4.42it/s]Eval probe pred:  81%|████████  | 126/156 [00:29<00:06,  4.42it/s]Eval probe pred:  81%|████████▏ | 127/156 [00:29<00:06,  4.41it/s]Eval probe pred:  82%|████████▏ | 128/156 [00:29<00:06,  4.42it/s]Eval probe pred:  83%|████████▎ | 129/156 [00:29<00:06,  4.42it/s]Eval probe pred:  83%|████████▎ | 130/156 [00:30<00:05,  4.43it/s]Eval probe pred:  84%|████████▍ | 131/156 [00:30<00:05,  4.44it/s]Eval probe pred:  85%|████████▍ | 132/156 [00:30<00:05,  4.43it/s]Eval probe pred:  85%|████████▌ | 133/156 [00:30<00:05,  4.41it/s]Eval probe pred:  86%|████████▌ | 134/156 [00:31<00:04,  4.41it/s]Eval probe pred:  87%|████████▋ | 135/156 [00:31<00:04,  4.42it/s]Eval probe pred:  87%|████████▋ | 136/156 [00:31<00:04,  4.41it/s]Eval probe pred:  88%|████████▊ | 137/156 [00:31<00:04,  4.41it/s]Eval probe pred:  88%|████████▊ | 138/156 [00:31<00:04,  4.41it/s]Eval probe pred:  89%|████████▉ | 139/156 [00:32<00:03,  4.41it/s]Eval probe pred:  90%|████████▉ | 140/156 [00:32<00:03,  4.41it/s]Eval probe pred:  90%|█████████ | 141/156 [00:32<00:03,  4.41it/s]Eval probe pred:  91%|█████████ | 142/156 [00:32<00:03,  4.42it/s]Eval probe pred:  92%|█████████▏| 143/156 [00:33<00:02,  4.42it/s]Eval probe pred:  92%|█████████▏| 144/156 [00:33<00:02,  4.43it/s]Eval probe pred:  93%|█████████▎| 145/156 [00:33<00:02,  4.43it/s]Eval probe pred:  94%|█████████▎| 146/156 [00:33<00:02,  4.42it/s]Eval probe pred:  94%|█████████▍| 147/156 [00:34<00:02,  4.43it/s]Eval probe pred:  95%|█████████▍| 148/156 [00:34<00:01,  4.42it/s]Eval probe pred:  96%|█████████▌| 149/156 [00:34<00:01,  4.41it/s]Eval probe pred:  96%|█████████▌| 150/156 [00:34<00:01,  4.40it/s]Eval probe pred:  97%|█████████▋| 151/156 [00:34<00:01,  4.41it/s]Eval probe pred:  97%|█████████▋| 152/156 [00:35<00:00,  4.41it/s]Eval probe pred:  98%|█████████▊| 153/156 [00:35<00:00,  4.41it/s]Eval probe pred:  99%|█████████▊| 154/156 [00:35<00:00,  4.38it/s]Eval probe pred:  99%|█████████▉| 155/156 [00:35<00:00,  4.41it/s]Eval probe pred: 100%|██████████| 156/156 [00:36<00:00,  4.42it/s]Eval probe pred: 100%|██████████| 156/156 [00:36<00:00,  4.32it/s]
+Plotting l2_0:   0%|          | 0/64 [00:00<?, ?it/s]Plotting l2_0:   2%|▏         | 1/64 [00:00<00:18,  3.38it/s]Plotting l2_0:   3%|▎         | 2/64 [00:00<00:11,  5.21it/s]Plotting l2_0:   5%|▍         | 3/64 [00:00<00:09,  6.38it/s]Plotting l2_0:   6%|▋         | 4/64 [00:00<00:08,  6.96it/s]Plotting l2_0:   8%|▊         | 5/64 [00:00<00:07,  7.41it/s]Plotting l2_0:   9%|▉         | 6/64 [00:00<00:07,  7.85it/s]Plotting l2_0:  11%|█         | 7/64 [00:00<00:07,  8.13it/s]Plotting l2_0:  12%|█▎        | 8/64 [00:01<00:06,  8.25it/s]Plotting l2_0:  14%|█▍        | 9/64 [00:01<00:06,  8.39it/s]Plotting l2_0:  16%|█▌        | 10/64 [00:01<00:06,  8.44it/s]Plotting l2_0:  17%|█▋        | 11/64 [00:01<00:06,  8.47it/s]Plotting l2_0:  19%|█▉        | 12/64 [00:01<00:06,  8.51it/s]Plotting l2_0:  20%|██        | 13/64 [00:01<00:06,  8.31it/s]Plotting l2_0:  22%|██▏       | 14/64 [00:01<00:05,  8.46it/s]Plotting l2_0:  23%|██▎       | 15/64 [00:01<00:05,  8.57it/s]Plotting l2_0:  25%|██▌       | 16/64 [00:02<00:05,  8.69it/s]Plotting l2_0:  27%|██▋       | 17/64 [00:02<00:05,  8.83it/s]Plotting l2_0:  28%|██▊       | 18/64 [00:02<00:05,  8.65it/s]Plotting l2_0:  30%|██▉       | 19/64 [00:02<00:05,  8.78it/s]Plotting l2_0:  31%|███▏      | 20/64 [00:02<00:05,  8.74it/s]Plotting l2_0:  33%|███▎      | 21/64 [00:02<00:04,  8.69it/s]Plotting l2_0:  34%|███▍      | 22/64 [00:02<00:04,  8.54it/s]Plotting l2_0:  36%|███▌      | 23/64 [00:02<00:04,  8.50it/s]Plotting l2_0:  38%|███▊      | 24/64 [00:03<00:05,  7.49it/s]Plotting l2_0:  39%|███▉      | 25/64 [00:03<00:05,  7.50it/s]Plotting l2_0:  41%|████      | 26/64 [00:03<00:04,  7.79it/s]Plotting l2_0:  42%|████▏     | 27/64 [00:03<00:04,  8.04it/s]Plotting l2_0:  44%|████▍     | 28/64 [00:03<00:04,  8.14it/s]Plotting l2_0:  45%|████▌     | 29/64 [00:03<00:04,  8.29it/s]Plotting l2_0:  47%|████▋     | 30/64 [00:03<00:04,  8.30it/s]Plotting l2_0:  48%|████▊     | 31/64 [00:03<00:03,  8.41it/s]Plotting l2_0:  50%|█████     | 32/64 [00:03<00:03,  8.52it/s]Plotting l2_0:  52%|█████▏    | 33/64 [00:04<00:03,  8.50it/s]Plotting l2_0:  53%|█████▎    | 34/64 [00:04<00:03,  8.60it/s]Plotting l2_0:  55%|█████▍    | 35/64 [00:04<00:03,  8.66it/s]Plotting l2_0:  56%|█████▋    | 36/64 [00:04<00:03,  8.53it/s]Plotting l2_0:  58%|█████▊    | 37/64 [00:04<00:03,  8.63it/s]Plotting l2_0:  59%|█████▉    | 38/64 [00:04<00:03,  8.58it/s]Plotting l2_0:  61%|██████    | 39/64 [00:04<00:03,  8.32it/s]Plotting l2_0:  62%|██████▎   | 40/64 [00:04<00:02,  8.42it/s]Plotting l2_0:  64%|██████▍   | 41/64 [00:05<00:02,  8.48it/s]Plotting l2_0:  66%|██████▌   | 42/64 [00:05<00:02,  8.41it/s]Plotting l2_0:  67%|██████▋   | 43/64 [00:05<00:02,  8.47it/s]Plotting l2_0:  69%|██████▉   | 44/64 [00:05<00:02,  8.48it/s]Plotting l2_0:  70%|███████   | 45/64 [00:05<00:02,  6.94it/s]Plotting l2_0:  72%|███████▏  | 46/64 [00:05<00:02,  6.78it/s]Plotting l2_0:  73%|███████▎  | 47/64 [00:05<00:02,  7.27it/s]Plotting l2_0:  75%|███████▌  | 48/64 [00:05<00:02,  7.66it/s]Plotting l2_0:  77%|███████▋  | 49/64 [00:06<00:01,  7.99it/s]Plotting l2_0:  78%|███████▊  | 50/64 [00:06<00:01,  8.22it/s]Plotting l2_0:  80%|███████▉  | 51/64 [00:06<00:01,  7.21it/s]Plotting l2_0:  81%|████████▏ | 52/64 [00:06<00:02,  5.99it/s]Plotting l2_0:  83%|████████▎ | 53/64 [00:06<00:01,  6.23it/s]Plotting l2_0:  84%|████████▍ | 54/64 [00:06<00:01,  6.78it/s]Plotting l2_0:  86%|████████▌ | 55/64 [00:06<00:01,  7.26it/s]Plotting l2_0:  88%|████████▊ | 56/64 [00:07<00:01,  7.61it/s]Plotting l2_0:  89%|████████▉ | 57/64 [00:07<00:00,  7.93it/s]Plotting l2_0:  91%|█████████ | 58/64 [00:07<00:00,  8.00it/s]Plotting l2_0:  92%|█████████▏| 59/64 [00:07<00:00,  8.22it/s]Plotting l2_0:  94%|█████████▍| 60/64 [00:07<00:00,  8.35it/s]Plotting l2_0:  95%|█████████▌| 61/64 [00:07<00:00,  8.50it/s]Plotting l2_0:  97%|█████████▋| 62/64 [00:07<00:00,  8.52it/s]Plotting l2_0:  98%|█████████▊| 63/64 [00:07<00:00,  8.62it/s]Plotting l2_0: 100%|██████████| 64/64 [00:08<00:00,  8.63it/s]Plotting l2_0: 100%|██████████| 64/64 [00:08<00:00,  7.97it/s]
+/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/Cython/Distutils/old_build_ext.py:15: DeprecationWarning: dep_util is Deprecated. Use functions from setuptools instead.
+  from distutils.dep_util import newer, newer_group
+pybullet build time: Jan 29 2025 23:20:52
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/evaluation/envs_generator.py:41: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.metadata = torch.load(f"{data_path}/metadata.pt")
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/utils.py:506: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  uniform_ds = torch.load(f"{data_path}/data.p")
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/evaluation/envs_generator.py:58: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  map_layouts = torch.load(map_path)
+/workspace/HWM_PLDM/pldm_envs/diverse_maze/evaluation/envs_generator.py:62: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  trials = torch.load(trials_path)
+/workspace/miniconda3/envs/pldm/lib/python3.9/site-packages/gym/utils/seeding.py:38: DeprecationWarning: [33mWARN: Function `rng.randn(*size)` is marked as deprecated and will be removed in the future. Please use `rng.standard_normal(size)` instead.[0m
+  deprecation(
+evaluating l2 planning level hard for 6 envs
+Planning steps:   0%|          | 0/135 [00:00<?, ?it/s][echo-repair] call#1 cond=repair_always fired=6/6 rplan_before=0.02265 rplan_after=0.02424 |dg|=8.647e-02
+Planning steps:   1%|          | 1/135 [00:47<1:46:05, 47.50s/it]Planning steps:   1%|▏         | 2/135 [00:47<43:33, 19.65s/it]  Planning steps:   2%|▏         | 3/135 [00:47<23:38, 10.74s/it]Planning steps:   3%|▎         | 4/135 [00:47<14:19,  6.56s/it][echo-repair] call#2 cond=repair_always fired=6/6 rplan_before=0.03029 rplan_after=0.03128 |dg|=8.547e-02
+Planning steps:   4%|▎         | 5/135 [01:35<45:58, 21.22s/it]Planning steps:   4%|▍         | 6/135 [01:35<30:13, 14.06s/it]Planning steps:   5%|▌         | 7/135 [01:35<20:17,  9.51s/it]Planning steps:   6%|▌         | 8/135 [01:35<13:49,  6.53s/it][echo-repair] call#3 cond=repair_always fired=6/6 rplan_before=0.03611 rplan_after=0.03636 |dg|=8.583e-02
+Planning steps:   7%|▋         | 9/135 [02:22<40:24, 19.24s/it]Planning steps:   7%|▋         | 10/135 [02:22<27:48, 13.34s/it]Planning steps:   8%|▊         | 11/135 [02:23<19:13,  9.31s/it]Planning steps:   9%|▉         | 12/135 [02:23<13:21,  6.52s/it][echo-repair] call#4 cond=repair_always fired=6/6 rplan_before=0.05014 rplan_after=0.04883 |dg|=8.537e-02
+Planning steps:  10%|▉         | 13/135 [03:09<37:43, 18.56s/it]Planning steps:  10%|█         | 14/135 [03:09<26:12, 13.00s/it]Planning steps:  11%|█         | 15/135 [03:09<18:14,  9.12s/it]Planning steps:  12%|█▏        | 16/135 [03:09<12:43,  6.42s/it][echo-repair] call#5 cond=repair_always fired=6/6 rplan_before=0.08793 rplan_after=0.07471 |dg|=8.677e-02
+Planning steps:  13%|█▎        | 17/135 [03:56<36:10, 18.39s/it]Planning steps:  13%|█▎        | 18/135 [03:56<25:10, 12.91s/it]Planning steps:  14%|█▍        | 19/135 [03:56<17:32,  9.07s/it]Planning steps:  15%|█▍        | 20/135 [03:56<12:15,  6.39s/it][echo-repair] call#6 cond=repair_always fired=6/6 rplan_before=0.05678 rplan_after=0.05537 |dg|=8.430e-02
+Planning steps:  16%|█▌        | 21/135 [04:41<34:18, 18.06s/it]Planning steps:  16%|█▋        | 22/135 [04:41<23:53, 12.68s/it]Planning steps:  17%|█▋        | 23/135 [04:42<16:39,  8.92s/it]Planning steps:  18%|█▊        | 24/135 [04:42<11:37,  6.29s/it][echo-repair] call#7 cond=repair_always fired=6/6 rplan_before=0.06823 rplan_after=0.06051 |dg|=8.581e-02
+Planning steps:  19%|█▊        | 25/135 [05:27<32:58, 17.98s/it]Planning steps:  19%|█▉        | 26/135 [05:27<22:56, 12.63s/it]Planning steps:  20%|██        | 27/135 [05:27<15:59,  8.88s/it]Planning steps:  21%|██        | 28/135 [05:27<11:09,  6.26s/it][echo-repair] call#8 cond=repair_always fired=6/6 rplan_before=0.05870 rplan_after=0.05507 |dg|=8.588e-02
+Planning steps:  21%|██▏       | 29/135 [06:13<31:43, 17.96s/it]Planning steps:  22%|██▏       | 30/135 [06:13<22:04, 12.61s/it]Planning steps:  23%|██▎       | 31/135 [06:13<15:22,  8.87s/it]Planning steps:  24%|██▎       | 32/135 [06:13<10:44,  6.25s/it]Planning steps:  24%|██▍       | 33/135 [06:57<30:02, 17.67s/it]Planning steps:  25%|██▌       | 34/135 [06:58<20:53, 12.41s/it]Planning steps:  26%|██▌       | 35/135 [06:58<14:33,  8.73s/it]Planning steps:  27%|██▋       | 36/135 [06:58<10:09,  6.16s/it]Planning steps:  27%|██▋       | 37/135 [07:42<28:46, 17.62s/it]Planning steps:  28%|██▊       | 38/135 [07:42<20:01, 12.39s/it]Planning steps:  29%|██▉       | 39/135 [07:43<13:57,  8.73s/it]Planning steps:  30%|██▉       | 40/135 [07:43<09:45,  6.16s/it]Planning steps:  30%|███       | 41/135 [08:26<27:09, 17.33s/it]Planning steps:  31%|███       | 42/135 [08:26<18:52, 12.18s/it]Planning steps:  32%|███▏      | 43/135 [08:27<13:08,  8.57s/it]Planning steps:  33%|███▎      | 44/135 [08:27<09:10,  6.05s/it]Planning steps:  33%|███▎      | 45/135 [09:10<25:51, 17.24s/it]Planning steps:  34%|███▍      | 46/135 [09:10<17:58, 12.12s/it]Planning steps:  35%|███▍      | 47/135 [09:10<12:30,  8.53s/it]Planning steps:  36%|███▌      | 48/135 [09:11<08:43,  6.01s/it]Planning steps:  36%|███▋      | 49/135 [09:54<24:41, 17.22s/it]Planning steps:  37%|███▋      | 50/135 [09:54<17:09, 12.11s/it]Planning steps:  38%|███▊      | 51/135 [09:54<11:56,  8.53s/it]Planning steps:  39%|███▊      | 52/135 [09:54<08:20,  6.03s/it]Planning steps:  39%|███▉      | 53/135 [10:37<23:09, 16.95s/it]Planning steps:  40%|████      | 54/135 [10:37<16:04, 11.91s/it]Planning steps:  41%|████      | 55/135 [10:37<11:10,  8.38s/it]Planning steps:  41%|████▏     | 56/135 [10:37<07:46,  5.91s/it]Planning steps:  42%|████▏     | 57/135 [11:20<21:54, 16.85s/it]Planning steps:  43%|████▎     | 58/135 [11:20<15:11, 11.84s/it]Planning steps:  44%|████▎     | 59/135 [11:20<10:33,  8.34s/it]Planning steps:  44%|████▍     | 60/135 [11:20<07:20,  5.88s/it]Planning steps:  45%|████▌     | 61/135 [12:02<20:23, 16.54s/it]Planning steps:  46%|████▌     | 62/135 [12:02<14:08, 11.62s/it]Planning steps:  47%|████▋     | 63/135 [12:02<09:49,  8.18s/it]Planning steps:  47%|████▋     | 64/135 [12:02<06:49,  5.77s/it]Planning steps:  48%|████▊     | 65/135 [12:43<19:12, 16.47s/it]Planning steps:  49%|████▉     | 66/135 [12:44<13:18, 11.58s/it]Planning steps:  50%|████▉     | 67/135 [12:44<09:14,  8.15s/it]Planning steps:  50%|█████     | 68/135 [12:44<06:25,  5.75s/it]Planning steps:  51%|█████     | 69/135 [13:25<18:05, 16.45s/it]Planning steps:  52%|█████▏    | 70/135 [13:25<12:31, 11.56s/it]Planning steps:  53%|█████▎    | 71/135 [13:26<08:40,  8.13s/it]Planning steps:  53%|█████▎    | 72/135 [13:26<06:01,  5.74s/it]Planning steps:  54%|█████▍    | 73/135 [14:06<16:41, 16.15s/it]Planning steps:  55%|█████▍    | 74/135 [14:06<11:32, 11.35s/it]Planning steps:  56%|█████▌    | 75/135 [14:06<07:59,  7.99s/it]Planning steps:  56%|█████▋    | 76/135 [14:07<05:32,  5.64s/it]Planning steps:  57%|█████▋    | 77/135 [14:47<15:32, 16.08s/it]Planning steps:  58%|█████▊    | 78/135 [14:47<10:44, 11.30s/it]Planning steps:  59%|█████▊    | 79/135 [14:47<07:25,  7.95s/it]Planning steps:  59%|█████▉    | 80/135 [14:48<05:08,  5.61s/it]Planning steps:  60%|██████    | 81/135 [15:27<14:11, 15.77s/it]Planning steps:  61%|██████    | 82/135 [15:27<09:47, 11.09s/it]Planning steps:  61%|██████▏   | 83/135 [15:27<06:45,  7.80s/it]Planning steps:  62%|██████▏   | 84/135 [15:27<04:40,  5.50s/it]Planning steps:  63%|██████▎   | 85/135 [16:07<13:05, 15.70s/it]Planning steps:  64%|██████▎   | 86/135 [16:07<09:00, 11.03s/it]Planning steps:  64%|██████▍   | 87/135 [16:07<06:12,  7.76s/it]Planning steps:  65%|██████▌   | 88/135 [16:07<04:17,  5.48s/it]Planning steps:  66%|██████▌   | 89/135 [16:47<12:01, 15.68s/it]Planning steps:  67%|██████▋   | 90/135 [16:47<08:15, 11.02s/it]Planning steps:  67%|██████▋   | 91/135 [16:47<05:41,  7.76s/it]Planning steps:  68%|██████▊   | 92/135 [16:47<03:55,  5.48s/it]Planning steps:  69%|██████▉   | 93/135 [17:26<10:46, 15.39s/it]Planning steps:  70%|██████▉   | 94/135 [17:26<07:23, 10.82s/it]Planning steps:  70%|███████   | 95/135 [17:26<05:04,  7.62s/it]Planning steps:  71%|███████   | 96/135 [17:26<03:29,  5.38s/it]Planning steps:  72%|███████▏  | 97/135 [18:05<09:42, 15.32s/it]Planning steps:  73%|███████▎  | 98/135 [18:05<06:38, 10.77s/it]Planning steps:  73%|███████▎  | 99/135 [18:05<04:33,  7.58s/it]Planning steps:  74%|███████▍  | 100/135 [18:05<03:07,  5.36s/it]Planning steps:  75%|███████▍  | 101/135 [18:43<08:30, 15.02s/it]Planning steps:  76%|███████▌  | 102/135 [18:43<05:48, 10.55s/it]Planning steps:  76%|███████▋  | 103/135 [18:43<03:57,  7.43s/it]Planning steps:  77%|███████▋  | 104/135 [18:43<02:42,  5.25s/it]Planning steps:  78%|███████▊  | 105/135 [19:21<07:28, 14.93s/it]Planning steps:  79%|███████▊  | 106/135 [19:21<05:04, 10.50s/it]Planning steps:  79%|███████▉  | 107/135 [19:21<03:26,  7.39s/it]Planning steps:  80%|████████  | 108/135 [19:21<02:20,  5.22s/it]Planning steps:  81%|████████  | 109/135 [19:59<06:27, 14.92s/it]Planning steps:  81%|████████▏ | 110/135 [19:59<04:22, 10.49s/it]Planning steps:  82%|████████▏ | 111/135 [19:59<02:57,  7.38s/it]Planning steps:  83%|████████▎ | 112/135 [19:59<01:59,  5.21s/it]Planning steps:  84%|████████▎ | 113/135 [20:36<05:21, 14.63s/it]Planning steps:  84%|████████▍ | 114/135 [20:36<03:35, 10.28s/it]Planning steps:  85%|████████▌ | 115/135 [20:36<02:24,  7.24s/it]Planning steps:  86%|████████▌ | 116/135 [20:36<01:37,  5.12s/it]Planning steps:  87%|████████▋ | 117/135 [21:13<04:22, 14.56s/it]Planning steps:  87%|████████▋ | 118/135 [21:13<02:53, 10.24s/it]Planning steps:  88%|████████▊ | 119/135 [21:13<01:55,  7.21s/it]Planning steps:  89%|████████▉ | 120/135 [21:13<01:16,  5.09s/it]Planning steps:  90%|████████▉ | 121/135 [21:49<03:19, 14.25s/it]Planning steps:  90%|█████████ | 122/135 [21:49<02:10, 10.02s/it]Planning steps:  91%|█████████ | 123/135 [21:49<01:24,  7.06s/it]Planning steps:  92%|█████████▏| 124/135 [21:49<00:54,  4.99s/it]Planning steps:  93%|█████████▎| 125/135 [22:25<02:21, 14.18s/it]Planning steps:  93%|█████████▎| 126/135 [22:25<01:29,  9.97s/it]Planning steps:  94%|█████████▍| 127/135 [22:25<00:56,  7.03s/it]Planning steps:  95%|█████████▍| 128/135 [22:25<00:34,  4.97s/it]Planning steps:  96%|█████████▌| 129/135 [23:01<01:24, 14.16s/it]Planning steps:  96%|█████████▋| 130/135 [23:01<00:49,  9.96s/it]Planning steps:  97%|█████████▋| 131/135 [23:01<00:28,  7.01s/it]Planning steps:  98%|█████████▊| 132/135 [23:02<00:14,  4.95s/it]Planning steps:  99%|█████████▊| 133/135 [23:36<00:27, 13.86s/it]Planning steps:  99%|█████████▉| 134/135 [23:36<00:09,  9.75s/it]Planning steps: 100%|██████████| 135/135 [23:36<00:00,  6.87s/it]Planning steps: 100%|██████████| 135/135 [23:36<00:00, 10.50s/it]
+[echo-caa] logged 6 envs (L=3, base=0) -> /workspace/HWM_PLDM/runs/repair_probe_caa.csv
+Planning steps:   0%|          | 0/15 [00:00<?, ?it/s]Planning steps:   7%|▋         | 1/15 [00:04<00:59,  4.26s/it]Planning steps:  13%|█▎        | 2/15 [00:04<00:23,  1.84s/it]Planning steps:  20%|██        | 3/15 [00:04<00:12,  1.06s/it]Planning steps:  27%|██▋       | 4/15 [00:04<00:07,  1.43it/s]Planning steps:  33%|███▎      | 5/15 [00:08<00:19,  1.98s/it]Planning steps:  40%|████      | 6/15 [00:09<00:12,  1.36s/it]Planning steps:  47%|████▋     | 7/15 [00:09<00:07,  1.04it/s]Planning steps:  53%|█████▎    | 8/15 [00:09<00:04,  1.43it/s]Planning steps:  60%|██████    | 9/15 [00:13<00:10,  1.81s/it]Planning steps:  67%|██████▋   | 10/15 [00:13<00:06,  1.30s/it]Planning steps:  73%|███████▎  | 11/15 [00:13<00:03,  1.06it/s]Planning steps:  80%|████████  | 12/15 [00:14<00:02,  1.43it/s]Planning steps:  87%|████████▋ | 13/15 [00:18<00:03,  1.78s/it]Planning steps:  93%|█████████▎| 14/15 [00:18<00:01,  1.29s/it]Planning steps: 100%|██████████| 15/15 [00:18<00:00,  1.06it/s]Planning steps: 100%|██████████| 15/15 [00:18<00:00,  1.24s/it]
+[echo-caa] logged 6 envs (L=3, base=0) -> /workspace/HWM_PLDM/runs/repair_probe_caa.csv
+hierarchical d4rl planning took 00:23:56
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run history:
+wandb:                                           custom_step ▁
+wandb:                  finetune_pred_l2_0_l2_locations/loss █▁▁
+wandb:          finetune_pred_val_l2_0_l2_locations/loss_avg ▁
+wandb:     finetune_pred_val_l2_0_l2_locations/loss_rmse_avg ▁
+wandb:        finetune_pred_val_l2_0_obs_component_repr_loss ▁
+wandb: finetune_pred_val_l2_0_obs_component_target_repr_diff ▁
+wandb:                        l2_d4rl_hard_avg_steps_to_goal ▁
+wandb:             l2_d4rl_hard_l2_l1_step_0_plan_iterations ▁
+wandb:                   l2_d4rl_hard_l2_l1_step_0_plan_loss ▁
+wandb:            l2_d4rl_hard_l2_l1_step_67_plan_iterations ▁
+wandb:                  l2_d4rl_hard_l2_l1_step_67_plan_loss ▁
+wandb:                l2_d4rl_hard_l2_step_0_plan_iterations ▁
+wandb:                      l2_d4rl_hard_l2_step_0_plan_loss ▁
+wandb:               l2_d4rl_hard_l2_step_67_plan_iterations ▁
+wandb:                     l2_d4rl_hard_l2_step_67_plan_loss ▁
+wandb:                     l2_d4rl_hard_median_steps_to_goal ▁
+wandb:                            l2_d4rl_hard_num_one_turns ▁
+wandb:                          l2_d4rl_hard_num_three_turns ▁
+wandb:                            l2_d4rl_hard_num_two_turns ▁
+wandb:                    l2_d4rl_hard_one_turn_success_rate ▁
+wandb:                    l2_d4rl_hard_planning_success_rate ▁
+wandb:                  l2_d4rl_hard_three_turn_success_rate ▁
+wandb:                    l2_d4rl_hard_two_turn_success_rate ▁
+wandb:                                            train_None ▁
+wandb: 
+wandb: Run summary:
+wandb:                                           custom_step 0
+wandb:                  finetune_pred_l2_0_l2_locations/loss 0.06414
+wandb:          finetune_pred_val_l2_0_l2_locations/loss_avg 0.42209
+wandb:     finetune_pred_val_l2_0_l2_locations/loss_rmse_avg 0.64968
+wandb:        finetune_pred_val_l2_0_obs_component_repr_loss 0.70296
+wandb: finetune_pred_val_l2_0_obs_component_target_repr_diff 1.19181
+wandb:                        l2_d4rl_hard_avg_steps_to_goal 109.25
+wandb:             l2_d4rl_hard_l2_l1_step_0_plan_iterations 1
+wandb:                   l2_d4rl_hard_l2_l1_step_0_plan_loss 0.0
+wandb:            l2_d4rl_hard_l2_l1_step_67_plan_iterations 1
+wandb:                  l2_d4rl_hard_l2_l1_step_67_plan_loss 0.0
+wandb:                l2_d4rl_hard_l2_step_0_plan_iterations 1
+wandb:                      l2_d4rl_hard_l2_step_0_plan_loss 0.0
+wandb:               l2_d4rl_hard_l2_step_67_plan_iterations 1
+wandb:                     l2_d4rl_hard_l2_step_67_plan_loss 0.0
+wandb:                     l2_d4rl_hard_median_steps_to_goal 100.0
+wandb:                            l2_d4rl_hard_num_one_turns 0
+wandb:                          l2_d4rl_hard_num_three_turns 1
+wandb:                            l2_d4rl_hard_num_two_turns 0
+wandb:                    l2_d4rl_hard_one_turn_success_rate -1
+wandb:                    l2_d4rl_hard_planning_success_rate 0.66667
+wandb:                  l2_d4rl_hard_three_turn_success_rate 1.0
+wandb:                    l2_d4rl_hard_two_turn_success_rate -1
+wandb:                                            train_None 0.66667
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /workspace/HWM_PLDM/checkpoint/maze2d_large_diverse/l2_wo_encoder/maze2d_large_diverse/wandb/offline-run-20260710_175007-sqiooona
+wandb: Find logs at: /workspace/HWM_PLDM/checkpoint/maze2d_large_diverse/l2_wo_encoder/maze2d_large_diverse/wandb/offline-run-20260710_175007-sqiooona/logs
+[echo-repair] wrote 204 events -> /workspace/HWM_PLDM/runs/repair_probe_events.csv
+[eval] done -> /workspace/HWM_PLDM/eval_hwm.log  (grep for success rates per level)

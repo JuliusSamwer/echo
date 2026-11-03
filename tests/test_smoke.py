@@ -11,12 +11,12 @@ import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from zeus.config import Rung0Config
-from zeus.envs.point_maze import PointMaze
-from zeus.data.collect import collect_dataset, dataset_bounds
-from zeus.models.encoder import IdentityEncoder
-from zeus.models.world_model import build_world_model
-from zeus.planning.mpc import PlannerParams, RecedingHorizonController, plan, coarse_only_plan
+from echo.config import Rung0Config
+from echo.envs.point_maze import PointMaze
+from echo.data.collect import collect_dataset, dataset_bounds
+from echo.models.encoder import IdentityEncoder
+from echo.models.world_model import build_world_model
+from echo.planning.mpc import PlannerParams, RecedingHorizonController, plan, coarse_only_plan
 
 
 def test_maze_walls_block_and_path_len():
@@ -83,7 +83,7 @@ def test_planner_signature_and_bounds():
 
 
 def test_hierarchical_controller_and_coarse_only():
-    from zeus.planning.hierarchical import HierarchicalController
+    from echo.planning.hierarchical import HierarchicalController
     cfg = Rung0Config.smoke()
     rng = np.random.default_rng(2)
     env = PointMaze.generate(cfg.grid, cfg.path_len, rng)

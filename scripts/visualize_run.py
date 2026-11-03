@@ -10,18 +10,18 @@ import numpy as np
 import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from zeus.config import Rung0Config
-from zeus.envs.point_maze import PointMaze
-from zeus.data.collect import collect_dataset, dataset_bounds
-from zeus.models.encoder import IdentityEncoder
-from zeus.models.world_model import build_world_model
-from zeus.train import train_world_model
-from zeus.planning.mpc import PlannerParams, RecedingHorizonController, plan
-from zeus.eval.viz import plot_trajectory, animate_trajectory
+from echo.config import Rung0Config
+from echo.envs.point_maze import PointMaze
+from echo.data.collect import collect_dataset, dataset_bounds
+from echo.models.encoder import IdentityEncoder
+from echo.models.world_model import build_world_model
+from echo.train import train_world_model
+from echo.planning.mpc import PlannerParams, RecedingHorizonController, plan
+from echo.eval.viz import plot_trajectory, animate_trajectory
 
 OUT = Path(__file__).resolve().parents[1] / "figures"
 OUT.mkdir(exist_ok=True)
-CACHE = Path("/Users/juliius/Nobel30/Zeus/models/"
+CACHE = Path(str(Path(__file__).resolve().parents[1]) + "/models/"
              "model_cache.pt")
 
 cfg = Rung0Config.full()
@@ -69,7 +69,7 @@ for attempt in range(60):
     if done and info["success"]:
         traj = np.asarray(traj)
         L = env.shortest_path_len()
-        title = f"Zeus rung-0 success  |  L={L}  start={sc} goal={gc}  |  {len(traj)-1} steps"
+        title = f"ECHO rung-0 success  |  L={L}  start={sc} goal={gc}  |  {len(traj)-1} steps"
         png = OUT / "successful_run.png"
         gif = OUT / "successful_run.gif"
         plot_trajectory(env, traj, goal, str(png), title=title, imagined=imagined)

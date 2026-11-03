@@ -18,11 +18,11 @@ import numpy as np
 import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from zeus.config import Rung0Config
-from zeus.envs.point_maze import PointMaze
-from zeus.models.true_model import TrueDynamicsModel
-from zeus.planning.mpc import PlannerParams, RecedingHorizonController
-from zeus.planning.hierarchical import HierarchicalController
+from echo.config import Rung0Config
+from echo.envs.point_maze import PointMaze
+from echo.models.true_model import TrueDynamicsModel
+from echo.planning.mpc import PlannerParams, RecedingHorizonController
+from echo.planning.hierarchical import HierarchicalController
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--shard", type=int, default=0)

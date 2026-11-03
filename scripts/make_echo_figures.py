@@ -2,7 +2,7 @@
 
 Every number plotted here is recomputed from files on disk (paths below), except the
 HWM-paper reference numbers (Table values quoted from the HWM paper) and the M1 reproduction
-numbers (zeus_map/results/M1_RESULTS.txt + STATUS doc), which are typed in with their source.
+numbers (echo_map/results/M1_RESULTS.txt + STATUS doc), which are typed in with their source.
 
     python scripts/make_echo_figures.py      # writes figures/echo/*.png
 """
@@ -18,8 +18,8 @@ import numpy as np
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RUNS = f"{ROOT}/zeus_map/pod_backup/runs"
-P1 = f"{ROOT}/zeus_p1/runs"
+RUNS = f"{ROOT}/echo_map/pod_backup/runs"
+P1 = f"{ROOT}/echo_p1/runs"
 OUT = f"{ROOT}/figures/echo"
 os.makedirs(OUT, exist_ok=True)
 
@@ -95,7 +95,7 @@ def fig_reproduction():
     save(fig, "m1_reproduction.png")
 
 
-# ================================================================= 2. H-JEPA / LeWM / HWM training (zeus_p1)
+# ================================================================= 2. H-JEPA / LeWM / HWM training (echo_p1)
 def read_log(name):
     rows = list(csv.DictReader(open(f"{P1}/{name}/seed0/log.csv")))
     return {k: np.array([float(r[k]) for r in rows]) for k in rows[0]}
@@ -130,7 +130,7 @@ def fig_p1():
             if key in L:
                 ax.annotate(f"{L[key][-1]:.0f}", (L["step"][-1], L[key][-1]), xytext=(4, 0),
                             textcoords="offset points", fontsize=8.5, color=INK2, va="center")
-    fig.suptitle("zeus_p1 · H-JEPA / LeWM / HWM reimplementation on FourRoom (seed 0, runs stopped at 6–8k steps)",
+    fig.suptitle("echo_p1 · H-JEPA / LeWM / HWM reimplementation on FourRoom (seed 0, runs stopped at 6–8k steps)",
                  x=0.01, ha="left", fontsize=11.5, fontweight="bold")
     fig.tight_layout()
     save(fig, "p1_training.png")
@@ -303,9 +303,9 @@ def fig_timeline():
     ax.axvspan(-0.5, 3.5, ymin=0.02, ymax=0.98, color="#f6f5f2", zorder=-1)
     ax.axvspan(3.5, 4.5, ymin=0.02, ymax=0.98, color="#eef4fc", zorder=-1)
     ax.axvspan(4.5, n - 0.5, ymin=0.02, ymax=0.98, color="#f6f5f2", zorder=-1)
-    ax.text(1.5, -2.15, "zeus_maze · own toy mazes (state obs)", ha="center", fontsize=8.5, color=MUTED)
+    ax.text(1.5, -2.15, "echo_maze · own toy mazes (state obs)", ha="center", fontsize=8.5, color=MUTED)
     ax.text(4.0, -2.15, "bridge", ha="center", fontsize=8.5, color=MUTED)
-    ax.text(7.0, -2.15, "zeus_map / zeus_p1 · published world models (pixels)", ha="center", fontsize=8.5, color=MUTED)
+    ax.text(7.0, -2.15, "echo_map / echo_p1 · published world models (pixels)", ha="center", fontsize=8.5, color=MUTED)
     ax.text(-0.5, 1.4, "Project timeline, 2026", fontsize=12, fontweight="bold")
     save(fig, "timeline.png")
 

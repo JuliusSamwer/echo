@@ -1,8 +1,8 @@
 #!/bin/bash
 # Autonomous: wait for 10 properly-trained models -> eval (flat vs hier, paired) -> aggregate panel.
 set -e
-ROOT=/Users/juliius/Nobel30/Zeus
-SCR=/Users/juliius/Nobel30/Zeus/models
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+SCR=$ROOT/models
 MD=$SCR/learned_models_v2
 ED=$SCR/learned_eval_v2
 cd "$ROOT"
@@ -13,7 +13,7 @@ echo "[pipe] 10 models ready. launching eval shards."
 
 rm -rf "$ED"; mkdir -p "$ED"
 for i in 0 1 2 3 4; do
-  ZEUS_DEVICE=cpu ZEUS_THREADS=3 python -u scripts/rung2_learned_rigorous.py \
+  ECHO_DEVICE=cpu ECHO_THREADS=3 python -u scripts/rung2_learned_rigorous.py \
     --shard $i --n-shards 5 --mazes 10 --pairs 10 --out-dir "$ED" --model-dir "$MD" \
     > "$ED/log_$i.txt" 2>&1 &
 done

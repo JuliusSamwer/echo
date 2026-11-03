@@ -1,0 +1,2 @@
+# ECHO-P1 M1 results (flat = full 40 envs, faithful)
+# paper: flat easy100/med~63/hard44  |  HWM med95/hard83

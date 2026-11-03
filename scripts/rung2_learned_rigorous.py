@@ -21,17 +21,17 @@ from pathlib import Path
 import numpy as np
 import os
 import torch
-torch.set_num_threads(int(os.environ.get("ZEUS_THREADS", "3")))   # avoid multi-proc thread thrash
+torch.set_num_threads(int(os.environ.get("ECHO_THREADS", "3")))   # avoid multi-proc thread thrash
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from zeus.config import Rung0Config
-from zeus.envs.point_maze import PointMaze
-from zeus.data.collect import collect_dataset, dataset_bounds, coverage_report
-from zeus.models.encoder import IdentityEncoder
-from zeus.models.world_model import build_world_model
-from zeus.train import train_world_model
-from zeus.planning.mpc import PlannerParams, RecedingHorizonController
-from zeus.planning.hierarchical import HierarchicalController
+from echo.config import Rung0Config
+from echo.envs.point_maze import PointMaze
+from echo.data.collect import collect_dataset, dataset_bounds, coverage_report
+from echo.models.encoder import IdentityEncoder
+from echo.models.world_model import build_world_model
+from echo.train import train_world_model
+from echo.planning.mpc import PlannerParams, RecedingHorizonController
+from echo.planning.hierarchical import HierarchicalController
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--shard", type=int, default=0)

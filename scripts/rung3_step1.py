@@ -11,14 +11,14 @@ import torch
 import matplotlib.pyplot as plt
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from zeus.config import Rung0Config
-from zeus.envs.point_maze import PointMaze
-from zeus.data.collect import collect_dataset
-from zeus.models.boundary import BoundaryNet
-from zeus.eval.viz import draw_maze
+from echo.config import Rung0Config
+from echo.envs.point_maze import PointMaze
+from echo.data.collect import collect_dataset
+from echo.models.boundary import BoundaryNet
+from echo.eval.viz import draw_maze
 
 dev = "cpu"
-MD = Path("/Users/juliius/Nobel30/Zeus/models/"
+MD = Path(str(Path(__file__).resolve().parents[1]) + "/models/"
           "learned_models_v2")
 OUT = Path(__file__).resolve().parents[1] / "figures"; OUT.mkdir(exist_ok=True)
 cfg = Rung0Config.full(); cfg.grid = (9, 9)

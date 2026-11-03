@@ -1,6 +1,6 @@
 [reinforce] precomputing fine-geodesic adjacency + training pool ...
 [reinforce] pool=40 pairs. training B (dense planning + success REINFORCE) ...
-/Users/juliius/Nobel30/Zeus/zeus_maze/rung3_reinforce.py:198: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+/Users/juliius/Nobel30/ECHO/echo_maze/rung3_reinforce.py:198: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
 Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:837.)
   f"| std={std:.2f} | loss={float(loss):.2f}", flush=True)
   [reinforce] up   0 | train_success=0.00 | std=0.50 | loss=-0.25
@@ -24,7 +24,7 @@ Consider using tensor.detach() first. (Triggered internally at /Users/runner/wor
   [reinforce] up  54 | train_success=0.00 | std=0.18 | loss=-0.07
   [reinforce] up  57 | train_success=0.00 | std=0.16 | loss=0.16
   [reinforce] up  59 | train_success=0.00 | std=0.15 | loss=-0.10
-/Users/juliius/Nobel30/Zeus/zeus_maze/rung3_reinforce.py:52: RuntimeWarning: divide by zero encountered in log
+/Users/juliius/Nobel30/ECHO/echo_maze/rung3_reinforce.py:52: RuntimeWarning: divide by zero encountered in log
   logp = (-0.5 * ((d - mean) / std) ** 2 - np.log(std) - 0.5 * np.log(2 * np.pi)).sum(-1)
 
 [reinforce] EMERGENT B success vs L (vs flat~0.15, HWM~0.25, oracle 0.85):

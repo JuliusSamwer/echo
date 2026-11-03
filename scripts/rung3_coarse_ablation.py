@@ -11,14 +11,14 @@ import numpy as np
 import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from zeus.config import Rung0Config
-from zeus.envs.point_maze import PointMaze
-from zeus.data.collect import collect_dataset
-from zeus.models.coarse_model import build_coarse_model
-from zeus.train_coarse import train_coarse_model
+from echo.config import Rung0Config
+from echo.envs.point_maze import PointMaze
+from echo.data.collect import collect_dataset
+from echo.models.coarse_model import build_coarse_model
+from echo.train_coarse import train_coarse_model
 
 dev = "cpu"
-MD = Path("/Users/juliius/Nobel30/Zeus/models/"
+MD = Path(str(Path(__file__).resolve().parents[1]) + "/models/"
           "learned_models_v2")
 cfg = Rung0Config.full(); cfg.grid = (9, 9); cfg.device = dev
 gen_rng = np.random.default_rng(1000)

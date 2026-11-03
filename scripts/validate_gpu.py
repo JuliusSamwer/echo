@@ -5,11 +5,11 @@ import numpy as np
 import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from zeus.config import Rung0Config
-from zeus.envs.point_maze import PointMaze
-from zeus.models.true_model import TrueDynamicsModel
-from zeus.planning.mpc import PlannerParams, RecedingHorizonController
-from zeus.eval.gpu_eval import BatchedMaze, batched_flat_eval
+from echo.config import Rung0Config
+from echo.envs.point_maze import PointMaze
+from echo.models.true_model import TrueDynamicsModel
+from echo.planning.mpc import PlannerParams, RecedingHorizonController
+from echo.eval.gpu_eval import BatchedMaze, batched_flat_eval
 
 cfg = Rung0Config.full(); cfg.grid = (9, 9); cfg.cost_mode = "min"
 cfg.horizon, cfg.n_samples, cfg.cem_iters = 25, 256, 5

@@ -5,4 +5,4 @@ __pycache__/
 ~$*
 .claude/
 # upstream clone, not vendored (see README "Not vendored")
-zeus_map/HWM_PLDM/
+echo_map/HWM_PLDM/

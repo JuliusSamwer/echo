@@ -1,4 +1,4 @@
-[coarse] loaded /Users/juliius/Nobel30/Zeus/models/hwm_coarse.pt
+[coarse] loaded /Users/juliius/Nobel30/ECHO/models/hwm_coarse.pt
 
 [baselines] fixed maze · model-based (plan in base, act in world) · 80 pairs/L · H_hop=12
   L |             FLAT |    HWM (learned) | HWM−FLAT (95% CI)

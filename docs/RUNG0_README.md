@@ -1,4 +1,4 @@
-# Zeus — Rung 0
+# ECHO — Rung 0
 
 The floor of a world-model planning ladder. **No abstraction, no hierarchy, no
 latent s-axis, no learned encoder.** Just a flat forward model plus a sampling
